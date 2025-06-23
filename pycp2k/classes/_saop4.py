@@ -8,5 +8,5 @@ class _saop4(InputSection):
         self.Beta = None
         self.K_rho = None
         self._name = "SAOP"
-        self._keywords = {'Alpha': 'ALPHA', 'K_rho': 'K_RHO', 'Beta': 'BETA'}
+        self._keywords = {'Alpha': 'ALPHA', 'Beta': 'BETA', 'K_rho': 'K_RHO'}
 

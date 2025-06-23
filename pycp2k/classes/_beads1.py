@@ -9,5 +9,5 @@ class _beads1(InputSection):
         self.COORD = _coord6()
         self.VELOCITY = _velocity7()
         self._name = "BEADS"
-        self._subsections = {'VELOCITY': 'VELOCITY', 'COORD': 'COORD'}
+        self._subsections = {'COORD': 'COORD', 'VELOCITY': 'VELOCITY'}
 

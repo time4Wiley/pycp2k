@@ -14,9 +14,9 @@ class _g4x61(InputSection):
         self.Exclude_mm = None
         self.RESTRAINT = _restraint3()
         self._name = "G4X6"
-        self._keywords = {'Molname': 'MOLNAME', 'Exclude_qm': 'EXCLUDE_QM', 'Atoms': 'ATOMS', 'Exclude_mm': 'EXCLUDE_MM', 'Distances': 'DISTANCES', 'Intermolecular': 'INTERMOLECULAR', 'Molecule': 'MOLECULE'}
+        self._keywords = {'Molecule': 'MOLECULE', 'Molname': 'MOLNAME', 'Intermolecular': 'INTERMOLECULAR', 'Atoms': 'ATOMS', 'Distances': 'DISTANCES', 'Exclude_qm': 'EXCLUDE_QM', 'Exclude_mm': 'EXCLUDE_MM'}
         self._subsections = {'RESTRAINT': 'RESTRAINT'}
-        self._aliases = {'Segname': 'Molname', 'Mol': 'Molecule'}
+        self._aliases = {'Mol': 'Molecule', 'Segname': 'Molname'}
 
 
     @property

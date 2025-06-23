@@ -11,7 +11,7 @@ from ._mc1 import _mc1
 from ._tmc1 import _tmc1
 from ._pint1 import _pint1
 from ._band1 import _band1
-from ._print16 import _print16
+from ._print17 import _print17
 
 
 class _motion1(InputSection):
@@ -31,12 +31,12 @@ class _motion1(InputSection):
         self.BAND = _band1()
         self.PRINT_list = []
         self._name = "MOTION"
-        self._subsections = {'TMC': 'TMC', 'FREE_ENERGY': 'FREE_ENERGY', 'CELL_OPT': 'CELL_OPT', 'CONSTRAINT': 'CONSTRAINT', 'SHELL_OPT': 'SHELL_OPT', 'GEO_OPT': 'GEO_OPT', 'MD': 'MD', 'DRIVER': 'DRIVER', 'BAND': 'BAND', 'PINT': 'PINT', 'FLEXIBLE_PARTITIONING': 'FLEXIBLE_PARTITIONING', 'MC': 'MC'}
-        self._repeated_subsections = {'PRINT': '_print16'}
+        self._subsections = {'GEO_OPT': 'GEO_OPT', 'CELL_OPT': 'CELL_OPT', 'SHELL_OPT': 'SHELL_OPT', 'MD': 'MD', 'DRIVER': 'DRIVER', 'FREE_ENERGY': 'FREE_ENERGY', 'CONSTRAINT': 'CONSTRAINT', 'FLEXIBLE_PARTITIONING': 'FLEXIBLE_PARTITIONING', 'MC': 'MC', 'TMC': 'TMC', 'PINT': 'PINT', 'BAND': 'BAND'}
+        self._repeated_subsections = {'PRINT': '_print17'}
         self._attributes = ['PRINT_list']
 
     def PRINT_add(self, section_parameters=None):
-        new_section = _print16()
+        new_section = _print17()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters

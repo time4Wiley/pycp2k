@@ -5,7 +5,7 @@ from ._torsion2 import _torsion2
 from ._improper2 import _improper2
 from ._isolated_atoms1 import _isolated_atoms1
 from ._neighbor_lists8 import _neighbor_lists8
-from ._print47 import _print47
+from ._print80 import _print80
 
 
 class _generate1(InputSection):
@@ -23,20 +23,12 @@ class _generate1(InputSection):
         self.IMPROPER_list = []
         self.ISOLATED_ATOMS = _isolated_atoms1()
         self.NEIGHBOR_LISTS = _neighbor_lists8()
-        self.PRINT = _print47()
+        self.PRINT = _print80()
         self._name = "GENERATE"
-        self._keywords = {'Reorder': 'REORDER', 'Create_molecules': 'CREATE_MOLECULES', 'Bondparm': 'BONDPARM', 'Bondlength_max': 'BONDLENGTH_MAX', 'Bondparm_factor': 'BONDPARM_FACTOR', 'Bondlength_min': 'BONDLENGTH_MIN'}
-        self._subsections = {'ISOLATED_ATOMS': 'ISOLATED_ATOMS', 'PRINT': 'PRINT', 'NEIGHBOR_LISTS': 'NEIGHBOR_LISTS'}
-        self._repeated_subsections = {'IMPROPER': '_improper2', 'BOND': '_bond2', 'ANGLE': '_angle1', 'TORSION': '_torsion2'}
+        self._keywords = {'Reorder': 'REORDER', 'Create_molecules': 'CREATE_MOLECULES', 'Bondparm': 'BONDPARM', 'Bondparm_factor': 'BONDPARM_FACTOR', 'Bondlength_max': 'BONDLENGTH_MAX', 'Bondlength_min': 'BONDLENGTH_MIN'}
+        self._subsections = {'ISOLATED_ATOMS': 'ISOLATED_ATOMS', 'NEIGHBOR_LISTS': 'NEIGHBOR_LISTS', 'PRINT': 'PRINT'}
+        self._repeated_subsections = {'BOND': '_bond2', 'ANGLE': '_angle1', 'TORSION': '_torsion2', 'IMPROPER': '_improper2'}
         self._attributes = ['BOND_list', 'ANGLE_list', 'TORSION_list', 'IMPROPER_list']
-
-    def IMPROPER_add(self, section_parameters=None):
-        new_section = _improper2()
-        if section_parameters is not None:
-            if hasattr(new_section, 'Section_parameters'):
-                new_section.Section_parameters = section_parameters
-        self.IMPROPER_list.append(new_section)
-        return new_section
 
     def BOND_add(self, section_parameters=None):
         new_section = _bond2()
@@ -60,5 +52,13 @@ class _generate1(InputSection):
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters
         self.TORSION_list.append(new_section)
+        return new_section
+
+    def IMPROPER_add(self, section_parameters=None):
+        new_section = _improper2()
+        if section_parameters is not None:
+            if hasattr(new_section, 'Section_parameters'):
+                new_section.Section_parameters = section_parameters
+        self.IMPROPER_list.append(new_section)
         return new_section
 

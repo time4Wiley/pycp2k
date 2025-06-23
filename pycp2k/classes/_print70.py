@@ -1,19 +1,29 @@
 from pycp2k.inputsection import InputSection
-from ._each443 import _each443
+from ._program_run_info26 import _program_run_info26
+from ._wannier_cubes4 import _wannier_cubes4
+from ._wannier_centers4 import _wannier_centers4
+from ._wannier_spreads4 import _wannier_spreads4
+from ._loc_restart4 import _loc_restart4
+from ._total_dipole3 import _total_dipole3
+from ._molecular_dipoles3 import _molecular_dipoles3
+from ._molecular_moments3 import _molecular_moments3
+from ._molecular_states3 import _molecular_states3
+from ._wannier_states3 import _wannier_states3
 
 
 class _print70(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Section_parameters = None
-        self.Add_last = None
-        self.Common_iteration_levels = None
-        self.Filename = None
-        self.Log_print_key = None
-        self.Load_balance_info = None
-        self.EACH = _each443()
+        self.PROGRAM_RUN_INFO = _program_run_info26()
+        self.WANNIER_CUBES = _wannier_cubes4()
+        self.WANNIER_CENTERS = _wannier_centers4()
+        self.WANNIER_SPREADS = _wannier_spreads4()
+        self.LOC_RESTART = _loc_restart4()
+        self.TOTAL_DIPOLE = _total_dipole3()
+        self.MOLECULAR_DIPOLES = _molecular_dipoles3()
+        self.MOLECULAR_MOMENTS = _molecular_moments3()
+        self.MOLECULAR_STATES = _molecular_states3()
+        self.WANNIER_STATES = _wannier_states3()
         self._name = "PRINT"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Load_balance_info': 'LOAD_BALANCE_INFO'}
-        self._subsections = {'EACH': 'EACH'}
-        self._attributes = ['Section_parameters']
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'WANNIER_CUBES': 'WANNIER_CUBES', 'WANNIER_CENTERS': 'WANNIER_CENTERS', 'WANNIER_SPREADS': 'WANNIER_SPREADS', 'LOC_RESTART': 'LOC_RESTART', 'TOTAL_DIPOLE': 'TOTAL_DIPOLE', 'MOLECULAR_DIPOLES': 'MOLECULAR_DIPOLES', 'MOLECULAR_MOMENTS': 'MOLECULAR_MOMENTS', 'MOLECULAR_STATES': 'MOLECULAR_STATES', 'WANNIER_STATES': 'WANNIER_STATES'}
 

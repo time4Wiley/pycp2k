@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each56 import _each56
+from ._each59 import _each59
 
 
 class _moment_of_inertia_avg1(InputSection):
@@ -10,9 +10,9 @@ class _moment_of_inertia_avg1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each56()
+        self.EACH = _each59()
         self._name = "MOMENT_OF_INERTIA_AVG"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

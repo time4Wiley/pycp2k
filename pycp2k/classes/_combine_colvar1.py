@@ -13,7 +13,7 @@ class _combine_colvar1(InputSection):
         self.Error_limit = None
         self.COLVAR_list = []
         self._name = "COMBINE_COLVAR"
-        self._keywords = {'Variables': 'VARIABLES', 'Error_limit': 'ERROR_LIMIT', 'Dx': 'DX', 'Function': 'FUNCTION'}
+        self._keywords = {'Function': 'FUNCTION', 'Variables': 'VARIABLES', 'Dx': 'DX', 'Error_limit': 'ERROR_LIMIT'}
         self._repeated_keywords = {'Parameters': 'PARAMETERS', 'Values': 'VALUES'}
         self._repeated_subsections = {'COLVAR': '_colvar4'}
         self._attributes = ['COLVAR_list']

@@ -7,5 +7,5 @@ class _constant_env1(InputSection):
         self.Start_step = None
         self.End_step = None
         self._name = "CONSTANT_ENV"
-        self._keywords = {'End_step': 'END_STEP', 'Start_step': 'START_STEP'}
+        self._keywords = {'Start_step': 'START_STEP', 'End_step': 'END_STEP'}
 

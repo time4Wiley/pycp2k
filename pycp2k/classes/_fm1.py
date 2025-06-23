@@ -9,5 +9,5 @@ class _fm1(InputSection):
         self.Force_block_size = None
         self.Type_of_matrix_multiplication = None
         self._name = "FM"
-        self._keywords = {'Ncol_blocks': 'NCOL_BLOCKS', 'Type_of_matrix_multiplication': 'TYPE_OF_MATRIX_MULTIPLICATION', 'Force_block_size': 'FORCE_BLOCK_SIZE', 'Nrow_blocks': 'NROW_BLOCKS'}
+        self._keywords = {'Nrow_blocks': 'NROW_BLOCKS', 'Ncol_blocks': 'NCOL_BLOCKS', 'Force_block_size': 'FORCE_BLOCK_SIZE', 'Type_of_matrix_multiplication': 'TYPE_OF_MATRIX_MULTIPLICATION'}
 

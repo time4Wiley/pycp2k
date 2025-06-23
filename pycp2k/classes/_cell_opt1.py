@@ -15,6 +15,11 @@ class _cell_opt1(InputSection):
         self.Rms_dr = None
         self.Rms_force = None
         self.Step_start_val = None
+        self.Keep_space_group = None
+        self.Eps_symmetry = None
+        self.Symm_reduction = None
+        self.Symm_exclude_range = []
+        self.Spgr_print_atoms = None
         self.Type = None
         self.External_pressure = None
         self.Keep_angles = None
@@ -26,8 +31,9 @@ class _cell_opt1(InputSection):
         self.BFGS = _bfgs3()
         self.PRINT_list = []
         self._name = "CELL_OPT"
-        self._keywords = {'Keep_symmetry': 'KEEP_SYMMETRY', 'Keep_angles': 'KEEP_ANGLES', 'Max_force': 'MAX_FORCE', 'Constraint': 'CONSTRAINT', 'Step_start_val': 'STEP_START_VAL', 'Rms_dr': 'RMS_DR', 'Pressure_tolerance': 'PRESSURE_TOLERANCE', 'Rms_force': 'RMS_FORCE', 'Optimizer': 'OPTIMIZER', 'Max_iter': 'MAX_ITER', 'Max_dr': 'MAX_DR', 'Type': 'TYPE', 'External_pressure': 'EXTERNAL_PRESSURE'}
-        self._subsections = {'BFGS': 'BFGS', 'CG': 'CG', 'LBFGS': 'LBFGS'}
+        self._keywords = {'Optimizer': 'OPTIMIZER', 'Max_iter': 'MAX_ITER', 'Max_dr': 'MAX_DR', 'Max_force': 'MAX_FORCE', 'Rms_dr': 'RMS_DR', 'Rms_force': 'RMS_FORCE', 'Step_start_val': 'STEP_START_VAL', 'Keep_space_group': 'KEEP_SPACE_GROUP', 'Eps_symmetry': 'EPS_SYMMETRY', 'Symm_reduction': 'SYMM_REDUCTION', 'Spgr_print_atoms': 'SPGR_PRINT_ATOMS', 'Type': 'TYPE', 'External_pressure': 'EXTERNAL_PRESSURE', 'Keep_angles': 'KEEP_ANGLES', 'Keep_symmetry': 'KEEP_SYMMETRY', 'Constraint': 'CONSTRAINT', 'Pressure_tolerance': 'PRESSURE_TOLERANCE'}
+        self._repeated_keywords = {'Symm_exclude_range': 'SYMM_EXCLUDE_RANGE'}
+        self._subsections = {'LBFGS': 'LBFGS', 'CG': 'CG', 'BFGS': 'BFGS'}
         self._repeated_subsections = {'PRINT': '_print4'}
         self._aliases = {'Minimizer': 'Optimizer'}
         self._attributes = ['PRINT_list']

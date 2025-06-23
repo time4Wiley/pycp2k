@@ -28,5 +28,5 @@ class _cp_dbcsr1(InputSection):
         self.Filter_eps = None
         self.Always_checksum = None
         self._name = "CP_DBCSR"
-        self._keywords = {'Bs_m': 'BS_M', 'Ctype': 'CTYPE', 'Bs_k': 'BS_K', 'Data_type': 'DATA_TYPE', 'Test_type': 'TEST_TYPE', 'K': 'K', 'Beta': 'BETA', 'Filter_eps': 'FILTER_EPS', 'Alpha': 'ALPHA', 'Atype': 'ATYPE', 'Keepsparse': 'KEEPSPARSE', 'Csparsity': 'CSPARSITY', 'M': 'M', 'Btype': 'BTYPE', 'N_loop': 'N_LOOP', 'Transa': 'TRANSA', 'N': 'N', 'Always_checksum': 'ALWAYS_CHECKSUM', 'Nproc': 'NPROC', 'Bsparsity': 'BSPARSITY', 'Bs_n': 'BS_N', 'Asparsity': 'ASPARSITY', 'Transb': 'TRANSB'}
+        self._keywords = {'N_loop': 'N_LOOP', 'Data_type': 'DATA_TYPE', 'Test_type': 'TEST_TYPE', 'M': 'M', 'N': 'N', 'K': 'K', 'Transa': 'TRANSA', 'Transb': 'TRANSB', 'Bs_m': 'BS_M', 'Bs_n': 'BS_N', 'Bs_k': 'BS_K', 'Atype': 'ATYPE', 'Btype': 'BTYPE', 'Ctype': 'CTYPE', 'Nproc': 'NPROC', 'Keepsparse': 'KEEPSPARSE', 'Asparsity': 'ASPARSITY', 'Bsparsity': 'BSPARSITY', 'Csparsity': 'CSPARSITY', 'Alpha': 'ALPHA', 'Beta': 'BETA', 'Filter_eps': 'FILTER_EPS', 'Always_checksum': 'ALWAYS_CHECKSUM'}
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._kpoint_set1 import _kpoint_set1
+from ._kpoint_set5 import _kpoint_set5
 
 
 class _band_structure1(InputSection):
@@ -10,12 +10,12 @@ class _band_structure1(InputSection):
         self.KPOINT_SET_list = []
         self._name = "BAND_STRUCTURE"
         self._keywords = {'File_name': 'FILE_NAME', 'Added_mos': 'ADDED_MOS'}
-        self._repeated_subsections = {'KPOINT_SET': '_kpoint_set1'}
+        self._repeated_subsections = {'KPOINT_SET': '_kpoint_set5'}
         self._aliases = {'Added_bands': 'Added_mos'}
         self._attributes = ['KPOINT_SET_list']
 
     def KPOINT_SET_add(self, section_parameters=None):
-        new_section = _kpoint_set1()
+        new_section = _kpoint_set5()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters

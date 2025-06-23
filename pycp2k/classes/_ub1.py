@@ -9,5 +9,5 @@ class _ub1(InputSection):
         self.Cs = None
         self.R0 = None
         self._name = "UB"
-        self._keywords = {'Cs': 'CS', 'Kind': 'KIND', 'K': 'K', 'R0': 'R0'}
+        self._keywords = {'Kind': 'KIND', 'K': 'K', 'Cs': 'CS', 'R0': 'R0'}
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each271 import _each271
+from ._each357 import _each357
 
 
 class _hyperfine_coupling_tensor1(InputSection):
@@ -11,9 +11,9 @@ class _hyperfine_coupling_tensor1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Interaction_radius = None
-        self.EACH = _each271()
+        self.EACH = _each357()
         self._name = "HYPERFINE_COUPLING_TENSOR"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Interaction_radius': 'INTERACTION_RADIUS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Interaction_radius': 'INTERACTION_RADIUS'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

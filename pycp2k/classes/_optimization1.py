@@ -8,5 +8,5 @@ class _optimization1(InputSection):
         self.Step_size = None
         self.Max_fun = None
         self._name = "OPTIMIZATION"
-        self._keywords = {'Accuracy': 'ACCURACY', 'Max_fun': 'MAX_FUN', 'Step_size': 'STEP_SIZE'}
+        self._keywords = {'Accuracy': 'ACCURACY', 'Step_size': 'STEP_SIZE', 'Max_fun': 'MAX_FUN'}
 

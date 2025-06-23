@@ -1,13 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._subcell4 import _subcell4
-from ._neighbor_lists7 import _neighbor_lists7
+from ._e_density_bqb1 import _e_density_bqb1
+from ._voronoi1 import _voronoi1
+from ._moments1 import _moments1
 
 
 class _print42(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.SUBCELL = _subcell4()
-        self.NEIGHBOR_LISTS = _neighbor_lists7()
+        self.E_DENSITY_BQB = _e_density_bqb1()
+        self.VORONOI = _voronoi1()
+        self.MOMENTS = _moments1()
         self._name = "PRINT"
-        self._subsections = {'NEIGHBOR_LISTS': 'NEIGHBOR_LISTS', 'SUBCELL': 'SUBCELL'}
+        self._subsections = {'E_DENSITY_BQB': 'E_DENSITY_BQB', 'VORONOI': 'VORONOI', 'MOMENTS': 'MOMENTS'}
 

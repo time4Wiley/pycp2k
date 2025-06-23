@@ -16,5 +16,5 @@ class _cp_fm_gemm1(InputSection):
         self.Transa = None
         self.Transb = None
         self._name = "CP_FM_GEMM"
-        self._keywords = {'Transb': 'TRANSB', 'M': 'M', 'N_loop': 'N_LOOP', 'Grid_2d': 'GRID_2D', 'Transa': 'TRANSA', 'Ncol_block': 'NCOL_BLOCK', 'Force_blocksize': 'FORCE_BLOCKSIZE', 'N': 'N', 'Nrow_block': 'NROW_BLOCK', 'K': 'K', 'Row_major': 'ROW_MAJOR'}
+        self._keywords = {'N_loop': 'N_LOOP', 'K': 'K', 'M': 'M', 'N': 'N', 'Nrow_block': 'NROW_BLOCK', 'Ncol_block': 'NCOL_BLOCK', 'Row_major': 'ROW_MAJOR', 'Force_blocksize': 'FORCE_BLOCKSIZE', 'Grid_2d': 'GRID_2D', 'Transa': 'TRANSA', 'Transb': 'TRANSB'}
 

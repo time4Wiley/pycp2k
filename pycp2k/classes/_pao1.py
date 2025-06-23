@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
 from ._machine_learning1 import _machine_learning1
-from ._print20 import _print20
+from ._print22 import _print22
 from ._line_search5 import _line_search5
 
 
@@ -34,13 +34,13 @@ class _pao1(InputSection):
         self.PRINT_list = []
         self.LINE_SEARCH = _line_search5()
         self._name = "PAO"
-        self._keywords = {'Preopt_dm_file': 'PREOPT_DM_FILE', 'Max_cycles': 'MAX_CYCLES', 'Check_unitary_tol': 'CHECK_UNITARY_TOL', 'Linpot_initguess_delta': 'LINPOT_INITGUESS_DELTA', 'Penalty_distance': 'PENALTY_DISTANCE', 'Max_pao': 'MAX_PAO', 'Precondition': 'PRECONDITION', 'Linpot_precondition_delta': 'LINPOT_PRECONDITION_DELTA', 'Restart_file': 'RESTART_FILE', 'Eps_pgf': 'EPS_PGF', 'Parameterization': 'PARAMETERIZATION', 'Num_gradient_eps': 'NUM_GRADIENT_EPS', 'Linpot_regularization_strength': 'LINPOT_REGULARIZATION_STRENGTH', 'Penalty_strength': 'PENALTY_STRENGTH', 'Regularization': 'REGULARIZATION', 'Check_gradient_tol': 'CHECK_GRADIENT_TOL', 'Num_gradient_order': 'NUM_GRADIENT_ORDER', 'Cg_reset_limit': 'CG_RESET_LIMIT', 'Eps_pao': 'EPS_PAO', 'Optimizer': 'OPTIMIZER', 'Mixing': 'MIXING', 'Cg_init_steps': 'CG_INIT_STEPS', 'Linpot_regularization_delta': 'LINPOT_REGULARIZATION_DELTA'}
-        self._subsections = {'LINE_SEARCH': 'LINE_SEARCH', 'MACHINE_LEARNING': 'MACHINE_LEARNING'}
-        self._repeated_subsections = {'PRINT': '_print20'}
+        self._keywords = {'Eps_pao': 'EPS_PAO', 'Mixing': 'MIXING', 'Max_pao': 'MAX_PAO', 'Max_cycles': 'MAX_CYCLES', 'Parameterization': 'PARAMETERIZATION', 'Regularization': 'REGULARIZATION', 'Penalty_distance': 'PENALTY_DISTANCE', 'Penalty_strength': 'PENALTY_STRENGTH', 'Precondition': 'PRECONDITION', 'Eps_pgf': 'EPS_PGF', 'Preopt_dm_file': 'PREOPT_DM_FILE', 'Restart_file': 'RESTART_FILE', 'Check_gradient_tol': 'CHECK_GRADIENT_TOL', 'Num_gradient_eps': 'NUM_GRADIENT_EPS', 'Num_gradient_order': 'NUM_GRADIENT_ORDER', 'Check_unitary_tol': 'CHECK_UNITARY_TOL', 'Linpot_precondition_delta': 'LINPOT_PRECONDITION_DELTA', 'Linpot_initguess_delta': 'LINPOT_INITGUESS_DELTA', 'Linpot_regularization_delta': 'LINPOT_REGULARIZATION_DELTA', 'Linpot_regularization_strength': 'LINPOT_REGULARIZATION_STRENGTH', 'Optimizer': 'OPTIMIZER', 'Cg_init_steps': 'CG_INIT_STEPS', 'Cg_reset_limit': 'CG_RESET_LIMIT'}
+        self._subsections = {'MACHINE_LEARNING': 'MACHINE_LEARNING', 'LINE_SEARCH': 'LINE_SEARCH'}
+        self._repeated_subsections = {'PRINT': '_print22'}
         self._attributes = ['PRINT_list']
 
     def PRINT_add(self, section_parameters=None):
-        new_section = _print20()
+        new_section = _print22()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters

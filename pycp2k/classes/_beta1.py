@@ -8,5 +8,5 @@ class _beta1(InputSection):
         self.L = None
         self.N = None
         self._name = "BETA"
-        self._keywords = {'N': 'N', 'Nel': 'NEL', 'L': 'L'}
+        self._keywords = {'Nel': 'NEL', 'L': 'L', 'N': 'N'}
 

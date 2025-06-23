@@ -15,7 +15,7 @@ class _gle3(InputSection):
         self.RNG_INIT = _rng_init6()
         self.S = _s3()
         self._name = "GLE"
-        self._keywords = {'A_scale': 'A_SCALE', 'Ndim': 'NDIM'}
-        self._repeated_keywords = {'C_list': 'C_LIST', 'A_list': 'A_LIST'}
-        self._subsections = {'RNG_INIT': 'RNG_INIT', 'THERMOSTAT_ENERGY': 'THERMOSTAT_ENERGY', 'S': 'S'}
+        self._keywords = {'Ndim': 'NDIM', 'A_scale': 'A_SCALE'}
+        self._repeated_keywords = {'A_list': 'A_LIST', 'C_list': 'C_LIST'}
+        self._subsections = {'THERMOSTAT_ENERGY': 'THERMOSTAT_ENERGY', 'RNG_INIT': 'RNG_INIT', 'S': 'S'}
 

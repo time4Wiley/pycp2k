@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each278 import _each278
+from ._each380 import _each380
 
 
 class _conv_info4(InputSection):
@@ -10,9 +10,9 @@ class _conv_info4(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each278()
+        self.EACH = _each380()
         self._name = "CONV_INFO"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

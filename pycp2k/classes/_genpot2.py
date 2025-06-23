@@ -14,6 +14,6 @@ class _genpot2(InputSection):
         self.Rmin = None
         self.Rmax = None
         self._name = "GENPOT"
-        self._keywords = {'Variables': 'VARIABLES', 'Atoms': 'ATOMS', 'Function': 'FUNCTION', 'Rcut': 'RCUT', 'Rmax': 'RMAX', 'Rmin': 'RMIN'}
-        self._repeated_keywords = {'Units': 'UNITS', 'Parameters': 'PARAMETERS', 'Values': 'VALUES'}
+        self._keywords = {'Atoms': 'ATOMS', 'Function': 'FUNCTION', 'Variables': 'VARIABLES', 'Rcut': 'RCUT', 'Rmin': 'RMIN', 'Rmax': 'RMAX'}
+        self._repeated_keywords = {'Parameters': 'PARAMETERS', 'Values': 'VALUES', 'Units': 'UNITS'}
 

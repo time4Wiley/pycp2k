@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each84 import _each84
+from ._each87 import _each87
 
 
 class _cell2(InputSection):
@@ -10,9 +10,9 @@ class _cell2(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each84()
+        self.EACH = _each87()
         self._name = "CELL"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

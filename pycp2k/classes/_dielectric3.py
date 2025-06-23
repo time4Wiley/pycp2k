@@ -15,7 +15,7 @@ class _dielectric3(InputSection):
         self.DIELEC_AA_CUBOIDAL_list = []
         self.DIELEC_XAA_ANNULAR_list = []
         self._name = "DIELECTRIC"
-        self._keywords = {'Rho_max': 'RHO_MAX', 'Dielectric_constant': 'DIELECTRIC_CONSTANT', 'Dielectric_function_type': 'DIELECTRIC_FUNCTION_TYPE', 'Derivative_method': 'DERIVATIVE_METHOD', 'Rho_min': 'RHO_MIN', 'Dielectric_core_correction': 'DIELECTRIC_CORE_CORRECTION'}
+        self._keywords = {'Dielectric_core_correction': 'DIELECTRIC_CORE_CORRECTION', 'Dielectric_function_type': 'DIELECTRIC_FUNCTION_TYPE', 'Dielectric_constant': 'DIELECTRIC_CONSTANT', 'Rho_min': 'RHO_MIN', 'Rho_max': 'RHO_MAX', 'Derivative_method': 'DERIVATIVE_METHOD'}
         self._repeated_subsections = {'DIELEC_AA_CUBOIDAL': '_dielec_aa_cuboidal3', 'DIELEC_XAA_ANNULAR': '_dielec_xaa_annular3'}
         self._aliases = {'Epsilon': 'Dielectric_constant'}
         self._attributes = ['DIELEC_AA_CUBOIDAL_list', 'DIELEC_XAA_ANNULAR_list']

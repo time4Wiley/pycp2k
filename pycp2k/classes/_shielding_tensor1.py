@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each364 import _each364
+from ._each474 import _each474
 
 
 class _shielding_tensor1(InputSection):
@@ -12,9 +12,9 @@ class _shielding_tensor1(InputSection):
         self.Log_print_key = None
         self.Atoms_lu_bounds = None
         self.Atoms_list = []
-        self.EACH = _each364()
+        self.EACH = _each474()
         self._name = "SHIELDING_TENSOR"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Atoms_lu_bounds': 'ATOMS_LU_BOUNDS', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Atoms_lu_bounds': 'ATOMS_LU_BOUNDS'}
         self._repeated_keywords = {'Atoms_list': 'ATOMS_LIST'}
         self._subsections = {'EACH': 'EACH'}
         self._aliases = {'Atoms_lu': 'Atoms_lu_bounds'}

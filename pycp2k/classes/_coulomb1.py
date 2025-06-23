@@ -8,5 +8,5 @@ class _coulomb1(InputSection):
         self.Rc_taper = None
         self.Rc_range = None
         self._name = "COULOMB"
-        self._keywords = {'Rc_range': 'RC_RANGE', 'Cutoff': 'CUTOFF', 'Rc_taper': 'RC_TAPER'}
+        self._keywords = {'Cutoff': 'CUTOFF', 'Rc_taper': 'RC_TAPER', 'Rc_range': 'RC_RANGE'}
 

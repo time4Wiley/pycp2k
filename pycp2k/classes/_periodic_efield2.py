@@ -9,5 +9,5 @@ class _periodic_efield2(InputSection):
         self.Displacement_field = None
         self.D_filter = None
         self._name = "PERIODIC_EFIELD"
-        self._keywords = {'Polarisation': 'POLARISATION', 'Intensity': 'INTENSITY', 'D_filter': 'D_FILTER', 'Displacement_field': 'DISPLACEMENT_FIELD'}
+        self._keywords = {'Intensity': 'INTENSITY', 'Polarisation': 'POLARISATION', 'Displacement_field': 'DISPLACEMENT_FIELD', 'D_filter': 'D_FILTER'}
 

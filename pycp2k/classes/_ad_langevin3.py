@@ -11,6 +11,6 @@ class _ad_langevin3(InputSection):
         self.CHI = _chi3()
         self.MASS = _mass7()
         self._name = "AD_LANGEVIN"
-        self._keywords = {'Timecon_langevin': 'TIMECON_LANGEVIN', 'Timecon_nh': 'TIMECON_NH'}
+        self._keywords = {'Timecon_nh': 'TIMECON_NH', 'Timecon_langevin': 'TIMECON_LANGEVIN'}
         self._subsections = {'CHI': 'CHI', 'MASS': 'MASS'}
 

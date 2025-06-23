@@ -26,7 +26,7 @@ class _pp_basis1(InputSection):
         self.Eps_eigenvalue = None
         self.BASIS = _basis5()
         self._name = "PP_BASIS"
-        self._keywords = {'Basis_set': 'BASIS_SET', 'Quadrature': 'QUADRATURE', 'Geometrical_factor': 'GEOMETRICAL_FACTOR', 'D_quantum_numbers': 'D_QUANTUM_NUMBERS', 'Num_gto': 'NUM_GTO', 'S_exponents': 'S_EXPONENTS', 'P_exponents': 'P_EXPONENTS', 'Eps_eigenvalue': 'EPS_EIGENVALUE', 'Basis_type': 'BASIS_TYPE', 'Num_slater': 'NUM_SLATER', 'S_quantum_numbers': 'S_QUANTUM_NUMBERS', 'Start_index': 'START_INDEX', 'Grid_points': 'GRID_POINTS', 'Basis_set_file_name': 'BASIS_SET_FILE_NAME', 'P_quantum_numbers': 'P_QUANTUM_NUMBERS', 'F_quantum_numbers': 'F_QUANTUM_NUMBERS', 'F_exponents': 'F_EXPONENTS', 'Geo_start_value': 'GEO_START_VALUE', 'D_exponents': 'D_EXPONENTS'}
+        self._keywords = {'Basis_type': 'BASIS_TYPE', 'Num_gto': 'NUM_GTO', 'Num_slater': 'NUM_SLATER', 'Start_index': 'START_INDEX', 'S_exponents': 'S_EXPONENTS', 'P_exponents': 'P_EXPONENTS', 'D_exponents': 'D_EXPONENTS', 'F_exponents': 'F_EXPONENTS', 'S_quantum_numbers': 'S_QUANTUM_NUMBERS', 'P_quantum_numbers': 'P_QUANTUM_NUMBERS', 'D_quantum_numbers': 'D_QUANTUM_NUMBERS', 'F_quantum_numbers': 'F_QUANTUM_NUMBERS', 'Geometrical_factor': 'GEOMETRICAL_FACTOR', 'Geo_start_value': 'GEO_START_VALUE', 'Basis_set_file_name': 'BASIS_SET_FILE_NAME', 'Basis_set': 'BASIS_SET', 'Quadrature': 'QUADRATURE', 'Grid_points': 'GRID_POINTS', 'Eps_eigenvalue': 'EPS_EIGENVALUE'}
         self._subsections = {'BASIS': 'BASIS'}
         self._aliases = {'Orbital_basis_set': 'Basis_set', 'Orb_basis': 'Basis_set'}
 

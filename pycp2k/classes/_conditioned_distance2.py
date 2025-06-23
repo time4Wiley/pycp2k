@@ -18,10 +18,10 @@ class _conditioned_distance2(InputSection):
         self.Lambda = None
         self.POINT_list = []
         self._name = "CONDITIONED_DISTANCE"
-        self._keywords = {'Nd': 'ND', 'Nn': 'NN', 'Lambda': 'LAMBDA', 'R0': 'R0'}
-        self._repeated_keywords = {'Atoms_from': 'ATOMS_FROM', 'Atoms_to': 'ATOMS_TO', 'Kinds_from': 'KINDS_FROM', 'Atoms_distance': 'ATOMS_DISTANCE', 'Kinds_to': 'KINDS_TO'}
+        self._keywords = {'R0': 'R0', 'Nn': 'NN', 'Nd': 'ND', 'Lambda': 'LAMBDA'}
+        self._repeated_keywords = {'Atoms_distance': 'ATOMS_DISTANCE', 'Atoms_from': 'ATOMS_FROM', 'Atoms_to': 'ATOMS_TO', 'Kinds_from': 'KINDS_FROM', 'Kinds_to': 'KINDS_TO'}
         self._repeated_subsections = {'POINT': '_point34'}
-        self._aliases = {'R_0': 'R0', 'Expon_denominator': 'Nd', 'Expon_numerator': 'Nn'}
+        self._aliases = {'R_0': 'R0', 'Expon_numerator': 'Nn', 'Expon_denominator': 'Nd'}
         self._repeated_aliases = {'Points_from': 'Atoms_from', 'Points_to': 'Atoms_to'}
         self._attributes = ['POINT_list']
 

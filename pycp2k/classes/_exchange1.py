@@ -8,5 +8,5 @@ class _exchange1(InputSection):
         self.Rc_taper = None
         self.Rc_range = None
         self._name = "EXCHANGE"
-        self._keywords = {'Rc_range': 'RC_RANGE', 'Cutoff': 'CUTOFF', 'Rc_taper': 'RC_TAPER'}
+        self._keywords = {'Cutoff': 'CUTOFF', 'Rc_taper': 'RC_TAPER', 'Rc_range': 'RC_RANGE'}
 

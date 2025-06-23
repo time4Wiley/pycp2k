@@ -25,6 +25,6 @@ class _acid_hydronium_shell3(InputSection):
         self.Lambda = None
         self.Lambda = None
         self._name = "ACID_HYDRONIUM_SHELL"
-        self._keywords = {'Qm': 'QM', 'Poo': 'POO', 'Qwoh': 'QWOH', 'Roo': 'ROO', 'Pwoh': 'PWOH', 'Lambda': 'LAMBDA', 'Paoh': 'PAOH', 'Qoo': 'QOO', 'Nh': 'NH', 'Qaoh': 'QAOH', 'Nc': 'NC', 'Rwoh': 'RWOH', 'Pcut': 'PCUT', 'Qcut': 'QCUT', 'Pm': 'PM', 'Raoh': 'RAOH'}
-        self._repeated_keywords = {'Oxygens_acid': 'OXYGENS_ACID', 'Hydrogens': 'HYDROGENS', 'Oxygens_water': 'OXYGENS_WATER'}
+        self._keywords = {'Pwoh': 'PWOH', 'Qwoh': 'QWOH', 'Rwoh': 'RWOH', 'Paoh': 'PAOH', 'Qaoh': 'QAOH', 'Raoh': 'RAOH', 'Poo': 'POO', 'Qoo': 'QOO', 'Roo': 'ROO', 'Pm': 'PM', 'Qm': 'QM', 'Nh': 'NH', 'Pcut': 'PCUT', 'Qcut': 'QCUT', 'Nc': 'NC', 'Lambda': 'LAMBDA'}
+        self._repeated_keywords = {'Oxygens_water': 'OXYGENS_WATER', 'Oxygens_acid': 'OXYGENS_ACID', 'Hydrogens': 'HYDROGENS'}
 

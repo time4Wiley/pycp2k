@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each166 import _each166
+from ._each232 import _each232
 
 
 class _program_run_info20(InputSection):
@@ -11,9 +11,9 @@ class _program_run_info20(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Condition_number = None
-        self.EACH = _each166()
+        self.EACH = _each232()
         self._name = "PROGRAM_RUN_INFO"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Condition_number': 'CONDITION_NUMBER'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Condition_number': 'CONDITION_NUMBER'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

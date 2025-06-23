@@ -15,7 +15,7 @@ class _diis1(InputSection):
         self.Check_diis = None
         self.DIIS_INFO = _diis_info1()
         self._name = "DIIS"
-        self._keywords = {'Np_ls': 'NP_LS', 'Stepsize': 'STEPSIZE', 'Check_diis': 'CHECK_DIIS', 'Max_stepsize': 'MAX_STEPSIZE', 'No_ls': 'NO_LS', 'Max_steps': 'MAX_STEPS', 'N_diis': 'N_DIIS', 'Max_sd_steps': 'MAX_SD_STEPS'}
+        self._keywords = {'Max_sd_steps': 'MAX_SD_STEPS', 'Max_steps': 'MAX_STEPS', 'N_diis': 'N_DIIS', 'Stepsize': 'STEPSIZE', 'Max_stepsize': 'MAX_STEPSIZE', 'Np_ls': 'NP_LS', 'No_ls': 'NO_LS', 'Check_diis': 'CHECK_DIIS'}
         self._subsections = {'DIIS_INFO': 'DIIS_INFO'}
         self._aliases = {'Ndiis': 'N_diis'}
 

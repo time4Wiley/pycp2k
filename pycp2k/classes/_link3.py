@@ -18,18 +18,10 @@ class _link3(InputSection):
         self.MOVE_MM_CHARGE_list = []
         self.ADD_MM_CHARGE_list = []
         self._name = "LINK"
-        self._keywords = {'Corr_radius': 'CORR_RADIUS', 'Mm_index': 'MM_INDEX', 'Qm_index': 'QM_INDEX', 'Alpha_imomm': 'ALPHA_IMOMM', 'Link_type': 'LINK_TYPE', 'Qmmm_scale_factor': 'QMMM_SCALE_FACTOR', 'Radius': 'RADIUS', 'Qm_kind': 'QM_KIND', 'Fist_scale_factor': 'FIST_SCALE_FACTOR'}
-        self._repeated_subsections = {'ADD_MM_CHARGE': '_add_mm_charge3', 'MOVE_MM_CHARGE': '_move_mm_charge3'}
-        self._aliases = {'Qm': 'Qm_index', 'Qmmm_charge_scale': 'Qmmm_scale_factor', 'Qmmm_charge_factor': 'Qmmm_scale_factor', 'Fist_charge_scale': 'Fist_scale_factor', 'Link': 'Link_type', 'Type': 'Link_type', 'Qmmm_scale_charge': 'Qmmm_scale_factor', 'Ltype': 'Link_type', 'Fist_scale_charge': 'Fist_scale_factor', 'Mm': 'Mm_index', 'Alpha': 'Alpha_imomm', 'Fist_charge_factor': 'Fist_scale_factor'}
+        self._keywords = {'Qm_index': 'QM_INDEX', 'Qm_kind': 'QM_KIND', 'Mm_index': 'MM_INDEX', 'Radius': 'RADIUS', 'Corr_radius': 'CORR_RADIUS', 'Link_type': 'LINK_TYPE', 'Alpha_imomm': 'ALPHA_IMOMM', 'Qmmm_scale_factor': 'QMMM_SCALE_FACTOR', 'Fist_scale_factor': 'FIST_SCALE_FACTOR'}
+        self._repeated_subsections = {'MOVE_MM_CHARGE': '_move_mm_charge3', 'ADD_MM_CHARGE': '_add_mm_charge3'}
+        self._aliases = {'Qm': 'Qm_index', 'Mm': 'Mm_index', 'Link': 'Link_type', 'Type': 'Link_type', 'Ltype': 'Link_type', 'Alpha': 'Alpha_imomm', 'Qmmm_charge_scale': 'Qmmm_scale_factor', 'Qmmm_charge_factor': 'Qmmm_scale_factor', 'Qmmm_scale_charge': 'Qmmm_scale_factor', 'Fist_charge_scale': 'Fist_scale_factor', 'Fist_charge_factor': 'Fist_scale_factor', 'Fist_scale_charge': 'Fist_scale_factor'}
         self._attributes = ['MOVE_MM_CHARGE_list', 'ADD_MM_CHARGE_list']
-
-    def ADD_MM_CHARGE_add(self, section_parameters=None):
-        new_section = _add_mm_charge3()
-        if section_parameters is not None:
-            if hasattr(new_section, 'Section_parameters'):
-                new_section.Section_parameters = section_parameters
-        self.ADD_MM_CHARGE_list.append(new_section)
-        return new_section
 
     def MOVE_MM_CHARGE_add(self, section_parameters=None):
         new_section = _move_mm_charge3()
@@ -37,6 +29,14 @@ class _link3(InputSection):
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters
         self.MOVE_MM_CHARGE_list.append(new_section)
+        return new_section
+
+    def ADD_MM_CHARGE_add(self, section_parameters=None):
+        new_section = _add_mm_charge3()
+        if section_parameters is not None:
+            if hasattr(new_section, 'Section_parameters'):
+                new_section.Section_parameters = section_parameters
+        self.ADD_MM_CHARGE_list.append(new_section)
         return new_section
 
 

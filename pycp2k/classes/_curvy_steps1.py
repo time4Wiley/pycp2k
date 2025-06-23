@@ -11,5 +11,5 @@ class _curvy_steps1(InputSection):
         self.Filter_factor_scale = None
         self.Min_filter = None
         self._name = "CURVY_STEPS"
-        self._keywords = {'Line_search': 'LINE_SEARCH', 'Filter_factor_scale': 'FILTER_FACTOR_SCALE', 'N_bch_history': 'N_BCH_HISTORY', 'Min_hessian_shift': 'MIN_HESSIAN_SHIFT', 'Min_filter': 'MIN_FILTER', 'Filter_factor': 'FILTER_FACTOR'}
+        self._keywords = {'Line_search': 'LINE_SEARCH', 'N_bch_history': 'N_BCH_HISTORY', 'Min_hessian_shift': 'MIN_HESSIAN_SHIFT', 'Filter_factor': 'FILTER_FACTOR', 'Filter_factor_scale': 'FILTER_FACTOR_SCALE', 'Min_filter': 'MIN_FILTER'}
 

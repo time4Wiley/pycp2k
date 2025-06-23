@@ -9,9 +9,11 @@ class _dimer1(InputSection):
         self.Dr = None
         self.Interpolate_gradient = None
         self.Angle_tolerance = None
+        self.K_dimer = None
+        self.Beta = None
         self.ROT_OPT = _rot_opt1()
         self.DIMER_VECTOR = _dimer_vector1()
         self._name = "DIMER"
-        self._keywords = {'Angle_tolerance': 'ANGLE_TOLERANCE', 'Dr': 'DR', 'Interpolate_gradient': 'INTERPOLATE_GRADIENT'}
+        self._keywords = {'Dr': 'DR', 'Interpolate_gradient': 'INTERPOLATE_GRADIENT', 'Angle_tolerance': 'ANGLE_TOLERANCE', 'K_dimer': 'K-DIMER', 'Beta': 'BETA'}
         self._subsections = {'ROT_OPT': 'ROT_OPT', 'DIMER_VECTOR': 'DIMER_VECTOR'}
 

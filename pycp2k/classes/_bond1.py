@@ -10,5 +10,5 @@ class _bond1(InputSection):
         self.Cs = None
         self.R0 = None
         self._name = "BOND"
-        self._keywords = {'Atoms': 'ATOMS', 'Cs': 'CS', 'Kind': 'KIND', 'K': 'K', 'R0': 'R0'}
+        self._keywords = {'Atoms': 'ATOMS', 'Kind': 'KIND', 'K': 'K', 'Cs': 'CS', 'R0': 'R0'}
 

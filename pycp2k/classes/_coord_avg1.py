@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each324 import _each324
+from ._each433 import _each433
 
 
 class _coord_avg1(InputSection):
@@ -10,9 +10,9 @@ class _coord_avg1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each324()
+        self.EACH = _each433()
         self._name = "COORD_AVG"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

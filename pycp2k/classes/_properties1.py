@@ -5,6 +5,8 @@ from ._resp1 import _resp1
 from ._atomic1 import _atomic1
 from ._fit_charge1 import _fit_charge1
 from ._tddfpt2 import _tddfpt2
+from ._bandstructure1 import _bandstructure1
+from ._tip_scan1 import _tip_scan1
 
 
 class _properties1(InputSection):
@@ -16,6 +18,8 @@ class _properties1(InputSection):
         self.ATOMIC = _atomic1()
         self.FIT_CHARGE = _fit_charge1()
         self.TDDFPT = _tddfpt2()
+        self.BANDSTRUCTURE = _bandstructure1()
+        self.TIP_SCAN = _tip_scan1()
         self._name = "PROPERTIES"
-        self._subsections = {'ET_COUPLING': 'ET_COUPLING', 'FIT_CHARGE': 'FIT_CHARGE', 'ATOMIC': 'ATOMIC', 'LINRES': 'LINRES', 'TDDFPT': 'TDDFPT', 'RESP': 'RESP'}
+        self._subsections = {'LINRES': 'LINRES', 'ET_COUPLING': 'ET_COUPLING', 'RESP': 'RESP', 'ATOMIC': 'ATOMIC', 'FIT_CHARGE': 'FIT_CHARGE', 'TDDFPT': 'TDDFPT', 'BANDSTRUCTURE': 'BANDSTRUCTURE', 'TIP_SCAN': 'TIP_SCAN'}
 

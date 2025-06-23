@@ -6,9 +6,10 @@ from ._nose6 import _nose6
 from ._gle4 import _gle4
 from ._pile1 import _pile1
 from ._piglet1 import _piglet1
+from ._qtb1 import _qtb1
 from ._init1 import _init1
 from ._helium1 import _helium1
-from ._print15 import _print15
+from ._print16 import _print16
 
 
 class _pint1(InputSection):
@@ -20,6 +21,7 @@ class _pint1(InputSection):
         self.Max_step = None
         self.Iteration = None
         self.Temp = None
+        self.Kt_correction = None
         self.T_tol = None
         self.Dt = None
         self.Harm_int = None
@@ -34,12 +36,13 @@ class _pint1(InputSection):
         self.GLE = _gle4()
         self.PILE = _pile1()
         self.PIGLET = _piglet1()
+        self.QTB = _qtb1()
         self.INIT = _init1()
         self.HELIUM = _helium1()
-        self.PRINT = _print15()
+        self.PRINT = _print16()
         self._name = "PINT"
-        self._keywords = {'Fix_centroid_pos': 'FIX_CENTROID_POS', 'Propagator': 'PROPAGATOR', 'Nrespa': 'NRESPA', 'Harm_int': 'HARM_INT', 'Temp': 'TEMP', 'T_tol': 'T_TOL', 'Num_steps': 'NUM_STEPS', 'P': 'P', 'Max_step': 'MAX_STEP', 'Iteration': 'ITERATION', 'Transformation': 'TRANSFORMATION', 'Dt': 'DT', 'Proc_per_replica': 'PROC_PER_REPLICA'}
-        self._subsections = {'PIGLET': 'PIGLET', 'NOSE': 'NOSE', 'GLE': 'GLE', 'HELIUM': 'HELIUM', 'PRINT': 'PRINT', 'STAGING': 'STAGING', 'BEADS': 'BEADS', 'INIT': 'INIT', 'PILE': 'PILE', 'NORMALMODE': 'NORMALMODE'}
+        self._keywords = {'P': 'P', 'Proc_per_replica': 'PROC_PER_REPLICA', 'Num_steps': 'NUM_STEPS', 'Max_step': 'MAX_STEP', 'Iteration': 'ITERATION', 'Temp': 'TEMP', 'Kt_correction': 'KT_CORRECTION', 'T_tol': 'T_TOL', 'Dt': 'DT', 'Harm_int': 'HARM_INT', 'Nrespa': 'NRESPA', 'Transformation': 'TRANSFORMATION', 'Propagator': 'PROPAGATOR', 'Fix_centroid_pos': 'FIX_CENTROID_POS'}
+        self._subsections = {'NORMALMODE': 'NORMALMODE', 'STAGING': 'STAGING', 'BEADS': 'BEADS', 'NOSE': 'NOSE', 'GLE': 'GLE', 'PILE': 'PILE', 'PIGLET': 'PIGLET', 'QTB': 'QTB', 'INIT': 'INIT', 'HELIUM': 'HELIUM', 'PRINT': 'PRINT'}
         self._aliases = {'Temp_to': 'T_tol'}
 
 

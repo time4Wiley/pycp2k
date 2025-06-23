@@ -1,11 +1,13 @@
 from pycp2k.inputsection import InputSection
-from ._k_matrix1 import _k_matrix1
+from ._local_bandgap4 import _local_bandgap4
+from ._gw_dos4 import _gw_dos4
 
 
 class _print56(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.K_MATRIX = _k_matrix1()
+        self.LOCAL_BANDGAP = _local_bandgap4()
+        self.GW_DOS = _gw_dos4()
         self._name = "PRINT"
-        self._subsections = {'K_MATRIX': 'K_MATRIX'}
+        self._subsections = {'LOCAL_BANDGAP': 'LOCAL_BANDGAP', 'GW_DOS': 'GW_DOS'}
 

@@ -1,15 +1,16 @@
 from pycp2k.inputsection import InputSection
 from ._distribution1 import _distribution1
 from ._dftb1 import _dftb1
+from ._xtb1 import _xtb1
 from ._se1 import _se1
 from ._mulliken_restraint1 import _mulliken_restraint1
 from ._ddapc_restraint1 import _ddapc_restraint1
-from ._becke_constraint1 import _becke_constraint1
 from ._cdft1 import _cdft1
 from ._s2_restraint1 import _s2_restraint1
-from ._lrigpw1 import _lrigpw1
+from ._lrigpw2 import _lrigpw2
 from ._optimize_lri_basis1 import _optimize_lri_basis1
 from ._opt_embed1 import _opt_embed1
+from ._opt_dmfet1 import _opt_dmfet1
 
 
 class _qs1(InputSection):
@@ -34,14 +35,18 @@ class _qs1(InputSection):
         self.Alpha0_hard = None
         self.Force_paw = None
         self.Max_rad_local = None
+        self.Gapw_1c_basis = None
+        self.Min_pair_list_radius = None
         self.Ls_scf = None
         self.Almo_scf = None
         self.Transport = None
         self.Kg_method = None
-        self.Map_consistent = None
         self.Ref_embed_subsys = None
         self.Cluster_embed_subsys = None
         self.High_level_embed_subsys = None
+        self.Dfet_embedded = None
+        self.Dmfet_embedded = None
+        self.Sto_ng = None
         self.Lmaxn1 = None
         self.Lmaxn0 = None
         self.Laddn0 = None
@@ -53,22 +58,26 @@ class _qs1(InputSection):
         self.Extrapolation_order = None
         self.Method = None
         self.Core_ppl = None
+        self.Embed_restart_file_name = None
+        self.Embed_cube_file_name = None
+        self.Embed_spin_cube_file_name = None
         self.DISTRIBUTION = _distribution1()
         self.DFTB = _dftb1()
+        self.XTB = _xtb1()
         self.SE = _se1()
         self.MULLIKEN_RESTRAINT = _mulliken_restraint1()
         self.DDAPC_RESTRAINT_list = []
-        self.BECKE_CONSTRAINT = _becke_constraint1()
         self.CDFT = _cdft1()
         self.S2_RESTRAINT = _s2_restraint1()
-        self.LRIGPW = _lrigpw1()
+        self.LRIGPW = _lrigpw2()
         self.OPTIMIZE_LRI_BASIS = _optimize_lri_basis1()
         self.OPT_EMBED = _opt_embed1()
+        self.OPT_DMFET = _opt_dmfet1()
         self._name = "QS"
-        self._keywords = {'Eps_filter_matrix': 'EPS_FILTER_MATRIX', 'Eps_gvg_rspace': 'EPS_GVG_RSPACE', 'Almo_scf': 'ALMO_SCF', 'Lmaxn1': 'LMAXN1', 'Eps_rho_gspace': 'EPS_RHO_GSPACE', 'Lmaxn0': 'LMAXN0', 'Pw_grid': 'PW_GRID', 'Eps_ppl': 'EPS_PPL', 'Laddn0': 'LADDN0', 'Alpha0_hard': 'ALPHA0_HARD', 'Core_ppl': 'CORE_PPL', 'Extrapolation_order': 'EXTRAPOLATION_ORDER', 'Map_consistent': 'MAP_CONSISTENT', 'Force_paw': 'FORCE_PAW', 'Epsrho0': 'EPSRHO0', 'Eps_kg_orb': 'EPS_KG_ORB', 'Eps_rho': 'EPS_RHO', 'Transport': 'TRANSPORT', 'Eps_rho_rspace': 'EPS_RHO_RSPACE', 'Pw_grid_layout': 'PW_GRID_LAYOUT', 'Kg_method': 'KG_METHOD', 'Epssvd': 'EPSSVD', 'Eps_cpc': 'EPS_CPC', 'High_level_embed_subsys': 'HIGH_LEVEL_EMBED_SUBSYS', 'Epsfit': 'EPSFIT', 'Epsiso': 'EPSISO', 'Eps_core_charge': 'EPS_CORE_CHARGE', 'Ls_scf': 'LS_SCF', 'Method': 'METHOD', 'Cluster_embed_subsys': 'CLUSTER_EMBED_SUBSYS', 'Eps_pgf_orb': 'EPS_PGF_ORB', 'Extrapolation': 'EXTRAPOLATION', 'Ref_embed_subsys': 'REF_EMBED_SUBSYS', 'Quadrature': 'QUADRATURE', 'Pw_grid_blocked': 'PW_GRID_BLOCKED', 'Eps_default': 'EPS_DEFAULT', 'Max_rad_local': 'MAX_RAD_LOCAL', 'Eps_ppnl': 'EPS_PPNL'}
-        self._subsections = {'SE': 'SE', 'DISTRIBUTION': 'DISTRIBUTION', 'DFTB': 'DFTB', 'CDFT': 'CDFT', 'MULLIKEN_RESTRAINT': 'MULLIKEN_RESTRAINT', 'BECKE_CONSTRAINT': 'BECKE_CONSTRAINT', 'S2_RESTRAINT': 'S2_RESTRAINT', 'LRIGPW': 'LRIGPW', 'OPT_EMBED': 'OPT_EMBED', 'OPTIMIZE_LRI_BASIS': 'OPTIMIZE_LRI_BASIS'}
+        self._keywords = {'Eps_default': 'EPS_DEFAULT', 'Eps_core_charge': 'EPS_CORE_CHARGE', 'Eps_gvg_rspace': 'EPS_GVG_RSPACE', 'Eps_pgf_orb': 'EPS_PGF_ORB', 'Eps_kg_orb': 'EPS_KG_ORB', 'Eps_ppl': 'EPS_PPL', 'Eps_ppnl': 'EPS_PPNL', 'Eps_cpc': 'EPS_CPC', 'Eps_rho': 'EPS_RHO', 'Eps_rho_rspace': 'EPS_RHO_RSPACE', 'Eps_rho_gspace': 'EPS_RHO_GSPACE', 'Eps_filter_matrix': 'EPS_FILTER_MATRIX', 'Epsfit': 'EPSFIT', 'Epsiso': 'EPSISO', 'Epssvd': 'EPSSVD', 'Epsrho0': 'EPSRHO0', 'Alpha0_hard': 'ALPHA0_HARD', 'Force_paw': 'FORCE_PAW', 'Max_rad_local': 'MAX_RAD_LOCAL', 'Gapw_1c_basis': 'GAPW_1C_BASIS', 'Min_pair_list_radius': 'MIN_PAIR_LIST_RADIUS', 'Ls_scf': 'LS_SCF', 'Almo_scf': 'ALMO_SCF', 'Transport': 'TRANSPORT', 'Kg_method': 'KG_METHOD', 'Ref_embed_subsys': 'REF_EMBED_SUBSYS', 'Cluster_embed_subsys': 'CLUSTER_EMBED_SUBSYS', 'High_level_embed_subsys': 'HIGH_LEVEL_EMBED_SUBSYS', 'Dfet_embedded': 'DFET_EMBEDDED', 'Dmfet_embedded': 'DMFET_EMBEDDED', 'Sto_ng': 'STO_NG', 'Lmaxn1': 'LMAXN1', 'Lmaxn0': 'LMAXN0', 'Laddn0': 'LADDN0', 'Quadrature': 'QUADRATURE', 'Pw_grid': 'PW_GRID', 'Pw_grid_layout': 'PW_GRID_LAYOUT', 'Pw_grid_blocked': 'PW_GRID_BLOCKED', 'Extrapolation': 'EXTRAPOLATION', 'Extrapolation_order': 'EXTRAPOLATION_ORDER', 'Method': 'METHOD', 'Core_ppl': 'CORE_PPL', 'Embed_restart_file_name': 'EMBED_RESTART_FILE_NAME', 'Embed_cube_file_name': 'EMBED_CUBE_FILE_NAME', 'Embed_spin_cube_file_name': 'EMBED_SPIN_CUBE_FILE_NAME'}
+        self._subsections = {'DISTRIBUTION': 'DISTRIBUTION', 'DFTB': 'DFTB', 'XTB': 'XTB', 'SE': 'SE', 'MULLIKEN_RESTRAINT': 'MULLIKEN_RESTRAINT', 'CDFT': 'CDFT', 'S2_RESTRAINT': 'S2_RESTRAINT', 'LRIGPW': 'LRIGPW', 'OPTIMIZE_LRI_BASIS': 'OPTIMIZE_LRI_BASIS', 'OPT_EMBED': 'OPT_EMBED', 'OPT_DMFET': 'OPT_DMFET'}
         self._repeated_subsections = {'DDAPC_RESTRAINT': '_ddapc_restraint1'}
-        self._aliases = {'Lmaxrho1': 'Lmaxn1', 'Interpolation': 'Extrapolation', 'Wf_interpolation': 'Extrapolation', 'Lmaxrho0': 'Lmaxn0', 'Eps_fit': 'Epsfit', 'Eps_vrho0': 'Epsrho0', 'Alpha0_h': 'Alpha0_hard', 'Epsvrho0': 'Epsrho0', 'Eps_iso': 'Epsiso', 'Eps_gvg': 'Eps_gvg_rspace', 'Alpha0': 'Alpha0_hard', 'Eps_svd': 'Epssvd'}
+        self._aliases = {'Eps_gvg': 'Eps_gvg_rspace', 'Eps_fit': 'Epsfit', 'Eps_iso': 'Epsiso', 'Eps_svd': 'Epssvd', 'Epsvrho0': 'Epsrho0', 'Eps_vrho0': 'Epsrho0', 'Alpha0_h': 'Alpha0_hard', 'Alpha0': 'Alpha0_hard', 'Lmaxrho1': 'Lmaxn1', 'Lmaxrho0': 'Lmaxn0', 'Interpolation': 'Extrapolation', 'Wf_interpolation': 'Extrapolation'}
         self._attributes = ['DDAPC_RESTRAINT_list']
 
     def DDAPC_RESTRAINT_add(self, section_parameters=None):

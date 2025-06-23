@@ -10,5 +10,5 @@ class _alpha1(InputSection):
         self.N = None
         self.N = None
         self._name = "ALPHA"
-        self._keywords = {'N': 'N', 'Nel': 'NEL', 'L': 'L'}
+        self._keywords = {'Nel': 'NEL', 'L': 'L', 'N': 'N'}
 

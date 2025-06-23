@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each318 import _each318
+from ._each427 import _each427
 
 
 class _qs_derivatives1(InputSection):
@@ -10,9 +10,9 @@ class _qs_derivatives1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each318()
+        self.EACH = _each427()
         self._name = "QS_DERIVATIVES"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

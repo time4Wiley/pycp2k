@@ -17,9 +17,9 @@ class _poisson1(InputSection):
         self.EWALD = _ewald1()
         self.IMPLICIT = _implicit1()
         self._name = "POISSON"
-        self._keywords = {'Periodic': 'PERIODIC', 'Poisson_solver': 'POISSON_SOLVER'}
-        self._subsections = {'MULTIPOLE': 'MULTIPOLE', 'MT': 'MT', 'WAVELET': 'WAVELET', 'EWALD': 'EWALD', 'IMPLICIT': 'IMPLICIT'}
-        self._aliases = {'Psolver': 'Poisson_solver', 'Poisson': 'Poisson_solver'}
+        self._keywords = {'Poisson_solver': 'POISSON_SOLVER', 'Periodic': 'PERIODIC'}
+        self._subsections = {'MT': 'MT', 'WAVELET': 'WAVELET', 'MULTIPOLE': 'MULTIPOLE', 'EWALD': 'EWALD', 'IMPLICIT': 'IMPLICIT'}
+        self._aliases = {'Poisson': 'Poisson_solver', 'Psolver': 'Poisson_solver'}
 
 
     @property

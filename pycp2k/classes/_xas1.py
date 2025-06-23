@@ -1,7 +1,7 @@
 from pycp2k.inputsection import InputSection
 from ._scf2 import _scf2
 from ._localize1 import _localize1
-from ._print35 import _print35
+from ._print64 import _print64
 
 
 class _xas1(InputSection):
@@ -16,8 +16,12 @@ class _xas1(InputSection):
         self.Dipole_form = None
         self.State_type = None
         self.State_search = None
+        self.Spin_channel = None
         self.Atoms_list = []
         self.At_list = self.Atoms_list
+        self.Overlap_threshold = None
+        self.Orbital_list = []
+        self.Orbital_list = []
         self.Added_mos = None
         self.Max_iter_added = None
         self.Eps_added = None
@@ -26,12 +30,12 @@ class _xas1(InputSection):
         self.Wfn_restart_file_name = None
         self.SCF = _scf2()
         self.LOCALIZE = _localize1()
-        self.PRINT = _print35()
+        self.PRINT = _print64()
         self._name = "XAS"
-        self._keywords = {'Method': 'METHOD', 'Eps_added': 'EPS_ADDED', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME', 'Xas_core': 'XAS_CORE', 'Added_mos': 'ADDED_MOS', 'Xes_empty_homo': 'XES_EMPTY_HOMO', 'State_search': 'STATE_SEARCH', 'Dipole_form': 'DIPOLE_FORM', 'Ngauss': 'NGAUSS', 'Restart': 'RESTART', 'Xes_core': 'XES_CORE', 'Xas_tot_el': 'XAS_TOT_EL', 'Max_iter_added': 'MAX_ITER_ADDED', 'State_type': 'STATE_TYPE'}
-        self._repeated_keywords = {'Atoms_list': 'ATOMS_LIST'}
-        self._subsections = {'LOCALIZE': 'LOCALIZE', 'SCF': 'SCF', 'PRINT': 'PRINT'}
-        self._aliases = {'Dip_form': 'Dipole_form', 'Xas_method': 'Method', 'Restart_file_name': 'Wfn_restart_file_name', 'Type': 'State_type'}
+        self._keywords = {'Method': 'METHOD', 'Xas_core': 'XAS_CORE', 'Xas_tot_el': 'XAS_TOT_EL', 'Xes_core': 'XES_CORE', 'Xes_empty_homo': 'XES_EMPTY_HOMO', 'Dipole_form': 'DIPOLE_FORM', 'State_type': 'STATE_TYPE', 'State_search': 'STATE_SEARCH', 'Spin_channel': 'SPIN_CHANNEL', 'Overlap_threshold': 'OVERLAP_THRESHOLD', 'Added_mos': 'ADDED_MOS', 'Max_iter_added': 'MAX_ITER_ADDED', 'Eps_added': 'EPS_ADDED', 'Ngauss': 'NGAUSS', 'Restart': 'RESTART', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME'}
+        self._repeated_keywords = {'Atoms_list': 'ATOMS_LIST', 'Orbital_list': 'ORBITAL_LIST'}
+        self._subsections = {'SCF': 'SCF', 'LOCALIZE': 'LOCALIZE', 'PRINT': 'PRINT'}
+        self._aliases = {'Xas_method': 'Method', 'Dip_form': 'Dipole_form', 'Type': 'State_type', 'Restart_file_name': 'Wfn_restart_file_name'}
         self._repeated_aliases = {'At_list': 'Atoms_list'}
         self._attributes = ['Section_parameters']
 

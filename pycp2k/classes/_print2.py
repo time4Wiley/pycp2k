@@ -9,5 +9,5 @@ class _print2(InputSection):
         self.PROGRAM_RUN_INFO = _program_run_info4()
         self.ROTATIONAL_INFO = _rotational_info1()
         self._name = "PRINT"
-        self._subsections = {'ROTATIONAL_INFO': 'ROTATIONAL_INFO', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'ROTATIONAL_INFO': 'ROTATIONAL_INFO'}
 

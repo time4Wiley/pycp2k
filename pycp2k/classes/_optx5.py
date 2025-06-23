@@ -10,6 +10,6 @@ class _optx5(InputSection):
         self.A2 = None
         self.Gamma = None
         self._name = "OPTX"
-        self._keywords = {'A1': 'A1', 'A2': 'A2', 'Scale_x': 'SCALE_X', 'Gamma': 'GAMMA'}
+        self._keywords = {'Scale_x': 'SCALE_X', 'A1': 'A1', 'A2': 'A2', 'Gamma': 'GAMMA'}
         self._attributes = ['Section_parameters']
 

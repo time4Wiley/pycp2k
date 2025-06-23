@@ -1,22 +1,19 @@
 from pycp2k.inputsection import InputSection
-from ._program_run_info16 import _program_run_info16
 
 
 class _hirshfeld_constraint1(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Strength = None
-        self.Target = None
-        self.Atoms = None
-        self.Coeff = []
-        self.Self_consistent = None
         self.Shape_function = None
-        self.Reference_charge = None
-        self.User_radius = None
+        self.Gaussian_shape = None
+        self.Gaussian_radius = None
         self.Atomic_radii = None
-        self.PROGRAM_RUN_INFO = _program_run_info16()
+        self.Use_bohr = None
+        self.Print_density = None
+        self.Atoms_memory = None
+        self.Use_atomic_cutoff = None
+        self.Eps_cutoff = None
+        self.Atomic_cutoff = None
         self._name = "HIRSHFELD_CONSTRAINT"
-        self._keywords = {'Atoms': 'ATOMS', 'Shape_function': 'SHAPE_FUNCTION', 'User_radius': 'USER_RADIUS', 'Target': 'TARGET', 'Atomic_radii': 'ATOMIC_RADII', 'Self_consistent': 'SELF_CONSISTENT', 'Strength': 'STRENGTH', 'Reference_charge': 'REFERENCE_CHARGE'}
-        self._repeated_keywords = {'Coeff': 'COEFF'}
-        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._keywords = {'Shape_function': 'SHAPE_FUNCTION', 'Gaussian_shape': 'GAUSSIAN_SHAPE', 'Gaussian_radius': 'GAUSSIAN_RADIUS', 'Atomic_radii': 'ATOMIC_RADII', 'Use_bohr': 'USE_BOHR', 'Print_density': 'PRINT_DENSITY', 'Atoms_memory': 'ATOMS_MEMORY', 'Use_atomic_cutoff': 'USE_ATOMIC_CUTOFF', 'Eps_cutoff': 'EPS_CUTOFF', 'Atomic_cutoff': 'ATOMIC_CUTOFF'}
 

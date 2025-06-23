@@ -9,5 +9,5 @@ class _print11(InputSection):
         self.TEMPERATURE = _temperature4()
         self.LANGEVIN_REGIONS = _langevin_regions1()
         self._name = "PRINT"
-        self._subsections = {'LANGEVIN_REGIONS': 'LANGEVIN_REGIONS', 'TEMPERATURE': 'TEMPERATURE'}
+        self._subsections = {'TEMPERATURE': 'TEMPERATURE', 'LANGEVIN_REGIONS': 'LANGEVIN_REGIONS'}
 

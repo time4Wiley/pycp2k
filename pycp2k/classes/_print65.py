@@ -1,15 +1,19 @@
 from pycp2k.inputsection import InputSection
-from ._worker_run_info1 import _worker_run_info1
-from ._master_run_info1 import _master_run_info1
-from ._communication_log1 import _communication_log1
+from ._spectrum1 import _spectrum1
+from ._restart_wfn1 import _restart_wfn1
+from ._pdos2 import _pdos2
+from ._cubes3 import _cubes3
+from ._restart10 import _restart10
 
 
 class _print65(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.WORKER_RUN_INFO = _worker_run_info1()
-        self.MASTER_RUN_INFO = _master_run_info1()
-        self.COMMUNICATION_LOG = _communication_log1()
+        self.SPECTRUM = _spectrum1()
+        self.RESTART_WFN = _restart_wfn1()
+        self.PDOS = _pdos2()
+        self.CUBES = _cubes3()
+        self.RESTART = _restart10()
         self._name = "PRINT"
-        self._subsections = {'MASTER_RUN_INFO': 'MASTER_RUN_INFO', 'WORKER_RUN_INFO': 'WORKER_RUN_INFO', 'COMMUNICATION_LOG': 'COMMUNICATION_LOG'}
+        self._subsections = {'SPECTRUM': 'SPECTRUM', 'RESTART_WFN': 'RESTART_WFN', 'PDOS': 'PDOS', 'CUBES': 'CUBES', 'RESTART': 'RESTART'}
 

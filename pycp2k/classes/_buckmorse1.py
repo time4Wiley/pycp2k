@@ -18,5 +18,5 @@ class _buckmorse1(InputSection):
         self.Rmin = None
         self.Rmax = None
         self._name = "BUCKMORSE"
-        self._keywords = {'F0': 'F0', 'A2': 'A2', 'Rmax': 'RMAX', 'C': 'C', 'B2': 'B2', 'Beta': 'BETA', 'A1': 'A1', 'Atoms': 'ATOMS', 'Rcut': 'RCUT', 'B1': 'B1', 'D': 'D', 'Rmin': 'RMIN', 'R0': 'R0'}
+        self._keywords = {'Atoms': 'ATOMS', 'F0': 'F0', 'A1': 'A1', 'A2': 'A2', 'B1': 'B1', 'B2': 'B2', 'C': 'C', 'D': 'D', 'R0': 'R0', 'Beta': 'BETA', 'Rcut': 'RCUT', 'Rmin': 'RMIN', 'Rmax': 'RMAX'}
 

@@ -10,8 +10,8 @@ class _dielec_xaa_annular1(InputSection):
         self.Base_radii = None
         self.Smoothing_width = None
         self._name = "DIELEC_XAA_ANNULAR"
-        self._keywords = {'Base_radii': 'BASE_RADII', 'Dielectric_constant': 'DIELECTRIC_CONSTANT', 'Base_center': 'BASE_CENTER', 'Smoothing_width': 'SMOOTHING_WIDTH', 'X_xtnt': 'X_XTNT'}
-        self._aliases = {'Zeta': 'Smoothing_width', 'Epsilon': 'Dielectric_constant'}
+        self._keywords = {'Dielectric_constant': 'DIELECTRIC_CONSTANT', 'X_xtnt': 'X_XTNT', 'Base_center': 'BASE_CENTER', 'Base_radii': 'BASE_RADII', 'Smoothing_width': 'SMOOTHING_WIDTH'}
+        self._aliases = {'Epsilon': 'Dielectric_constant', 'Zeta': 'Smoothing_width'}
 
 
     @property

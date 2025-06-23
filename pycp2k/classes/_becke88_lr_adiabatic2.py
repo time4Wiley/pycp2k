@@ -9,6 +9,6 @@ class _becke88_lr_adiabatic2(InputSection):
         self.Omega = None
         self.Lambda = None
         self._name = "BECKE88_LR_ADIABATIC"
-        self._keywords = {'Omega': 'OMEGA', 'Scale_x': 'SCALE_X', 'Lambda': 'LAMBDA'}
+        self._keywords = {'Scale_x': 'SCALE_X', 'Omega': 'OMEGA', 'Lambda': 'LAMBDA'}
         self._attributes = ['Section_parameters']
 

@@ -11,5 +11,5 @@ class _csvr3(InputSection):
         self.RNG_INIT = _rng_init5()
         self._name = "CSVR"
         self._keywords = {'Timecon': 'TIMECON'}
-        self._subsections = {'RNG_INIT': 'RNG_INIT', 'THERMOSTAT_ENERGY': 'THERMOSTAT_ENERGY'}
+        self._subsections = {'THERMOSTAT_ENERGY': 'THERMOSTAT_ENERGY', 'RNG_INIT': 'RNG_INIT'}
 

@@ -9,5 +9,5 @@ class _print4(InputSection):
         self.PROGRAM_RUN_INFO = _program_run_info6()
         self.CELL = _cell1()
         self._name = "PRINT"
-        self._subsections = {'CELL': 'CELL', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'CELL': 'CELL'}
 

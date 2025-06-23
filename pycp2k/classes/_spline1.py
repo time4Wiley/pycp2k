@@ -12,5 +12,5 @@ class _spline1(InputSection):
         self.Npoints = None
         self.Unique_spline = None
         self._name = "SPLINE"
-        self._keywords = {'Emax_spline': 'EMAX_SPLINE', 'Eps_spline': 'EPS_SPLINE', 'R0_nb': 'R0_NB', 'Unique_spline': 'UNIQUE_SPLINE', 'Rcut_nb': 'RCUT_NB', 'Npoints': 'NPOINTS', 'Emax_accuracy': 'EMAX_ACCURACY'}
+        self._keywords = {'R0_nb': 'R0_NB', 'Rcut_nb': 'RCUT_NB', 'Emax_spline': 'EMAX_SPLINE', 'Emax_accuracy': 'EMAX_ACCURACY', 'Eps_spline': 'EPS_SPLINE', 'Npoints': 'NPOINTS', 'Unique_spline': 'UNIQUE_SPLINE'}
 

@@ -12,6 +12,6 @@ class _bfgs2(InputSection):
         self.Restart_file_name = None
         self.RESTART = _restart2()
         self._name = "BFGS"
-        self._keywords = {'Use_model_hessian': 'USE_MODEL_HESSIAN', 'Trust_radius': 'TRUST_RADIUS', 'Restart_hessian': 'RESTART_HESSIAN', 'Use_rat_fun_opt': 'USE_RAT_FUN_OPT', 'Restart_file_name': 'RESTART_FILE_NAME'}
+        self._keywords = {'Trust_radius': 'TRUST_RADIUS', 'Use_model_hessian': 'USE_MODEL_HESSIAN', 'Use_rat_fun_opt': 'USE_RAT_FUN_OPT', 'Restart_hessian': 'RESTART_HESSIAN', 'Restart_file_name': 'RESTART_FILE_NAME'}
         self._subsections = {'RESTART': 'RESTART'}
 

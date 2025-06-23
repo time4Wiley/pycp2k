@@ -11,5 +11,5 @@ class _nose6(InputSection):
         self.VELOCITY = _velocity8()
         self._name = "NOSE"
         self._keywords = {'Nnos': 'NNOS'}
-        self._subsections = {'VELOCITY': 'VELOCITY', 'COORD': 'COORD'}
+        self._subsections = {'COORD': 'COORD', 'VELOCITY': 'VELOCITY'}
 

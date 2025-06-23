@@ -8,5 +8,5 @@ class _vel_control1(InputSection):
         self.Proj_velocity_verlet = None
         self.Sd_like = None
         self._name = "VEL_CONTROL"
-        self._keywords = {'Proj_velocity_verlet': 'PROJ_VELOCITY_VERLET', 'Sd_like': 'SD_LIKE', 'Annealing': 'ANNEALING'}
+        self._keywords = {'Annealing': 'ANNEALING', 'Proj_velocity_verlet': 'PROJ_VELOCITY_VERLET', 'Sd_like': 'SD_LIKE'}
 

@@ -8,5 +8,5 @@ class _mulliken_restraint1(InputSection):
         self.Target = None
         self.Atoms = None
         self._name = "MULLIKEN_RESTRAINT"
-        self._keywords = {'Atoms': 'ATOMS', 'Strength': 'STRENGTH', 'Target': 'TARGET'}
+        self._keywords = {'Strength': 'STRENGTH', 'Target': 'TARGET', 'Atoms': 'ATOMS'}
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each114 import _each114
+from ._each548 import _each548
 
 
 class _mos_molden1(InputSection):
@@ -11,9 +11,10 @@ class _mos_molden1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Ndigits = None
-        self.EACH = _each114()
+        self.Gto_kind = None
+        self.EACH = _each548()
         self._name = "MOS_MOLDEN"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Ndigits': 'NDIGITS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Ndigits': 'NDIGITS', 'Gto_kind': 'GTO_KIND'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

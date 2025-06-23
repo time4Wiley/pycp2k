@@ -1,13 +1,13 @@
 from pycp2k.inputsection import InputSection
 from ._job1 import _job1
-from ._program_run_info48 import _program_run_info48
-from ._restart14 import _restart14
+from ._program_run_info47 import _program_run_info47
+from ._restart16 import _restart16
 
 
 class _farming1(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Master_slave = None
+        self.Captain_minion = None
         self.Ngroups = None
         self.Group_size = None
         self.Stride = None
@@ -18,11 +18,11 @@ class _farming1(InputSection):
         self.Do_restart = None
         self.Restart_file_name = None
         self.JOB_list = []
-        self.PROGRAM_RUN_INFO = _program_run_info48()
-        self.RESTART = _restart14()
+        self.PROGRAM_RUN_INFO = _program_run_info47()
+        self.RESTART = _restart16()
         self._name = "FARMING"
-        self._keywords = {'Wait_time': 'WAIT_TIME', 'Ngroups': 'NGROUPS', 'Group_partition': 'GROUP_PARTITION', 'Restart_file_name': 'RESTART_FILE_NAME', 'Cycle': 'CYCLE', 'Do_restart': 'DO_RESTART', 'Master_slave': 'MASTER_SLAVE', 'Group_size': 'GROUP_SIZE', 'Stride': 'STRIDE', 'Max_jobs_per_group': 'MAX_JOBS_PER_GROUP'}
-        self._subsections = {'RESTART': 'RESTART', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._keywords = {'Captain_minion': 'CAPTAIN_MINION', 'Ngroups': 'NGROUPS', 'Group_size': 'GROUP_SIZE', 'Stride': 'STRIDE', 'Group_partition': 'GROUP_PARTITION', 'Max_jobs_per_group': 'MAX_JOBS_PER_GROUP', 'Cycle': 'CYCLE', 'Wait_time': 'WAIT_TIME', 'Do_restart': 'DO_RESTART', 'Restart_file_name': 'RESTART_FILE_NAME'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'RESTART': 'RESTART'}
         self._repeated_subsections = {'JOB': '_job1'}
         self._aliases = {'Ngroup': 'Ngroups', 'Max_jobs': 'Max_jobs_per_group'}
         self._attributes = ['JOB_list']

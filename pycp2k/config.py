@@ -1,8 +1,6 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
+# Default configuration for pycp2k
 cp2k_default_command = "cp2k.popt"
-mpi_default_command = ""
+build_revision = "unknown"
+build_version = "unknown"
 mpi_on_default = False
-build_version = "5.1"
-build_revision = "svn:18091"
+mpi_default_command = "mpirun -np"

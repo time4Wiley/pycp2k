@@ -11,5 +11,5 @@ class _implicit_psolver1(InputSection):
         self.DIRICHLET_BC_CUBE = _dirichlet_bc_cube1()
         self.DIRICHLET_CSTR_CHARGE_CUBE = _dirichlet_cstr_charge_cube1()
         self._name = "IMPLICIT_PSOLVER"
-        self._subsections = {'DIRICHLET_BC_CUBE': 'DIRICHLET_BC_CUBE', 'DIRICHLET_CSTR_CHARGE_CUBE': 'DIRICHLET_CSTR_CHARGE_CUBE', 'DIELECTRIC_CUBE': 'DIELECTRIC_CUBE'}
+        self._subsections = {'DIELECTRIC_CUBE': 'DIELECTRIC_CUBE', 'DIRICHLET_BC_CUBE': 'DIRICHLET_BC_CUBE', 'DIRICHLET_CSTR_CHARGE_CUBE': 'DIRICHLET_CSTR_CHARGE_CUBE'}
 

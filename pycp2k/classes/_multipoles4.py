@@ -9,5 +9,5 @@ class _multipoles4(InputSection):
         self.DIPOLES = _dipoles1()
         self.QUADRUPOLES = _quadrupoles1()
         self._name = "MULTIPOLES"
-        self._subsections = {'QUADRUPOLES': 'QUADRUPOLES', 'DIPOLES': 'DIPOLES'}
+        self._subsections = {'DIPOLES': 'DIPOLES', 'QUADRUPOLES': 'QUADRUPOLES'}
 

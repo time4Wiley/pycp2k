@@ -8,5 +8,5 @@ class _s2_restraint1(InputSection):
         self.Target = None
         self.Functional_form = None
         self._name = "S2_RESTRAINT"
-        self._keywords = {'Functional_form': 'FUNCTIONAL_FORM', 'Strength': 'STRENGTH', 'Target': 'TARGET'}
+        self._keywords = {'Strength': 'STRENGTH', 'Target': 'TARGET', 'Functional_form': 'FUNCTIONAL_FORM'}
 

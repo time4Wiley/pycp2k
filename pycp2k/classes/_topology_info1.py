@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each342 import _each342
+from ._each451 import _each451
 
 
 class _topology_info1(InputSection):
@@ -21,9 +21,9 @@ class _topology_info1(InputSection):
         self.Gtop_info = None
         self.Util_info = None
         self.Generate_info = None
-        self.EACH = _each342()
+        self.EACH = _each451()
         self._name = "TOPOLOGY_INFO"
-        self._keywords = {'Cif_info': 'CIF_INFO', 'Xtl_info': 'XTL_INFO', 'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Pdb_info': 'PDB_INFO', 'Gtop_info': 'GTOP_INFO', 'Psf_info': 'PSF_INFO', 'Crd_info': 'CRD_INFO', 'Amber_info': 'AMBER_INFO', 'Xyz_info': 'XYZ_INFO', 'Filename': 'FILENAME', 'Util_info': 'UTIL_INFO', 'Generate_info': 'GENERATE_INFO', 'G96_info': 'G96_INFO'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Xtl_info': 'XTL_INFO', 'Cif_info': 'CIF_INFO', 'Pdb_info': 'PDB_INFO', 'Xyz_info': 'XYZ_INFO', 'Psf_info': 'PSF_INFO', 'Amber_info': 'AMBER_INFO', 'G96_info': 'G96_INFO', 'Crd_info': 'CRD_INFO', 'Gtop_info': 'GTOP_INFO', 'Util_info': 'UTIL_INFO', 'Generate_info': 'GENERATE_INFO'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

@@ -13,5 +13,5 @@ class _print13(InputSection):
         self.COLVAR = _colvar1()
         self.HILLS = _hills1()
         self._name = "PRINT"
-        self._subsections = {'TEMPERATURE_COLVAR': 'TEMPERATURE_COLVAR', 'HILLS': 'HILLS', 'COLVAR': 'COLVAR', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'TEMPERATURE_COLVAR': 'TEMPERATURE_COLVAR', 'COLVAR': 'COLVAR', 'HILLS': 'HILLS'}
 

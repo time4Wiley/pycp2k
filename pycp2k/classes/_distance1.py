@@ -7,9 +7,10 @@ class _distance1(InputSection):
         InputSection.__init__(self)
         self.Atoms = None
         self.Axis = None
+        self.Sign = None
         self.POINT_list = []
         self._name = "DISTANCE"
-        self._keywords = {'Atoms': 'ATOMS', 'Axis': 'AXIS'}
+        self._keywords = {'Atoms': 'ATOMS', 'Axis': 'AXIS', 'Sign': 'SIGN'}
         self._repeated_subsections = {'POINT': '_point1'}
         self._aliases = {'Points': 'Atoms'}
         self._attributes = ['POINT_list']

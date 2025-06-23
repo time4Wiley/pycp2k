@@ -9,7 +9,7 @@ class _configuration1(InputSection):
         self.Multiplicity = None
         self.Charge = None
         self._name = "CONFIGURATION"
-        self._keywords = {'Glb_conf': 'GLB_CONF', 'Multiplicity': 'MULTIPLICITY', 'Sub_conf': 'SUB_CONF', 'Charge': 'CHARGE'}
+        self._keywords = {'Glb_conf': 'GLB_CONF', 'Sub_conf': 'SUB_CONF', 'Multiplicity': 'MULTIPLICITY', 'Charge': 'CHARGE'}
         self._aliases = {'Multip': 'Multiplicity'}
 
 

@@ -8,7 +8,7 @@ class _langevin1(InputSection):
         self.Noisy_gamma = None
         self.Shadow_gamma = None
         self._name = "LANGEVIN"
-        self._keywords = {'Noisy_gamma': 'NOISY_GAMMA', 'Gamma': 'GAMMA', 'Shadow_gamma': 'SHADOW_GAMMA'}
+        self._keywords = {'Gamma': 'GAMMA', 'Noisy_gamma': 'NOISY_GAMMA', 'Shadow_gamma': 'SHADOW_GAMMA'}
         self._aliases = {'Noisygamma': 'Noisy_gamma', 'Shadowgamma': 'Shadow_gamma'}
 
 

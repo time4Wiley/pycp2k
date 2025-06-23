@@ -13,6 +13,6 @@ class _machine_learning1(InputSection):
         self.Gp_scale = None
         self.TRAINING_SET = _training_set1()
         self._name = "MACHINE_LEARNING"
-        self._keywords = {'Descriptor': 'DESCRIPTOR', 'Method': 'METHOD', 'Gp_noise_var': 'GP_NOISE_VAR', 'Tolerance': 'TOLERANCE', 'Prior': 'PRIOR', 'Gp_scale': 'GP_SCALE'}
+        self._keywords = {'Method': 'METHOD', 'Prior': 'PRIOR', 'Descriptor': 'DESCRIPTOR', 'Tolerance': 'TOLERANCE', 'Gp_noise_var': 'GP_NOISE_VAR', 'Gp_scale': 'GP_SCALE'}
         self._subsections = {'TRAINING_SET': 'TRAINING_SET'}
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each415 import _each415
+from ._each573 import _each573
 
 
 class _minima_trajectory1(InputSection):
@@ -11,9 +11,9 @@ class _minima_trajectory1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Unit = None
-        self.EACH = _each415()
+        self.EACH = _each573()
         self._name = "MINIMA_TRAJECTORY"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Unit': 'UNIT'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

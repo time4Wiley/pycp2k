@@ -19,8 +19,8 @@ class _thermostat2(InputSection):
         self.AD_LANGEVIN = _ad_langevin2()
         self.PRINT = _print8()
         self._name = "THERMOSTAT"
-        self._keywords = {'Region': 'REGION', 'Type': 'TYPE'}
-        self._subsections = {'AD_LANGEVIN': 'AD_LANGEVIN', 'NOSE': 'NOSE', 'GLE': 'GLE', 'CSVR': 'CSVR', 'PRINT': 'PRINT'}
+        self._keywords = {'Type': 'TYPE', 'Region': 'REGION'}
+        self._subsections = {'NOSE': 'NOSE', 'CSVR': 'CSVR', 'GLE': 'GLE', 'AD_LANGEVIN': 'AD_LANGEVIN', 'PRINT': 'PRINT'}
         self._repeated_subsections = {'DEFINE_REGION': '_define_region1'}
         self._attributes = ['DEFINE_REGION_list']
 

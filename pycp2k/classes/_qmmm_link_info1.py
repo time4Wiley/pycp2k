@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each317 import _each317
+from ._each426 import _each426
 
 
 class _qmmm_link_info1(InputSection):
@@ -10,9 +10,9 @@ class _qmmm_link_info1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each317()
+        self.EACH = _each426()
         self._name = "QMMM_LINK_INFO"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

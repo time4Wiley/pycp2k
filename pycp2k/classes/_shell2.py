@@ -13,8 +13,8 @@ class _shell2(InputSection):
         self.Max_distance = None
         self.Shell_cutoff = None
         self._name = "SHELL"
-        self._keywords = {'K2_spring': 'K2_SPRING', 'Mass_fraction': 'MASS_FRACTION', 'K4_spring': 'K4_SPRING', 'Shell_charge': 'SHELL_CHARGE', 'Shell_cutoff': 'SHELL_CUTOFF', 'Max_distance': 'MAX_DISTANCE', 'Core_charge': 'CORE_CHARGE'}
-        self._aliases = {'Core': 'Core_charge', 'Mass': 'Mass_fraction', 'Spring': 'K2_spring', 'Shell': 'Shell_charge', 'K2': 'K2_spring', 'K4': 'K4_spring'}
+        self._keywords = {'Core_charge': 'CORE_CHARGE', 'Shell_charge': 'SHELL_CHARGE', 'Mass_fraction': 'MASS_FRACTION', 'K2_spring': 'K2_SPRING', 'K4_spring': 'K4_SPRING', 'Max_distance': 'MAX_DISTANCE', 'Shell_cutoff': 'SHELL_CUTOFF'}
+        self._aliases = {'Core': 'Core_charge', 'Shell': 'Shell_charge', 'Mass': 'Mass_fraction', 'K2': 'K2_spring', 'Spring': 'K2_spring', 'K4': 'K4_spring'}
         self._attributes = ['Section_parameters']
 
 

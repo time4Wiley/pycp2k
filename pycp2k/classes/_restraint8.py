@@ -9,6 +9,6 @@ class _restraint8(InputSection):
         self.Atom_list = []
         self.Atom_coef = None
         self._name = "RESTRAINT"
-        self._keywords = {'Atom_coef': 'ATOM_COEF', 'Strength': 'STRENGTH', 'Target': 'TARGET'}
+        self._keywords = {'Target': 'TARGET', 'Strength': 'STRENGTH', 'Atom_coef': 'ATOM_COEF'}
         self._repeated_keywords = {'Atom_list': 'ATOM_LIST'}
 

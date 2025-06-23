@@ -15,7 +15,7 @@ class _planar2(InputSection):
         self.Thickness = None
         self.Smoothing_width = None
         self._name = "PLANAR"
-        self._keywords = {'Frequency': 'FREQUENCY', 'V_d': 'V_D', 'N_prtn': 'N_PRTN', 'A': 'A', 'B': 'B', 'Oscillating_fraction': 'OSCILLATING_FRACTION', 'Smoothing_width': 'SMOOTHING_WIDTH', 'C': 'C', 'Phase': 'PHASE', 'Thickness': 'THICKNESS'}
+        self._keywords = {'V_d': 'V_D', 'Oscillating_fraction': 'OSCILLATING_FRACTION', 'Frequency': 'FREQUENCY', 'Phase': 'PHASE', 'A': 'A', 'B': 'B', 'C': 'C', 'N_prtn': 'N_PRTN', 'Thickness': 'THICKNESS', 'Smoothing_width': 'SMOOTHING_WIDTH'}
         self._aliases = {'Sigma': 'Smoothing_width'}
 
 

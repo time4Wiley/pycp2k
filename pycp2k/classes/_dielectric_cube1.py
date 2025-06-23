@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each248 import _each248
+from ._each320 import _each320
 
 
 class _dielectric_cube1(InputSection):
@@ -12,9 +12,9 @@ class _dielectric_cube1(InputSection):
         self.Log_print_key = None
         self.Stride = None
         self.Append = None
-        self.EACH = _each248()
+        self.EACH = _each320()
         self._name = "DIELECTRIC_CUBE"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Append': 'APPEND', 'Filename': 'FILENAME', 'Stride': 'STRIDE'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

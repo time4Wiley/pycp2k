@@ -16,7 +16,7 @@ class _collective1(InputSection):
         self.Exclude_mm = None
         self.RESTRAINT = _restraint5()
         self._name = "COLLECTIVE"
-        self._keywords = {'Molname': 'MOLNAME', 'Exclude_qm': 'EXCLUDE_QM', 'Colvar': 'COLVAR', 'Target_limit': 'TARGET_LIMIT', 'Target': 'TARGET', 'Target_growth': 'TARGET_GROWTH', 'Intermolecular': 'INTERMOLECULAR', 'Molecule': 'MOLECULE', 'Exclude_mm': 'EXCLUDE_MM'}
+        self._keywords = {'Colvar': 'COLVAR', 'Molecule': 'MOLECULE', 'Molname': 'MOLNAME', 'Intermolecular': 'INTERMOLECULAR', 'Target': 'TARGET', 'Target_growth': 'TARGET_GROWTH', 'Target_limit': 'TARGET_LIMIT', 'Exclude_qm': 'EXCLUDE_QM', 'Exclude_mm': 'EXCLUDE_MM'}
         self._subsections = {'RESTRAINT': 'RESTRAINT'}
         self._aliases = {'Segname': 'Molname'}
 

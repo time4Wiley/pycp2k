@@ -13,8 +13,11 @@ class _parameter1(InputSection):
         self.Dispersion_radius = None
         self.Coordination_cutoff = None
         self.D3_scaling = None
+        self.D3bj_scaling = None
+        self.D2_scaling = None
+        self.D2_exp_pre = None
         self.Hb_sr_param = None
         self._name = "PARAMETER"
-        self._keywords = {'Uff_force_field': 'UFF_FORCE_FIELD', 'Dispersion_type': 'DISPERSION_TYPE', 'Hb_sr_param': 'HB_SR_PARAM', 'D3_scaling': 'D3_SCALING', 'Dispersion_parameter_file': 'DISPERSION_PARAMETER_FILE', 'Param_file_name': 'PARAM_FILE_NAME', 'Param_file_path': 'PARAM_FILE_PATH', 'Coordination_cutoff': 'COORDINATION_CUTOFF', 'Dispersion_radius': 'DISPERSION_RADIUS'}
+        self._keywords = {'Param_file_path': 'PARAM_FILE_PATH', 'Param_file_name': 'PARAM_FILE_NAME', 'Dispersion_type': 'DISPERSION_TYPE', 'Uff_force_field': 'UFF_FORCE_FIELD', 'Dispersion_parameter_file': 'DISPERSION_PARAMETER_FILE', 'Dispersion_radius': 'DISPERSION_RADIUS', 'Coordination_cutoff': 'COORDINATION_CUTOFF', 'D3_scaling': 'D3_SCALING', 'D3bj_scaling': 'D3BJ_SCALING', 'D2_scaling': 'D2_SCALING', 'D2_exp_pre': 'D2_EXP_PRE', 'Hb_sr_param': 'HB_SR_PARAM'}
         self._repeated_keywords = {'Sk_file': 'SK_FILE'}
 

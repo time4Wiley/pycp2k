@@ -13,7 +13,7 @@ class _hbonds1(InputSection):
         self.Targets = None
         self.RESTRAINT = _restraint1()
         self._name = "HBONDS"
-        self._keywords = {'Molname': 'MOLNAME', 'Exclude_qm': 'EXCLUDE_QM', 'Exclude_mm': 'EXCLUDE_MM', 'Atom_type': 'ATOM_TYPE', 'Targets': 'TARGETS', 'Molecule': 'MOLECULE'}
+        self._keywords = {'Atom_type': 'ATOM_TYPE', 'Molecule': 'MOLECULE', 'Molname': 'MOLNAME', 'Exclude_qm': 'EXCLUDE_QM', 'Exclude_mm': 'EXCLUDE_MM', 'Targets': 'TARGETS'}
         self._subsections = {'RESTRAINT': 'RESTRAINT'}
         self._aliases = {'Segname': 'Molname'}
 

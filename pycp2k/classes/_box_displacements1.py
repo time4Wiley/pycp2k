@@ -7,5 +7,5 @@ class _box_displacements1(InputSection):
         self.Rmvolume = None
         self.Rmcltrans = None
         self._name = "BOX_DISPLACEMENTS"
-        self._keywords = {'Rmcltrans': 'RMCLTRANS', 'Rmvolume': 'RMVOLUME'}
+        self._keywords = {'Rmvolume': 'RMVOLUME', 'Rmcltrans': 'RMCLTRANS'}
 

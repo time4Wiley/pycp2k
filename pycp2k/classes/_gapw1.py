@@ -9,5 +9,5 @@ class _gapw1(InputSection):
         self.PROJECTORS = _projectors1()
         self.RHO0_INFORMATION = _rho0_information1()
         self._name = "GAPW"
-        self._subsections = {'RHO0_INFORMATION': 'RHO0_INFORMATION', 'PROJECTORS': 'PROJECTORS'}
+        self._subsections = {'PROJECTORS': 'PROJECTORS', 'RHO0_INFORMATION': 'RHO0_INFORMATION'}
 

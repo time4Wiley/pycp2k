@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each430 import _each430
+from ._each593 import _each593
 
 
 class _geometrical_response_basis1(InputSection):
@@ -22,9 +22,9 @@ class _geometrical_response_basis1(InputSection):
         self.Geo_start_value = None
         self.Confinement = None
         self.Name_body = None
-        self.EACH = _each430()
+        self.EACH = _each593()
         self._name = "GEOMETRICAL_RESPONSE_BASIS"
-        self._keywords = {'Num_gto_core': 'NUM_GTO_CORE', 'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Confinement': 'CONFINEMENT', 'Num_gto_polarization': 'NUM_GTO_POLARIZATION', 'Extension_basis': 'EXTENSION_BASIS', 'Geo_start_value': 'GEO_START_VALUE', 'Delta_charge': 'DELTA_CHARGE', 'Quadrature': 'QUADRATURE', 'Filename': 'FILENAME', 'Name_body': 'NAME_BODY', 'Num_gto_extended': 'NUM_GTO_EXTENDED', 'Geometrical_factor': 'GEOMETRICAL_FACTOR', 'Grid_points': 'GRID_POINTS', 'Derivatives': 'DERIVATIVES'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Delta_charge': 'DELTA_CHARGE', 'Derivatives': 'DERIVATIVES', 'Quadrature': 'QUADRATURE', 'Grid_points': 'GRID_POINTS', 'Num_gto_core': 'NUM_GTO_CORE', 'Num_gto_extended': 'NUM_GTO_EXTENDED', 'Num_gto_polarization': 'NUM_GTO_POLARIZATION', 'Extension_basis': 'EXTENSION_BASIS', 'Geometrical_factor': 'GEOMETRICAL_FACTOR', 'Geo_start_value': 'GEO_START_VALUE', 'Confinement': 'CONFINEMENT', 'Name_body': 'NAME_BODY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

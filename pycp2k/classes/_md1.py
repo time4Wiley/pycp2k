@@ -20,6 +20,7 @@ class _md1(InputSection):
         InputSection.__init__(self)
         self.Ensemble = None
         self.Steps = None
+        self.Max_steps = None
         self.Timestep = None
         self.Step_start_val = None
         self.Time_start_val = None
@@ -51,9 +52,9 @@ class _md1(InputSection):
         self.CASCADE = _cascade1()
         self.INITIAL_VIBRATION = _initial_vibration1()
         self._name = "MD"
-        self._keywords = {'Angvel_tol': 'ANGVEL_TOL', 'Time_start_val': 'TIME_START_VAL', 'Annealing_cell': 'ANNEALING_CELL', 'Steps': 'STEPS', 'Timestep': 'TIMESTEP', 'Temperature_annealing': 'TEMPERATURE_ANNEALING', 'Scale_temp_kind': 'SCALE_TEMP_KIND', 'Temperature': 'TEMPERATURE', 'Temp_tol': 'TEMP_TOL', 'Displacement_tol': 'DISPLACEMENT_TOL', 'Step_start_val': 'STEP_START_VAL', 'Temp_kind': 'TEMP_KIND', 'Comvel_tol': 'COMVEL_TOL', 'Initialization_method': 'INITIALIZATION_METHOD', 'Angvel_zero': 'ANGVEL_ZERO', 'Ensemble': 'ENSEMBLE', 'Econs_start_val': 'ECONS_START_VAL', 'Annealing': 'ANNEALING'}
-        self._subsections = {'VELOCITY_SOFTENING': 'VELOCITY_SOFTENING', 'REFTRAJ': 'REFTRAJ', 'THERMOSTAT': 'THERMOSTAT', 'BAROSTAT': 'BAROSTAT', 'LANGEVIN': 'LANGEVIN', 'RESPA': 'RESPA', 'ADIABATIC_DYNAMICS': 'ADIABATIC_DYNAMICS', 'SHELL': 'SHELL', 'THERMAL_REGION': 'THERMAL_REGION', 'MSST': 'MSST', 'INITIAL_VIBRATION': 'INITIAL_VIBRATION', 'CASCADE': 'CASCADE', 'AVERAGES': 'AVERAGES', 'PRINT': 'PRINT'}
-        self._aliases = {'Temperature_tolerance': 'Temp_tol', 'Temp_to': 'Temp_tol'}
+        self._keywords = {'Ensemble': 'ENSEMBLE', 'Steps': 'STEPS', 'Max_steps': 'MAX_STEPS', 'Timestep': 'TIMESTEP', 'Step_start_val': 'STEP_START_VAL', 'Time_start_val': 'TIME_START_VAL', 'Econs_start_val': 'ECONS_START_VAL', 'Temperature': 'TEMPERATURE', 'Temp_tol': 'TEMP_TOL', 'Temp_kind': 'TEMP_KIND', 'Scale_temp_kind': 'SCALE_TEMP_KIND', 'Comvel_tol': 'COMVEL_TOL', 'Angvel_tol': 'ANGVEL_TOL', 'Angvel_zero': 'ANGVEL_ZERO', 'Annealing': 'ANNEALING', 'Annealing_cell': 'ANNEALING_CELL', 'Temperature_annealing': 'TEMPERATURE_ANNEALING', 'Displacement_tol': 'DISPLACEMENT_TOL', 'Initialization_method': 'INITIALIZATION_METHOD'}
+        self._subsections = {'LANGEVIN': 'LANGEVIN', 'MSST': 'MSST', 'BAROSTAT': 'BAROSTAT', 'THERMOSTAT': 'THERMOSTAT', 'RESPA': 'RESPA', 'SHELL': 'SHELL', 'ADIABATIC_DYNAMICS': 'ADIABATIC_DYNAMICS', 'VELOCITY_SOFTENING': 'VELOCITY_SOFTENING', 'REFTRAJ': 'REFTRAJ', 'AVERAGES': 'AVERAGES', 'THERMAL_REGION': 'THERMAL_REGION', 'PRINT': 'PRINT', 'CASCADE': 'CASCADE', 'INITIAL_VIBRATION': 'INITIAL_VIBRATION'}
+        self._aliases = {'Temp_to': 'Temp_tol', 'Temperature_tolerance': 'Temp_tol'}
 
 
     @property

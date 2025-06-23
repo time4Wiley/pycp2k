@@ -7,5 +7,5 @@ class _restraint7(InputSection):
         self.Restraint_target = None
         self.Restraint_strength = None
         self._name = "RESTRAINT"
-        self._keywords = {'Restraint_strength': 'RESTRAINT_STRENGTH', 'Restraint_target': 'RESTRAINT_TARGET'}
+        self._keywords = {'Restraint_target': 'RESTRAINT_TARGET', 'Restraint_strength': 'RESTRAINT_STRENGTH'}
 

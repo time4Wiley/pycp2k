@@ -16,7 +16,7 @@ class _interpolator8(InputSection):
         self.CONV_INFO = _conv_info8()
         self.SPL_COEFFS = _spl_coeffs1()
         self._name = "INTERPOLATOR"
-        self._keywords = {'Aint_precond': 'AINT_PRECOND', 'Kind': 'KIND', 'Eps_x': 'EPS_X', 'Safe_computation': 'SAFE_COMPUTATION', 'Precond': 'PRECOND', 'Eps_r': 'EPS_R', 'Max_iter': 'MAX_ITER'}
+        self._keywords = {'Kind': 'KIND', 'Safe_computation': 'SAFE_COMPUTATION', 'Aint_precond': 'AINT_PRECOND', 'Precond': 'PRECOND', 'Eps_x': 'EPS_X', 'Eps_r': 'EPS_R', 'Max_iter': 'MAX_ITER'}
         self._subsections = {'CONV_INFO': 'CONV_INFO', 'SPL_COEFFS': 'SPL_COEFFS'}
         self._aliases = {'Maxiter': 'Max_iter'}
 

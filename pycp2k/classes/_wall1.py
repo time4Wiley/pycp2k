@@ -15,6 +15,6 @@ class _wall1(InputSection):
         self.QUARTIC = _quartic1()
         self.GAUSSIAN = _gaussian1()
         self._name = "WALL"
-        self._keywords = {'Position': 'POSITION', 'Type': 'TYPE'}
-        self._subsections = {'REFLECTIVE': 'REFLECTIVE', 'QUARTIC': 'QUARTIC', 'GAUSSIAN': 'GAUSSIAN', 'QUADRATIC': 'QUADRATIC'}
+        self._keywords = {'Type': 'TYPE', 'Position': 'POSITION'}
+        self._subsections = {'REFLECTIVE': 'REFLECTIVE', 'QUADRATIC': 'QUADRATIC', 'QUARTIC': 'QUARTIC', 'GAUSSIAN': 'GAUSSIAN'}
 

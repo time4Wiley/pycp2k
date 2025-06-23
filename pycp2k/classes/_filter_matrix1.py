@@ -9,5 +9,5 @@ class _filter_matrix1(InputSection):
         self.Eps_fb = None
         self.Collective_communication = None
         self._name = "FILTER_MATRIX"
-        self._keywords = {'Eps_fb': 'EPS_FB', 'Collective_communication': 'COLLECTIVE_COMMUNICATION', 'Auto_cutoff_scale': 'AUTO_CUTOFF_SCALE', 'Filter_temperature': 'FILTER_TEMPERATURE'}
+        self._keywords = {'Filter_temperature': 'FILTER_TEMPERATURE', 'Auto_cutoff_scale': 'AUTO_CUTOFF_SCALE', 'Eps_fb': 'EPS_FB', 'Collective_communication': 'COLLECTIVE_COMMUNICATION'}
 

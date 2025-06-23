@@ -11,7 +11,7 @@ class _nmc_moves1(InputSection):
         self.Init_acc_prob = None
         self.MOVE_TYPE_list = []
         self._name = "NMC_MOVES"
-        self._keywords = {'Nr_nmc_steps': 'NR_NMC_STEPS', 'Init_acc_prob': 'INIT_ACC_PROB', 'Nmc_file_name': 'NMC_FILE_NAME', 'Prob': 'PROB'}
+        self._keywords = {'Nr_nmc_steps': 'NR_NMC_STEPS', 'Nmc_file_name': 'NMC_FILE_NAME', 'Prob': 'PROB', 'Init_acc_prob': 'INIT_ACC_PROB'}
         self._repeated_subsections = {'MOVE_TYPE': '_move_type2'}
         self._attributes = ['MOVE_TYPE_list']
 

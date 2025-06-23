@@ -7,6 +7,7 @@ class _normalmode1(InputSection):
         self.Q_centroid = None
         self.Q_bead = None
         self.Modefactor = None
+        self.Gamma = None
         self._name = "NORMALMODE"
-        self._keywords = {'Q_bead': 'Q_BEAD', 'Q_centroid': 'Q_CENTROID', 'Modefactor': 'MODEFACTOR'}
+        self._keywords = {'Q_centroid': 'Q_CENTROID', 'Q_bead': 'Q_BEAD', 'Modefactor': 'MODEFACTOR', 'Gamma': 'GAMMA'}
 

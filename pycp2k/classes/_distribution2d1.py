@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each402 import _each402
+from ._each558 import _each558
 
 
 class _distribution2d1(InputSection):
@@ -10,9 +10,9 @@ class _distribution2d1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each402()
+        self.EACH = _each558()
         self._name = "DISTRIBUTION2D"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

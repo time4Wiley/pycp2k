@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._xc2 import _xc2
+from ._xc3 import _xc3
 from ._sic1 import _sic1
 
 
@@ -19,12 +19,12 @@ class _tddfpt1(InputSection):
         self.Diag_method = None
         self.Oe_corr = None
         self.Convergence = None
-        self.XC = _xc2()
+        self.XC = _xc3()
         self.SIC = _sic1()
         self._name = "TDDFPT"
-        self._keywords = {'Nev': 'NEV', 'Res_etype': 'RES_ETYPE', 'Preconditioner': 'PRECONDITIONER', 'Lsd_singlets': 'LSD_SINGLETS', 'Kernel': 'KERNEL', 'Restarts': 'RESTARTS', 'Nlumo': 'NLUMO', 'Invert_s': 'INVERT_S', 'Oe_corr': 'OE_CORR', 'Max_kv': 'MAX_KV', 'Convergence': 'CONVERGENCE', 'Nreortho': 'NREORTHO', 'Diag_method': 'DIAG_METHOD'}
+        self._keywords = {'Max_kv': 'MAX_KV', 'Restarts': 'RESTARTS', 'Nev': 'NEV', 'Nlumo': 'NLUMO', 'Nreortho': 'NREORTHO', 'Kernel': 'KERNEL', 'Lsd_singlets': 'LSD_SINGLETS', 'Invert_s': 'INVERT_S', 'Preconditioner': 'PRECONDITIONER', 'Res_etype': 'RES_ETYPE', 'Diag_method': 'DIAG_METHOD', 'Oe_corr': 'OE_CORR', 'Convergence': 'CONVERGENCE'}
         self._subsections = {'XC': 'XC', 'SIC': 'SIC'}
-        self._aliases = {'Method': 'Diag_method', 'Do_kernel': 'Kernel', 'Reorthogonalitazions': 'Nreortho', 'Invert_overlap': 'Invert_s', 'N_reortho': 'Nreortho', 'Orbital_eigenvalues_correction': 'Oe_corr', 'N_ev': 'Nev', 'Reortho': 'Nreortho', 'Conv': 'Convergence', 'N_restarts': 'Restarts', 'Restricted_excitations_type': 'Res_etype', 'Max_vectors': 'Max_kv', 'Diagonalization_method': 'Diag_method', 'Precond': 'Preconditioner', 'Ev': 'Nev', 'Res_e_type': 'Res_etype'}
+        self._aliases = {'Max_vectors': 'Max_kv', 'N_restarts': 'Restarts', 'N_ev': 'Nev', 'Ev': 'Nev', 'N_reortho': 'Nreortho', 'Reortho': 'Nreortho', 'Reorthogonalitazions': 'Nreortho', 'Do_kernel': 'Kernel', 'Invert_overlap': 'Invert_s', 'Precond': 'Preconditioner', 'Restricted_excitations_type': 'Res_etype', 'Res_e_type': 'Res_etype', 'Diagonalization_method': 'Diag_method', 'Method': 'Diag_method', 'Orbital_eigenvalues_correction': 'Oe_corr', 'Conv': 'Convergence'}
 
 
     @property

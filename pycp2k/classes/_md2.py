@@ -12,6 +12,6 @@ class _md2(InputSection):
         self.TEMP_CONTROL = _temp_control1()
         self.VEL_CONTROL = _vel_control1()
         self._name = "MD"
-        self._keywords = {'Temperature': 'TEMPERATURE', 'Timestep': 'TIMESTEP', 'Max_steps': 'MAX_STEPS'}
-        self._subsections = {'VEL_CONTROL': 'VEL_CONTROL', 'TEMP_CONTROL': 'TEMP_CONTROL'}
+        self._keywords = {'Max_steps': 'MAX_STEPS', 'Timestep': 'TIMESTEP', 'Temperature': 'TEMPERATURE'}
+        self._subsections = {'TEMP_CONTROL': 'TEMP_CONTROL', 'VEL_CONTROL': 'VEL_CONTROL'}
 

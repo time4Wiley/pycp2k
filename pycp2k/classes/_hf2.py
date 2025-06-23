@@ -5,6 +5,7 @@ from ._screening2 import _screening2
 from ._interaction_potential2 import _interaction_potential2
 from ._load_balance2 import _load_balance2
 from ._memory2 import _memory2
+from ._ri2 import _ri2
 
 
 class _hf2(InputSection):
@@ -20,7 +21,8 @@ class _hf2(InputSection):
         self.INTERACTION_POTENTIAL = _interaction_potential2()
         self.LOAD_BALANCE = _load_balance2()
         self.MEMORY = _memory2()
+        self.RI = _ri2()
         self._name = "HF"
-        self._keywords = {'Treat_lsd_in_core': 'TREAT_LSD_IN_CORE', 'Pw_hfx_blocksize': 'PW_HFX_BLOCKSIZE', 'Fraction': 'FRACTION', 'Pw_hfx': 'PW_HFX'}
-        self._subsections = {'SCREENING': 'SCREENING', 'LOAD_BALANCE': 'LOAD_BALANCE', 'PERIODIC': 'PERIODIC', 'MEMORY': 'MEMORY', 'INTERACTION_POTENTIAL': 'INTERACTION_POTENTIAL', 'HF_INFO': 'HF_INFO'}
+        self._keywords = {'Fraction': 'FRACTION', 'Treat_lsd_in_core': 'TREAT_LSD_IN_CORE', 'Pw_hfx': 'PW_HFX', 'Pw_hfx_blocksize': 'PW_HFX_BLOCKSIZE'}
+        self._subsections = {'HF_INFO': 'HF_INFO', 'PERIODIC': 'PERIODIC', 'SCREENING': 'SCREENING', 'INTERACTION_POTENTIAL': 'INTERACTION_POTENTIAL', 'LOAD_BALANCE': 'LOAD_BALANCE', 'MEMORY': 'MEMORY', 'RI': 'RI'}
 

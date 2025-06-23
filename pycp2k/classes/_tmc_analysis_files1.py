@@ -23,7 +23,7 @@ class _tmc_analysis_files1(InputSection):
         self.End_elem = None
         self.CHARGE_list = []
         self._name = "TMC_ANALYSIS_FILES"
-        self._keywords = {'Start_elem': 'START_ELEM', 'Nr_temperature': 'NR_TEMPERATURE', 'Classical_dipole_moments': 'CLASSICAL_DIPOLE_MOMENTS', 'Dipole_analysis': 'DIPOLE_ANALYSIS', 'G_r': 'G_R', 'Temperature': 'TEMPERATURE', 'Deviation': 'DEVIATION', 'Dipole_file': 'DIPOLE_FILE', 'End_elem': 'END_ELEM', 'Prefix_ana_files': 'PREFIX_ANA_FILES', 'Cell_file': 'CELL_FILE', 'Force_env_file': 'FORCE_ENV_FILE', 'Position_file': 'POSITION_FILE', 'Directories': 'DIRECTORIES', 'Restart': 'RESTART', 'Density': 'DENSITY'}
+        self._keywords = {'Restart': 'RESTART', 'Prefix_ana_files': 'PREFIX_ANA_FILES', 'Density': 'DENSITY', 'G_r': 'G_R', 'Classical_dipole_moments': 'CLASSICAL_DIPOLE_MOMENTS', 'Dipole_analysis': 'DIPOLE_ANALYSIS', 'Deviation': 'DEVIATION', 'Nr_temperature': 'NR_TEMPERATURE', 'Temperature': 'TEMPERATURE', 'Directories': 'DIRECTORIES', 'Force_env_file': 'FORCE_ENV_FILE', 'Position_file': 'POSITION_FILE', 'Cell_file': 'CELL_FILE', 'Dipole_file': 'DIPOLE_FILE', 'Start_elem': 'START_ELEM', 'End_elem': 'END_ELEM'}
         self._repeated_subsections = {'CHARGE': '_charge2'}
         self._attributes = ['CHARGE_list']
 

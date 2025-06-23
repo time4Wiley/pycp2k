@@ -11,6 +11,7 @@ from ._mol_set1 import _mol_set1
 class _topology1(InputSection):
     def __init__(self):
         InputSection.__init__(self)
+        self.Use_element_as_kind = None
         self.Charge_occup = None
         self.Charge_beta = None
         self.Charge_extended = None
@@ -36,10 +37,10 @@ class _topology1(InputSection):
         self.GENERATE_list = []
         self.MOL_SET = _mol_set1()
         self._name = "TOPOLOGY"
-        self._keywords = {'Memory_progression_factor': 'MEMORY_PROGRESSION_FACTOR', 'Charge_occup': 'CHARGE_OCCUP', 'Charge_beta': 'CHARGE_BETA', 'Mol_check': 'MOL_CHECK', 'Autogen_exclude_lists': 'AUTOGEN_EXCLUDE_LISTS', 'Charge_extended': 'CHARGE_EXTENDED', 'Disable_exclusion_lists': 'DISABLE_EXCLUSION_LISTS', 'Multiple_unit_cell': 'MULTIPLE_UNIT_CELL', 'Conn_file_name': 'CONN_FILE_NAME', 'Para_res': 'PARA_RES', 'Conn_file_format': 'CONN_FILE_FORMAT', 'Exclude_ei': 'EXCLUDE_EI', 'Number_of_atoms': 'NUMBER_OF_ATOMS', 'Exclude_vdw': 'EXCLUDE_VDW', 'Use_g96_velocity': 'USE_G96_VELOCITY', 'Coord_file_format': 'COORD_FILE_FORMAT', 'Coord_file_name': 'COORD_FILE_NAME'}
-        self._subsections = {'CENTER_COORDINATES': 'CENTER_COORDINATES', 'EXCLUDE_EI_LIST': 'EXCLUDE_EI_LIST', 'DUMP_PDB': 'DUMP_PDB', 'EXCLUDE_VDW_LIST': 'EXCLUDE_VDW_LIST', 'DUMP_PSF': 'DUMP_PSF', 'MOL_SET': 'MOL_SET'}
+        self._keywords = {'Use_element_as_kind': 'USE_ELEMENT_AS_KIND', 'Charge_occup': 'CHARGE_OCCUP', 'Charge_beta': 'CHARGE_BETA', 'Charge_extended': 'CHARGE_EXTENDED', 'Para_res': 'PARA_RES', 'Mol_check': 'MOL_CHECK', 'Use_g96_velocity': 'USE_G96_VELOCITY', 'Coord_file_name': 'COORD_FILE_NAME', 'Coord_file_format': 'COORD_FILE_FORMAT', 'Number_of_atoms': 'NUMBER_OF_ATOMS', 'Conn_file_name': 'CONN_FILE_NAME', 'Conn_file_format': 'CONN_FILE_FORMAT', 'Disable_exclusion_lists': 'DISABLE_EXCLUSION_LISTS', 'Exclude_vdw': 'EXCLUDE_VDW', 'Exclude_ei': 'EXCLUDE_EI', 'Autogen_exclude_lists': 'AUTOGEN_EXCLUDE_LISTS', 'Multiple_unit_cell': 'MULTIPLE_UNIT_CELL', 'Memory_progression_factor': 'MEMORY_PROGRESSION_FACTOR'}
+        self._subsections = {'DUMP_PDB': 'DUMP_PDB', 'DUMP_PSF': 'DUMP_PSF', 'EXCLUDE_VDW_LIST': 'EXCLUDE_VDW_LIST', 'EXCLUDE_EI_LIST': 'EXCLUDE_EI_LIST', 'CENTER_COORDINATES': 'CENTER_COORDINATES', 'MOL_SET': 'MOL_SET'}
         self._repeated_subsections = {'GENERATE': '_generate1'}
-        self._aliases = {'Coord_file': 'Coord_file_name', 'Connectivity': 'Conn_file_format', 'Conn_file': 'Conn_file_name', 'Natom': 'Number_of_atoms', 'Natoms': 'Number_of_atoms', 'Charge_o': 'Charge_occup', 'Charge_b': 'Charge_beta', 'Coordinate': 'Coord_file_format'}
+        self._aliases = {'Charge_o': 'Charge_occup', 'Charge_b': 'Charge_beta', 'Coord_file': 'Coord_file_name', 'Coordinate': 'Coord_file_format', 'Natoms': 'Number_of_atoms', 'Natom': 'Number_of_atoms', 'Conn_file': 'Conn_file_name', 'Connectivity': 'Conn_file_format'}
         self._attributes = ['GENERATE_list']
 
     def GENERATE_add(self, section_parameters=None):

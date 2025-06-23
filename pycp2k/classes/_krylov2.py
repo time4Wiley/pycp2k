@@ -10,5 +10,5 @@ class _krylov2(InputSection):
         self.Eps_std_diag = None
         self.Check_mos_conv = None
         self._name = "KRYLOV"
-        self._keywords = {'Nblock': 'NBLOCK', 'Eps_krylov': 'EPS_KRYLOV', 'Nkrylov': 'NKRYLOV', 'Check_mos_conv': 'CHECK_MOS_CONV', 'Eps_std_diag': 'EPS_STD_DIAG'}
+        self._keywords = {'Nkrylov': 'NKRYLOV', 'Nblock': 'NBLOCK', 'Eps_krylov': 'EPS_KRYLOV', 'Eps_std_diag': 'EPS_STD_DIAG', 'Check_mos_conv': 'CHECK_MOS_CONV'}
 

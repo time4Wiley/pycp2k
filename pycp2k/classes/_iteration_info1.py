@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each103 import _each103
+from ._each108 import _each108
 
 
 class _iteration_info1(InputSection):
@@ -11,9 +11,9 @@ class _iteration_info1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Time_cumul = None
-        self.EACH = _each103()
+        self.EACH = _each108()
         self._name = "ITERATION_INFO"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Time_cumul': 'TIME_CUMUL'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Time_cumul': 'TIME_CUMUL'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

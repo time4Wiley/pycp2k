@@ -7,8 +7,9 @@ class _pile1(InputSection):
         InputSection.__init__(self)
         self.Tau = None
         self.Lambda = None
+        self.Thermostat_energy = None
         self.RNG_INIT = _rng_init8()
         self._name = "PILE"
-        self._keywords = {'Tau': 'TAU', 'Lambda': 'LAMBDA'}
+        self._keywords = {'Tau': 'TAU', 'Lambda': 'LAMBDA', 'Thermostat_energy': 'THERMOSTAT_ENERGY'}
         self._subsections = {'RNG_INIT': 'RNG_INIT'}
 

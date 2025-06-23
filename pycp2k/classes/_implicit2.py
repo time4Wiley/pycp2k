@@ -15,8 +15,8 @@ class _implicit2(InputSection):
         self.DIELECTRIC = _dielectric2()
         self.DIRICHLET_BC = _dirichlet_bc2()
         self._name = "IMPLICIT"
-        self._keywords = {'Boundary_conditions': 'BOUNDARY_CONDITIONS', 'Zero_initial_guess': 'ZERO_INITIAL_GUESS', 'Neumann_directions': 'NEUMANN_DIRECTIONS', 'Or_parameter': 'OR_PARAMETER', 'Tol': 'TOL', 'Max_iter': 'MAX_ITER'}
-        self._subsections = {'DIRICHLET_BC': 'DIRICHLET_BC', 'DIELECTRIC': 'DIELECTRIC'}
+        self._keywords = {'Boundary_conditions': 'BOUNDARY_CONDITIONS', 'Zero_initial_guess': 'ZERO_INITIAL_GUESS', 'Max_iter': 'MAX_ITER', 'Tol': 'TOL', 'Or_parameter': 'OR_PARAMETER', 'Neumann_directions': 'NEUMANN_DIRECTIONS'}
+        self._subsections = {'DIELECTRIC': 'DIELECTRIC', 'DIRICHLET_BC': 'DIRICHLET_BC'}
         self._aliases = {'Omega': 'Or_parameter'}
 
 

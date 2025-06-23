@@ -5,7 +5,10 @@ from ._hf1 import _hf1
 from ._wf_correlation1 import _wf_correlation1
 from ._adiabatic_rescaling1 import _adiabatic_rescaling1
 from ._xc_potential1 import _xc_potential1
+from ._xc_kernel1 import _xc_kernel1
+from ._hfx_kernel1 import _hfx_kernel1
 from ._vdw_potential1 import _vdw_potential1
+from ._gcp_potential1 import _gcp_potential1
 
 
 class _xc1(InputSection):
@@ -16,16 +19,23 @@ class _xc1(InputSection):
         self.Density_smooth_cutoff_range = None
         self.Tau_cutoff = None
         self.Functional_routine = None
+        self.Num2nd_deriv_analytical = None
+        self.Num3rd_deriv_analytical = None
+        self.Step_size = None
+        self.Nsteps = None
         self.XC_GRID = _xc_grid1()
         self.XC_FUNCTIONAL = _xc_functional1()
         self.HF_list = []
         self.WF_CORRELATION_list = []
         self.ADIABATIC_RESCALING = _adiabatic_rescaling1()
         self.XC_POTENTIAL = _xc_potential1()
+        self.XC_KERNEL = _xc_kernel1()
+        self.HFX_KERNEL = _hfx_kernel1()
         self.VDW_POTENTIAL = _vdw_potential1()
+        self.GCP_POTENTIAL = _gcp_potential1()
         self._name = "XC"
-        self._keywords = {'Gradient_cutoff': 'GRADIENT_CUTOFF', 'Density_smooth_cutoff_range': 'DENSITY_SMOOTH_CUTOFF_RANGE', 'Functional_routine': 'FUNCTIONAL_ROUTINE', 'Tau_cutoff': 'TAU_CUTOFF', 'Density_cutoff': 'DENSITY_CUTOFF'}
-        self._subsections = {'VDW_POTENTIAL': 'VDW_POTENTIAL', 'ADIABATIC_RESCALING': 'ADIABATIC_RESCALING', 'XC_FUNCTIONAL': 'XC_FUNCTIONAL', 'XC_POTENTIAL': 'XC_POTENTIAL', 'XC_GRID': 'XC_GRID'}
+        self._keywords = {'Density_cutoff': 'DENSITY_CUTOFF', 'Gradient_cutoff': 'GRADIENT_CUTOFF', 'Density_smooth_cutoff_range': 'DENSITY_SMOOTH_CUTOFF_RANGE', 'Tau_cutoff': 'TAU_CUTOFF', 'Functional_routine': 'FUNCTIONAL_ROUTINE', 'Num2nd_deriv_analytical': '2ND_DERIV_ANALYTICAL', 'Num3rd_deriv_analytical': '3RD_DERIV_ANALYTICAL', 'Step_size': 'STEP_SIZE', 'Nsteps': 'NSTEPS'}
+        self._subsections = {'XC_GRID': 'XC_GRID', 'XC_FUNCTIONAL': 'XC_FUNCTIONAL', 'ADIABATIC_RESCALING': 'ADIABATIC_RESCALING', 'XC_POTENTIAL': 'XC_POTENTIAL', 'XC_KERNEL': 'XC_KERNEL', 'HFX_KERNEL': 'HFX_KERNEL', 'VDW_POTENTIAL': 'VDW_POTENTIAL', 'GCP_POTENTIAL': 'GCP_POTENTIAL'}
         self._repeated_subsections = {'HF': '_hf1', 'WF_CORRELATION': '_wf_correlation1'}
         self._attributes = ['HF_list', 'WF_CORRELATION_list']
 

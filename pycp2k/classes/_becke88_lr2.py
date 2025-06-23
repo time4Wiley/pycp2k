@@ -8,6 +8,6 @@ class _becke88_lr2(InputSection):
         self.Scale_x = None
         self.Omega = None
         self._name = "BECKE88_LR"
-        self._keywords = {'Omega': 'OMEGA', 'Scale_x': 'SCALE_X'}
+        self._keywords = {'Scale_x': 'SCALE_X', 'Omega': 'OMEGA'}
         self._attributes = ['Section_parameters']
 

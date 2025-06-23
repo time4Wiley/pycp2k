@@ -14,7 +14,7 @@ class _tmc_analysis1(InputSection):
         self.Deviation = None
         self.CHARGE_list = []
         self._name = "TMC_ANALYSIS"
-        self._keywords = {'Prefix_ana_files': 'PREFIX_ANA_FILES', 'Classical_dipole_moments': 'CLASSICAL_DIPOLE_MOMENTS', 'Dipole_analysis': 'DIPOLE_ANALYSIS', 'G_r': 'G_R', 'Restart': 'RESTART', 'Density': 'DENSITY', 'Deviation': 'DEVIATION'}
+        self._keywords = {'Restart': 'RESTART', 'Prefix_ana_files': 'PREFIX_ANA_FILES', 'Density': 'DENSITY', 'G_r': 'G_R', 'Classical_dipole_moments': 'CLASSICAL_DIPOLE_MOMENTS', 'Dipole_analysis': 'DIPOLE_ANALYSIS', 'Deviation': 'DEVIATION'}
         self._repeated_subsections = {'CHARGE': '_charge1'}
         self._attributes = ['CHARGE_list']
 

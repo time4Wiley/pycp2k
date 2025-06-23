@@ -14,6 +14,6 @@ class _kpoints1(InputSection):
         self.Parallel_group_size = None
         self.Wavefunctions = None
         self._name = "KPOINTS"
-        self._keywords = {'Parallel_group_size': 'PARALLEL_GROUP_SIZE', 'Wavefunctions': 'WAVEFUNCTIONS', 'Symmetry': 'SYMMETRY', 'Full_grid': 'FULL_GRID', 'Eps_geo': 'EPS_GEO', 'Verbose': 'VERBOSE', 'Units': 'UNITS', 'Scheme': 'SCHEME'}
+        self._keywords = {'Scheme': 'SCHEME', 'Units': 'UNITS', 'Symmetry': 'SYMMETRY', 'Full_grid': 'FULL_GRID', 'Verbose': 'VERBOSE', 'Eps_geo': 'EPS_GEO', 'Parallel_group_size': 'PARALLEL_GROUP_SIZE', 'Wavefunctions': 'WAVEFUNCTIONS'}
         self._repeated_keywords = {'Kpoint': 'KPOINT'}
 

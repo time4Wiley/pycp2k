@@ -11,5 +11,5 @@ class _print6(InputSection):
         self.TEMPERATURE = _temperature1()
         self.ENERGY = _energy1()
         self._name = "PRINT"
-        self._subsections = {'THERMOSTAT_INFO': 'THERMOSTAT_INFO', 'ENERGY': 'ENERGY', 'TEMPERATURE': 'TEMPERATURE'}
+        self._subsections = {'THERMOSTAT_INFO': 'THERMOSTAT_INFO', 'TEMPERATURE': 'TEMPERATURE', 'ENERGY': 'ENERGY'}
 

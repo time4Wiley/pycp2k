@@ -3,11 +3,14 @@ from ._scf1 import _scf1
 from ._ls_scf1 import _ls_scf1
 from ._almo_scf1 import _almo_scf1
 from ._kg_method1 import _kg_method1
+from ._harris_method1 import _harris_method1
+from ._energy_correction1 import _energy_correction1
+from ._excited_states1 import _excited_states1
 from ._auxiliary_density_matrix_method1 import _auxiliary_density_matrix_method1
 from ._qs1 import _qs1
 from ._tddfpt1 import _tddfpt1
 from ._mgrid1 import _mgrid1
-from ._xc3 import _xc3
+from ._xc4 import _xc4
 from ._relativistic1 import _relativistic1
 from ._sic2 import _sic2
 from ._low_spin_roks1 import _low_spin_roks1
@@ -22,10 +25,13 @@ from ._kpoints1 import _kpoints1
 from ._scrf1 import _scrf1
 from ._density_fitting1 import _density_fitting1
 from ._xas1 import _xas1
+from ._xas_tdp1 import _xas_tdp1
 from ._localize2 import _localize2
 from ._real_time_propagation1 import _real_time_propagation1
-from ._print39 import _print39
+from ._print69 import _print69
 from ._sccs2 import _sccs2
+from ._active_space1 import _active_space1
+from ._smeagol1 import _smeagol1
 
 
 class _dft1(InputSection):
@@ -42,17 +48,25 @@ class _dft1(InputSection):
         self.Plus_u_method = None
         self.Relax_multiplicity = None
         self.Subcells = None
+        self.Auto_basis = []
         self.Surface_dipole_correction = None
         self.Surf_dip_dir = None
+        self.Surf_dip_pos = None
+        self.Surf_dip_switch = None
+        self.Core_corr_dip = None
+        self.Sort_basis = None
         self.SCF = _scf1()
         self.LS_SCF = _ls_scf1()
         self.ALMO_SCF = _almo_scf1()
         self.KG_METHOD = _kg_method1()
+        self.HARRIS_METHOD = _harris_method1()
+        self.ENERGY_CORRECTION = _energy_correction1()
+        self.EXCITED_STATES = _excited_states1()
         self.AUXILIARY_DENSITY_MATRIX_METHOD = _auxiliary_density_matrix_method1()
         self.QS = _qs1()
         self.TDDFPT = _tddfpt1()
         self.MGRID = _mgrid1()
-        self.XC = _xc3()
+        self.XC = _xc4()
         self.RELATIVISTIC = _relativistic1()
         self.SIC = _sic2()
         self.LOW_SPIN_ROKS = _low_spin_roks1()
@@ -67,16 +81,19 @@ class _dft1(InputSection):
         self.SCRF = _scrf1()
         self.DENSITY_FITTING = _density_fitting1()
         self.XAS = _xas1()
+        self.XAS_TDP = _xas_tdp1()
         self.LOCALIZE = _localize2()
         self.REAL_TIME_PROPAGATION = _real_time_propagation1()
-        self.PRINT = _print39()
+        self.PRINT = _print69()
         self.SCCS = _sccs2()
+        self.ACTIVE_SPACE = _active_space1()
+        self.SMEAGOL = _smeagol1()
         self._name = "DFT"
-        self._keywords = {'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Multiplicity': 'MULTIPLICITY', 'Surf_dip_dir': 'SURF_DIP_DIR', 'Plus_u_method': 'PLUS_U_METHOD', 'Subcells': 'SUBCELLS', 'Excitations': 'EXCITATIONS', 'Uks': 'UKS', 'Relax_multiplicity': 'RELAX_MULTIPLICITY', 'Roks': 'ROKS', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME', 'Surface_dipole_correction': 'SURFACE_DIPOLE_CORRECTION', 'Charge': 'CHARGE'}
-        self._repeated_keywords = {'Basis_set_file_name': 'BASIS_SET_FILE_NAME'}
-        self._subsections = {'EXTERNAL_DENSITY': 'EXTERNAL_DENSITY', 'RELATIVISTIC': 'RELATIVISTIC', 'PRINT': 'PRINT', 'LOW_SPIN_ROKS': 'LOW_SPIN_ROKS', 'SIC': 'SIC', 'KG_METHOD': 'KG_METHOD', 'EXTERNAL_VXC': 'EXTERNAL_VXC', 'SCCS': 'SCCS', 'TDDFPT': 'TDDFPT', 'SCRF': 'SCRF', 'EXTERNAL_POTENTIAL': 'EXTERNAL_POTENTIAL', 'ALMO_SCF': 'ALMO_SCF', 'XAS': 'XAS', 'LOCALIZE': 'LOCALIZE', 'LS_SCF': 'LS_SCF', 'MGRID': 'MGRID', 'DENSITY_FITTING': 'DENSITY_FITTING', 'QS': 'QS', 'XC': 'XC', 'TRANSPORT': 'TRANSPORT', 'KPOINTS': 'KPOINTS', 'AUXILIARY_DENSITY_MATRIX_METHOD': 'AUXILIARY_DENSITY_MATRIX_METHOD', 'POISSON': 'POISSON', 'SCF': 'SCF', 'REAL_TIME_PROPAGATION': 'REAL_TIME_PROPAGATION'}
+        self._keywords = {'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME', 'Uks': 'UKS', 'Roks': 'ROKS', 'Multiplicity': 'MULTIPLICITY', 'Charge': 'CHARGE', 'Excitations': 'EXCITATIONS', 'Plus_u_method': 'PLUS_U_METHOD', 'Relax_multiplicity': 'RELAX_MULTIPLICITY', 'Subcells': 'SUBCELLS', 'Surface_dipole_correction': 'SURFACE_DIPOLE_CORRECTION', 'Surf_dip_dir': 'SURF_DIP_DIR', 'Surf_dip_pos': 'SURF_DIP_POS', 'Surf_dip_switch': 'SURF_DIP_SWITCH', 'Core_corr_dip': 'CORE_CORR_DIP', 'Sort_basis': 'SORT_BASIS'}
+        self._repeated_keywords = {'Basis_set_file_name': 'BASIS_SET_FILE_NAME', 'Auto_basis': 'AUTO_BASIS'}
+        self._subsections = {'SCF': 'SCF', 'LS_SCF': 'LS_SCF', 'ALMO_SCF': 'ALMO_SCF', 'KG_METHOD': 'KG_METHOD', 'HARRIS_METHOD': 'HARRIS_METHOD', 'ENERGY_CORRECTION': 'ENERGY_CORRECTION', 'EXCITED_STATES': 'EXCITED_STATES', 'AUXILIARY_DENSITY_MATRIX_METHOD': 'AUXILIARY_DENSITY_MATRIX_METHOD', 'QS': 'QS', 'TDDFPT': 'TDDFPT', 'MGRID': 'MGRID', 'XC': 'XC', 'RELATIVISTIC': 'RELATIVISTIC', 'SIC': 'SIC', 'LOW_SPIN_ROKS': 'LOW_SPIN_ROKS', 'EXTERNAL_POTENTIAL': 'EXTERNAL_POTENTIAL', 'TRANSPORT': 'TRANSPORT', 'EXTERNAL_DENSITY': 'EXTERNAL_DENSITY', 'EXTERNAL_VXC': 'EXTERNAL_VXC', 'POISSON': 'POISSON', 'KPOINTS': 'KPOINTS', 'SCRF': 'SCRF', 'DENSITY_FITTING': 'DENSITY_FITTING', 'XAS': 'XAS', 'XAS_TDP': 'XAS_TDP', 'LOCALIZE': 'LOCALIZE', 'REAL_TIME_PROPAGATION': 'REAL_TIME_PROPAGATION', 'PRINT': 'PRINT', 'SCCS': 'SCCS', 'ACTIVE_SPACE': 'ACTIVE_SPACE', 'SMEAGOL': 'SMEAGOL'}
         self._repeated_subsections = {'EFIELD': '_efield1', 'PERIODIC_EFIELD': '_periodic_efield1'}
-        self._aliases = {'Restricted_open_kohn_sham': 'Roks', 'Unrestricted_kohn_sham': 'Uks', 'Surface_dipole': 'Surface_dipole_correction', 'Restart_file_name': 'Wfn_restart_file_name', 'Multip': 'Multiplicity', 'Relax_multip': 'Relax_multiplicity', 'Spin_polarized': 'Uks', 'Lsd': 'Uks', 'Surf_dip': 'Surface_dipole_correction'}
+        self._aliases = {'Restart_file_name': 'Wfn_restart_file_name', 'Unrestricted_kohn_sham': 'Uks', 'Lsd': 'Uks', 'Spin_polarized': 'Uks', 'Restricted_open_kohn_sham': 'Roks', 'Multip': 'Multiplicity', 'Relax_multip': 'Relax_multiplicity', 'Surface_dipole': 'Surface_dipole_correction', 'Surf_dip': 'Surface_dipole_correction'}
         self._attributes = ['EFIELD_list', 'PERIODIC_EFIELD_list']
 
     def EFIELD_add(self, section_parameters=None):

@@ -7,5 +7,5 @@ class _staging1(InputSection):
         self.J = None
         self.Q_end = None
         self._name = "STAGING"
-        self._keywords = {'Q_end': 'Q_END', 'J': 'J'}
+        self._keywords = {'J': 'J', 'Q_end': 'Q_END'}
 

@@ -34,19 +34,11 @@ class _band1(InputSection):
         self.ENERGY = _energy8()
         self.BANNER = _banner1()
         self._name = "BAND"
-        self._keywords = {'Proc_dist_type': 'PROC_DIST_TYPE', 'Nproc_rep': 'NPROC_REP', 'Pot_type': 'POT_TYPE', 'K_spring': 'K_SPRING', 'Number_of_replica': 'NUMBER_OF_REPLICA', 'Rotate_frames': 'ROTATE_FRAMES', 'Align_frames': 'ALIGN_FRAMES', 'Use_colvars': 'USE_COLVARS', 'Band_type': 'BAND_TYPE'}
-        self._subsections = {'BANNER': 'BANNER', 'REPLICA_INFO': 'REPLICA_INFO', 'ENERGY': 'ENERGY', 'CI_NEB': 'CI_NEB', 'CONVERGENCE_INFO': 'CONVERGENCE_INFO', 'STRING_METHOD': 'STRING_METHOD', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'CONVERGENCE_CONTROL': 'CONVERGENCE_CONTROL'}
-        self._repeated_subsections = {'REPLICA': '_replica1', 'OPTIMIZE_BAND': '_optimize_band1'}
+        self._keywords = {'Nproc_rep': 'NPROC_REP', 'Proc_dist_type': 'PROC_DIST_TYPE', 'Band_type': 'BAND_TYPE', 'Number_of_replica': 'NUMBER_OF_REPLICA', 'Use_colvars': 'USE_COLVARS', 'Pot_type': 'POT_TYPE', 'Rotate_frames': 'ROTATE_FRAMES', 'Align_frames': 'ALIGN_FRAMES', 'K_spring': 'K_SPRING'}
+        self._subsections = {'CONVERGENCE_CONTROL': 'CONVERGENCE_CONTROL', 'CI_NEB': 'CI_NEB', 'STRING_METHOD': 'STRING_METHOD', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'CONVERGENCE_INFO': 'CONVERGENCE_INFO', 'REPLICA_INFO': 'REPLICA_INFO', 'ENERGY': 'ENERGY', 'BANNER': 'BANNER'}
+        self._repeated_subsections = {'OPTIMIZE_BAND': '_optimize_band1', 'REPLICA': '_replica1'}
         self._aliases = {'K': 'K_spring'}
         self._attributes = ['OPTIMIZE_BAND_list', 'REPLICA_list']
-
-    def REPLICA_add(self, section_parameters=None):
-        new_section = _replica1()
-        if section_parameters is not None:
-            if hasattr(new_section, 'Section_parameters'):
-                new_section.Section_parameters = section_parameters
-        self.REPLICA_list.append(new_section)
-        return new_section
 
     def OPTIMIZE_BAND_add(self, section_parameters=None):
         new_section = _optimize_band1()
@@ -54,6 +46,14 @@ class _band1(InputSection):
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters
         self.OPTIMIZE_BAND_list.append(new_section)
+        return new_section
+
+    def REPLICA_add(self, section_parameters=None):
+        new_section = _replica1()
+        if section_parameters is not None:
+            if hasattr(new_section, 'Section_parameters'):
+                new_section.Section_parameters = section_parameters
+        self.REPLICA_list.append(new_section)
         return new_section
 
 

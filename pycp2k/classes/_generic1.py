@@ -12,6 +12,6 @@ class _generic1(InputSection):
         self.Dx = None
         self.Error_limit = None
         self._name = "GENERIC"
-        self._keywords = {'Variables': 'VARIABLES', 'Error_limit': 'ERROR_LIMIT', 'Mixing_function': 'MIXING_FUNCTION', 'Dx': 'DX'}
-        self._repeated_keywords = {'Units': 'UNITS', 'Parameters': 'PARAMETERS', 'Values': 'VALUES'}
+        self._keywords = {'Mixing_function': 'MIXING_FUNCTION', 'Variables': 'VARIABLES', 'Dx': 'DX', 'Error_limit': 'ERROR_LIMIT'}
+        self._repeated_keywords = {'Parameters': 'PARAMETERS', 'Values': 'VALUES', 'Units': 'UNITS'}
 

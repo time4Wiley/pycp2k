@@ -12,5 +12,5 @@ class _davidson3(InputSection):
         self.Conv_mos_percent = None
         self.Sparse_mos = None
         self._name = "DAVIDSON"
-        self._keywords = {'New_prec_each': 'NEW_PREC_EACH', 'Precond_solver': 'PRECOND_SOLVER', 'Energy_gap': 'ENERGY_GAP', 'Preconditioner': 'PRECONDITIONER', 'Conv_mos_percent': 'CONV_MOS_PERCENT', 'Sparse_mos': 'SPARSE_MOS', 'First_prec': 'FIRST_PREC'}
+        self._keywords = {'Preconditioner': 'PRECONDITIONER', 'Precond_solver': 'PRECOND_SOLVER', 'Energy_gap': 'ENERGY_GAP', 'New_prec_each': 'NEW_PREC_EACH', 'First_prec': 'FIRST_PREC', 'Conv_mos_percent': 'CONV_MOS_PERCENT', 'Sparse_mos': 'SPARSE_MOS'}
 

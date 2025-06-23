@@ -14,7 +14,7 @@ class _msd1(InputSection):
         self.Displacement_tol = None
         self.DEFINE_REGION_list = []
         self._name = "MSD"
-        self._keywords = {'Displacement_tol': 'DISPLACEMENT_TOL', 'Displaced_atom': 'DISPLACED_ATOM', 'Ref0_filename': 'REF0_FILENAME', 'Msd_per_kind': 'MSD_PER_KIND', 'Msd_per_region': 'MSD_PER_REGION', 'Msd_per_molkind': 'MSD_PER_MOLKIND'}
+        self._keywords = {'Ref0_filename': 'REF0_FILENAME', 'Msd_per_kind': 'MSD_PER_KIND', 'Msd_per_molkind': 'MSD_PER_MOLKIND', 'Msd_per_region': 'MSD_PER_REGION', 'Displaced_atom': 'DISPLACED_ATOM', 'Displacement_tol': 'DISPLACEMENT_TOL'}
         self._repeated_subsections = {'DEFINE_REGION': '_define_region5'}
         self._attributes = ['Section_parameters', 'DEFINE_REGION_list']
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each427 import _each427
+from ._each590 import _each590
 
 
 class _fit_density1(InputSection):
@@ -11,9 +11,9 @@ class _fit_density1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Num_gto = None
-        self.EACH = _each427()
+        self.EACH = _each590()
         self._name = "FIT_DENSITY"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Num_gto': 'NUM_GTO'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Num_gto': 'NUM_GTO'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

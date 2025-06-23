@@ -16,6 +16,6 @@ class _move_probabilities1(InputSection):
         self.MOL_PROBABILITIES = _mol_probabilities1()
         self.BOX_PROBABILITIES = _box_probabilities1()
         self._name = "MOVE_PROBABILITIES"
-        self._keywords = {'Pmtrans': 'PMTRANS', 'Pmvolume': 'PMVOLUME', 'Pmtraion': 'PMTRAION', 'Pmhmc': 'PMHMC', 'Pmavbmc': 'PMAVBMC', 'Pmswap': 'PMSWAP', 'Pmcltrans': 'PMCLTRANS'}
+        self._keywords = {'Pmhmc': 'PMHMC', 'Pmtrans': 'PMTRANS', 'Pmcltrans': 'PMCLTRANS', 'Pmavbmc': 'PMAVBMC', 'Pmtraion': 'PMTRAION', 'Pmswap': 'PMSWAP', 'Pmvolume': 'PMVOLUME'}
         self._subsections = {'MOL_PROBABILITIES': 'MOL_PROBABILITIES', 'BOX_PROBABILITIES': 'BOX_PROBABILITIES'}
 

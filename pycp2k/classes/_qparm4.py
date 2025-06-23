@@ -15,7 +15,7 @@ class _qparm4(InputSection):
         self.L = None
         self.POINT_list = []
         self._name = "QPARM"
-        self._keywords = {'Rstart': 'RSTART', 'L': 'L', 'Include_images': 'INCLUDE_IMAGES', 'Rcut': 'RCUT'}
+        self._keywords = {'Rcut': 'RCUT', 'Include_images': 'INCLUDE_IMAGES', 'Rstart': 'RSTART', 'L': 'L'}
         self._repeated_keywords = {'Atoms_from': 'ATOMS_FROM', 'Atoms_to': 'ATOMS_TO'}
         self._repeated_subsections = {'POINT': '_point62'}
         self._repeated_aliases = {'Points_from': 'Atoms_from', 'Points_to': 'Atoms_to'}

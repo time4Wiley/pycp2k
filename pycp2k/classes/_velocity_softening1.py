@@ -8,5 +8,5 @@ class _velocity_softening1(InputSection):
         self.Delta = None
         self.Alpha = None
         self._name = "VELOCITY_SOFTENING"
-        self._keywords = {'Delta': 'DELTA', 'Steps': 'STEPS', 'Alpha': 'ALPHA'}
+        self._keywords = {'Steps': 'STEPS', 'Delta': 'DELTA', 'Alpha': 'ALPHA'}
 

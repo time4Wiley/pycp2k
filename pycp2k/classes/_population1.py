@@ -18,10 +18,10 @@ class _population1(InputSection):
         self.Sigma = None
         self.POINT_list = []
         self._name = "POPULATION"
-        self._keywords = {'Nd': 'ND', 'N0': 'N0', 'Nn': 'NN', 'Sigma': 'SIGMA', 'R0': 'R0'}
+        self._keywords = {'R0': 'R0', 'Nn': 'NN', 'Nd': 'ND', 'N0': 'N0', 'Sigma': 'SIGMA'}
         self._repeated_keywords = {'Atoms_from': 'ATOMS_FROM', 'Atoms_to': 'ATOMS_TO', 'Kinds_from': 'KINDS_FROM', 'Kinds_to': 'KINDS_TO'}
         self._repeated_subsections = {'POINT': '_point5'}
-        self._aliases = {'R_0': 'R0', 'N_0': 'N0', 'Expon_denominator': 'Nd', 'Expon_numerator': 'Nn'}
+        self._aliases = {'R_0': 'R0', 'Expon_numerator': 'Nn', 'Expon_denominator': 'Nd', 'N_0': 'N0'}
         self._repeated_aliases = {'Points_from': 'Atoms_from', 'Points_to': 'Atoms_to'}
         self._attributes = ['POINT_list']
 

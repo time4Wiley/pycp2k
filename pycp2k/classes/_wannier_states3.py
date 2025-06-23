@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
-from ._each237 import _each237
-from ._cubes6 import _cubes6
+from ._each378 import _each378
+from ._cubes7 import _cubes7
 
 
 class _wannier_states3(InputSection):
@@ -13,11 +13,12 @@ class _wannier_states3(InputSection):
         self.Log_print_key = None
         self.Cube_eval_range = None
         self.Mark_states = []
-        self.EACH = _each237()
-        self.CUBES = _cubes6()
+        self.Cartesian = None
+        self.EACH = _each378()
+        self.CUBES = _cubes7()
         self._name = "WANNIER_STATES"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Cube_eval_range': 'CUBE_EVAL_RANGE'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cube_eval_range': 'CUBE_EVAL_RANGE', 'Cartesian': 'CARTESIAN'}
         self._repeated_keywords = {'Mark_states': 'MARK_STATES'}
-        self._subsections = {'CUBES': 'CUBES', 'EACH': 'EACH'}
+        self._subsections = {'EACH': 'EACH', 'CUBES': 'CUBES'}
         self._attributes = ['Section_parameters']
 

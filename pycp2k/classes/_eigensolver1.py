@@ -10,5 +10,5 @@ class _eigensolver1(InputSection):
         self.Eigenvalues = None
         self.Init_method = None
         self._name = "EIGENSOLVER"
-        self._keywords = {'Eigenvalues': 'EIGENVALUES', 'Init_method': 'INIT_METHOD', 'N': 'N', 'N_loop': 'N_LOOP', 'Diag_method': 'DIAG_METHOD'}
+        self._keywords = {'N': 'N', 'N_loop': 'N_LOOP', 'Diag_method': 'DIAG_METHOD', 'Eigenvalues': 'EIGENVALUES', 'Init_method': 'INIT_METHOD'}
 

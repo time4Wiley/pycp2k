@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each241 import _each241
+from ._each311 import _each311
 
 
 class _dft_control_parameters1(InputSection):
@@ -10,9 +10,9 @@ class _dft_control_parameters1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each241()
+        self.EACH = _each311()
         self._name = "DFT_CONTROL_PARAMETERS"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

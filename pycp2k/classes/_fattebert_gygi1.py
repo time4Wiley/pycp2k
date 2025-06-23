@@ -7,7 +7,7 @@ class _fattebert_gygi1(InputSection):
         self.Beta = None
         self.Rho_zero = None
         self._name = "FATTEBERT-GYGI"
-        self._keywords = {'Rho_zero': 'RHO_ZERO', 'Beta': 'BETA'}
+        self._keywords = {'Beta': 'BETA', 'Rho_zero': 'RHO_ZERO'}
         self._aliases = {'Rho0': 'Rho_zero'}
 
 

@@ -11,5 +11,5 @@ class _print10(InputSection):
         self.MSD_MOLECULE = _msd_molecule1()
         self.DISPLACED_ATOM = _displaced_atom1()
         self._name = "PRINT"
-        self._subsections = {'DISPLACED_ATOM': 'DISPLACED_ATOM', 'MSD_MOLECULE': 'MSD_MOLECULE', 'MSD_KIND': 'MSD_KIND'}
+        self._subsections = {'MSD_KIND': 'MSD_KIND', 'MSD_MOLECULE': 'MSD_MOLECULE', 'DISPLACED_ATOM': 'DISPLACED_ATOM'}
 

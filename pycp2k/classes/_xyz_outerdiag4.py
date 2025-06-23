@@ -11,7 +11,7 @@ class _xyz_outerdiag4(InputSection):
         self.Pbc = None
         self.POINT_list = []
         self._name = "XYZ_OUTERDIAG"
-        self._keywords = {'Atoms': 'ATOMS', 'Component_a': 'COMPONENT_A', 'Pbc': 'PBC', 'Component_b': 'COMPONENT_B'}
+        self._keywords = {'Atoms': 'ATOMS', 'Component_a': 'COMPONENT_A', 'Component_b': 'COMPONENT_B', 'Pbc': 'PBC'}
         self._repeated_subsections = {'POINT': '_point64'}
         self._aliases = {'Points': 'Atoms'}
         self._attributes = ['POINT_list']

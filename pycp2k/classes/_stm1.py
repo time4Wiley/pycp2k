@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each226 import _each226
+from ._each308 import _each308
 
 
 class _stm1(InputSection):
@@ -16,9 +16,9 @@ class _stm1(InputSection):
         self.Th_torb = []
         self.Ref_energy = None
         self.Append = None
-        self.EACH = _each226()
+        self.EACH = _each308()
         self._name = "STM"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Bias': 'BIAS', 'Append': 'APPEND', 'Filename': 'FILENAME', 'Nlumo': 'NLUMO', 'Stride': 'STRIDE', 'Ref_energy': 'REF_ENERGY'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Nlumo': 'NLUMO', 'Bias': 'BIAS', 'Ref_energy': 'REF_ENERGY', 'Append': 'APPEND'}
         self._repeated_keywords = {'Th_torb': 'TH_TORB'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']

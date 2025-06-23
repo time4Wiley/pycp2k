@@ -9,5 +9,5 @@ class _ramp_env1(InputSection):
         self.Start_step_out = None
         self.End_step_out = None
         self._name = "RAMP_ENV"
-        self._keywords = {'End_step_out': 'END_STEP_OUT', 'Start_step_out': 'START_STEP_OUT', 'Start_step_in': 'START_STEP_IN', 'End_step_in': 'END_STEP_IN'}
+        self._keywords = {'Start_step_in': 'START_STEP_IN', 'End_step_in': 'END_STEP_IN', 'Start_step_out': 'START_STEP_OUT', 'End_step_out': 'END_STEP_OUT'}
 

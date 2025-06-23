@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._nonbonded2 import _nonbonded2
+from ._nonbonded3 import _nonbonded3
 from ._nonbonded142 import _nonbonded142
 
 
@@ -12,11 +12,11 @@ class _forcefield2(InputSection):
         self._name = "FORCEFIELD"
         self._keywords = {'Multiple_potential': 'MULTIPLE_POTENTIAL'}
         self._subsections = {'NONBONDED14': 'NONBONDED14'}
-        self._repeated_subsections = {'NONBONDED': '_nonbonded2'}
+        self._repeated_subsections = {'NONBONDED': '_nonbonded3'}
         self._attributes = ['NONBONDED_list']
 
     def NONBONDED_add(self, section_parameters=None):
-        new_section = _nonbonded2()
+        new_section = _nonbonded3()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters

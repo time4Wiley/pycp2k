@@ -22,7 +22,7 @@ class _diagonalization1(InputSection):
         self.DAVIDSON = _davidson1()
         self.FILTER_MATRIX = _filter_matrix1()
         self._name = "DIAGONALIZATION"
-        self._keywords = {'Eps_adapt': 'EPS_ADAPT', 'Jacobi_threshold': 'JACOBI_THRESHOLD', 'Algorithm': 'ALGORITHM', 'Eps_jacobi': 'EPS_JACOBI', 'Eps_iter': 'EPS_ITER', 'Max_iter': 'MAX_ITER'}
-        self._subsections = {'FILTER_MATRIX': 'FILTER_MATRIX', 'DIAG_SUB_SCF': 'DIAG_SUB_SCF', 'DAVIDSON': 'DAVIDSON', 'KRYLOV': 'KRYLOV', 'OT': 'OT'}
+        self._keywords = {'Algorithm': 'ALGORITHM', 'Jacobi_threshold': 'JACOBI_THRESHOLD', 'Eps_jacobi': 'EPS_JACOBI', 'Eps_adapt': 'EPS_ADAPT', 'Max_iter': 'MAX_ITER', 'Eps_iter': 'EPS_ITER'}
+        self._subsections = {'OT': 'OT', 'KRYLOV': 'KRYLOV', 'DIAG_SUB_SCF': 'DIAG_SUB_SCF', 'DAVIDSON': 'DAVIDSON', 'FILTER_MATRIX': 'FILTER_MATRIX'}
         self._attributes = ['Section_parameters']
 

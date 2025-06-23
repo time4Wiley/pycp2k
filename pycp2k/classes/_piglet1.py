@@ -9,9 +9,10 @@ class _piglet1(InputSection):
         self.Nextra_dof = None
         self.Matrices_file_name = None
         self.Smatrix_init = None
+        self.Thermostat_energy = None
         self.RNG_INIT = _rng_init9()
         self.EXTRA_DOF = _extra_dof1()
         self._name = "PIGLET"
-        self._keywords = {'Nextra_dof': 'NEXTRA_DOF', 'Smatrix_init': 'SMATRIX_INIT', 'Matrices_file_name': 'MATRICES_FILE_NAME'}
-        self._subsections = {'EXTRA_DOF': 'EXTRA_DOF', 'RNG_INIT': 'RNG_INIT'}
+        self._keywords = {'Nextra_dof': 'NEXTRA_DOF', 'Matrices_file_name': 'MATRICES_FILE_NAME', 'Smatrix_init': 'SMATRIX_INIT', 'Thermostat_energy': 'THERMOSTAT_ENERGY'}
+        self._subsections = {'RNG_INIT': 'RNG_INIT', 'EXTRA_DOF': 'EXTRA_DOF'}
 

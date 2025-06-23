@@ -44,18 +44,10 @@ class _tmc1(InputSection):
         self.TMC_ANALYSIS = _tmc_analysis1()
         self.TMC_ANALYSIS_FILES = _tmc_analysis_files1()
         self._name = "TMC"
-        self._keywords = {'Print_only_acc': 'PRINT_ONLY_ACC', 'Group_energy_nr': 'GROUP_ENERGY_NR', 'Print_test_output': 'PRINT_TEST_OUTPUT', 'Result_list_in_memory': 'RESULT_LIST_IN_MEMORY', 'Info_out_step_size': 'INFO_OUT_STEP_SIZE', 'Sub_box': 'SUB_BOX', 'Temperature': 'TEMPERATURE', 'Pressure': 'PRESSURE', 'Energy_file_name': 'ENERGY_FILE_NAME', 'Use_scf_energy_info': 'USE_SCF_ENERGY_INFO', 'Print_dipole': 'PRINT_DIPOLE', 'Print_coords': 'PRINT_COORDS', 'Nr_temperature': 'NR_TEMPERATURE', 'Print_cell': 'PRINT_CELL', 'Group_anlysis_nr': 'GROUP_ANLYSIS_NR', 'Restart_out': 'RESTART_OUT', 'All_conf_file_name': 'ALL_CONF_FILE_NAME', 'Group_energy_size': 'GROUP_ENERGY_SIZE', 'Num_mc_elem': 'NUM_MC_ELEM', 'Restart_in': 'RESTART_IN', 'Group_cc_size': 'GROUP_CC_SIZE', 'Volume_isotropic': 'VOLUME_ISOTROPIC', 'Rnd_deterministic': 'RND_DETERMINISTIC', 'Print_forces': 'PRINT_FORCES', 'Print_energies': 'PRINT_ENERGIES', 'Num_mv_elem_in_cell': 'NUM_MV_ELEM_IN_CELL', 'Dot_tree': 'DOT_TREE', 'Esimate_acc_prob': 'ESIMATE_ACC_PROB', 'Speculative_canceling': 'SPECULATIVE_CANCELING', 'Task_type': 'TASK_TYPE', 'Move_center_of_mass': 'MOVE_CENTER_OF_MASS'}
+        self._keywords = {'Group_energy_size': 'GROUP_ENERGY_SIZE', 'Group_energy_nr': 'GROUP_ENERGY_NR', 'Group_cc_size': 'GROUP_CC_SIZE', 'Group_anlysis_nr': 'GROUP_ANLYSIS_NR', 'Num_mc_elem': 'NUM_MC_ELEM', 'Rnd_deterministic': 'RND_DETERMINISTIC', 'Task_type': 'TASK_TYPE', 'Nr_temperature': 'NR_TEMPERATURE', 'Temperature': 'TEMPERATURE', 'Num_mv_elem_in_cell': 'NUM_MV_ELEM_IN_CELL', 'Sub_box': 'SUB_BOX', 'Pressure': 'PRESSURE', 'Volume_isotropic': 'VOLUME_ISOTROPIC', 'Move_center_of_mass': 'MOVE_CENTER_OF_MASS', 'Esimate_acc_prob': 'ESIMATE_ACC_PROB', 'Speculative_canceling': 'SPECULATIVE_CANCELING', 'Use_scf_energy_info': 'USE_SCF_ENERGY_INFO', 'Result_list_in_memory': 'RESULT_LIST_IN_MEMORY', 'Info_out_step_size': 'INFO_OUT_STEP_SIZE', 'Restart_in': 'RESTART_IN', 'Restart_out': 'RESTART_OUT', 'Energy_file_name': 'ENERGY_FILE_NAME', 'Print_only_acc': 'PRINT_ONLY_ACC', 'Print_coords': 'PRINT_COORDS', 'Print_forces': 'PRINT_FORCES', 'Print_dipole': 'PRINT_DIPOLE', 'Print_cell': 'PRINT_CELL', 'Print_energies': 'PRINT_ENERGIES', 'Dot_tree': 'DOT_TREE', 'All_conf_file_name': 'ALL_CONF_FILE_NAME', 'Print_test_output': 'PRINT_TEST_OUTPUT'}
         self._subsections = {'TMC_ANALYSIS': 'TMC_ANALYSIS', 'TMC_ANALYSIS_FILES': 'TMC_ANALYSIS_FILES'}
-        self._repeated_subsections = {'NMC_MOVES': '_nmc_moves1', 'MOVE_TYPE': '_move_type1'}
+        self._repeated_subsections = {'MOVE_TYPE': '_move_type1', 'NMC_MOVES': '_nmc_moves1'}
         self._attributes = ['MOVE_TYPE_list', 'NMC_MOVES_list']
-
-    def NMC_MOVES_add(self, section_parameters=None):
-        new_section = _nmc_moves1()
-        if section_parameters is not None:
-            if hasattr(new_section, 'Section_parameters'):
-                new_section.Section_parameters = section_parameters
-        self.NMC_MOVES_list.append(new_section)
-        return new_section
 
     def MOVE_TYPE_add(self, section_parameters=None):
         new_section = _move_type1()
@@ -63,5 +55,13 @@ class _tmc1(InputSection):
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters
         self.MOVE_TYPE_list.append(new_section)
+        return new_section
+
+    def NMC_MOVES_add(self, section_parameters=None):
+        new_section = _nmc_moves1()
+        if section_parameters is not None:
+            if hasattr(new_section, 'Section_parameters'):
+                new_section.Section_parameters = section_parameters
+        self.NMC_MOVES_list.append(new_section)
         return new_section
 

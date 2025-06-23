@@ -17,9 +17,9 @@ class _hydronium_shell4(InputSection):
         self.Qm = None
         self.Lambda = None
         self._name = "HYDRONIUM_SHELL"
-        self._keywords = {'Qm': 'QM', 'Qoh': 'QOH', 'Qoo': 'QOO', 'Roh': 'ROH', 'Poh': 'POH', 'Poo': 'POO', 'Roo': 'ROO', 'Nh': 'NH', 'Pm': 'PM', 'Lambda': 'LAMBDA'}
-        self._repeated_keywords = {'Hydrogens': 'HYDROGENS', 'Oxygens': 'OXYGENS'}
-        self._aliases = {'Expon_denominatorb': 'Qoh', 'Expon_denominatora': 'Qoo', 'Expon_numeratora': 'Poo', 'Expon_numeratorb': 'Poh', 'Expon_numerator': 'Pm', 'Expon_denominator': 'Qm'}
+        self._keywords = {'Roo': 'ROO', 'Poo': 'POO', 'Qoo': 'QOO', 'Roh': 'ROH', 'Poh': 'POH', 'Qoh': 'QOH', 'Nh': 'NH', 'Pm': 'PM', 'Qm': 'QM', 'Lambda': 'LAMBDA'}
+        self._repeated_keywords = {'Oxygens': 'OXYGENS', 'Hydrogens': 'HYDROGENS'}
+        self._aliases = {'Expon_numeratora': 'Poo', 'Expon_denominatora': 'Qoo', 'Expon_numeratorb': 'Poh', 'Expon_denominatorb': 'Qoh', 'Expon_numerator': 'Pm', 'Expon_denominator': 'Qm'}
 
 
     @property

@@ -9,5 +9,5 @@ class _alchemical_change1(InputSection):
         self.Eps_conv = None
         self.Nequil_steps = None
         self._name = "ALCHEMICAL_CHANGE"
-        self._keywords = {'Eps_conv': 'EPS_CONV', 'Weighting_function': 'WEIGHTING_FUNCTION', 'Nequil_steps': 'NEQUIL_STEPS', 'Parameter': 'PARAMETER'}
+        self._keywords = {'Parameter': 'PARAMETER', 'Weighting_function': 'WEIGHTING_FUNCTION', 'Eps_conv': 'EPS_CONV', 'Nequil_steps': 'NEQUIL_STEPS'}
 

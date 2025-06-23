@@ -15,6 +15,6 @@ class _minima_crawling1(InputSection):
         self.Escape_history_length = None
         self.MINIMA_TRAJECTORY = _minima_trajectory1()
         self._name = "MINIMA_CRAWLING"
-        self._keywords = {'Escape_history_length': 'ESCAPE_HISTORY_LENGTH', 'Tempdist_init_width': 'TEMPDIST_INIT_WIDTH', 'Tempdist_update_width': 'TEMPDIST_UPDATE_WIDTH', 'Tempstep_base': 'TEMPSTEP_BASE', 'Tempstep_max': 'TEMPSTEP_MAX', 'Temperature_init': 'TEMPERATURE_INIT', 'Worker_per_minima': 'WORKER_PER_MINIMA', 'Tempdist_update_height': 'TEMPDIST_UPDATE_HEIGHT'}
+        self._keywords = {'Tempstep_base': 'TEMPSTEP_BASE', 'Tempstep_max': 'TEMPSTEP_MAX', 'Tempdist_update_width': 'TEMPDIST_UPDATE_WIDTH', 'Tempdist_update_height': 'TEMPDIST_UPDATE_HEIGHT', 'Temperature_init': 'TEMPERATURE_INIT', 'Tempdist_init_width': 'TEMPDIST_INIT_WIDTH', 'Worker_per_minima': 'WORKER_PER_MINIMA', 'Escape_history_length': 'ESCAPE_HISTORY_LENGTH'}
         self._subsections = {'MINIMA_TRAJECTORY': 'MINIMA_TRAJECTORY'}
 

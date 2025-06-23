@@ -15,5 +15,5 @@ class _free_energy1(InputSection):
         self.FREE_ENERGY_INFO = _free_energy_info1()
         self._name = "FREE_ENERGY"
         self._keywords = {'Method': 'METHOD'}
-        self._subsections = {'ALCHEMICAL_CHANGE': 'ALCHEMICAL_CHANGE', 'METADYN': 'METADYN', 'UMBRELLA_INTEGRATION': 'UMBRELLA_INTEGRATION', 'FREE_ENERGY_INFO': 'FREE_ENERGY_INFO'}
+        self._subsections = {'METADYN': 'METADYN', 'UMBRELLA_INTEGRATION': 'UMBRELLA_INTEGRATION', 'ALCHEMICAL_CHANGE': 'ALCHEMICAL_CHANGE', 'FREE_ENERGY_INFO': 'FREE_ENERGY_INFO'}
 

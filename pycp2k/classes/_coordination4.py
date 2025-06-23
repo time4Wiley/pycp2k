@@ -22,10 +22,10 @@ class _coordination4(InputSection):
         self.Nd_b = None
         self.POINT_list = []
         self._name = "COORDINATION"
-        self._keywords = {'Nn_b': 'NN_B', 'Nd_b': 'ND_B', 'Nd': 'ND', 'R0_b': 'R0_B', 'Nn': 'NN', 'R0': 'R0'}
-        self._repeated_keywords = {'Kinds_to': 'KINDS_TO', 'Kinds_to_b': 'KINDS_TO_B', 'Atoms_from': 'ATOMS_FROM', 'Atoms_to': 'ATOMS_TO', 'Kinds_from': 'KINDS_FROM', 'Atoms_to_b': 'ATOMS_TO_B'}
+        self._keywords = {'R0': 'R0', 'Nn': 'NN', 'Nd': 'ND', 'R0_b': 'R0_B', 'Nn_b': 'NN_B', 'Nd_b': 'ND_B'}
+        self._repeated_keywords = {'Atoms_from': 'ATOMS_FROM', 'Atoms_to': 'ATOMS_TO', 'Atoms_to_b': 'ATOMS_TO_B', 'Kinds_from': 'KINDS_FROM', 'Kinds_to': 'KINDS_TO', 'Kinds_to_b': 'KINDS_TO_B'}
         self._repeated_subsections = {'POINT': '_point55'}
-        self._aliases = {'Expon_denominator_b': 'Nd_b', 'R_0_b': 'R0_b', 'Expon_denominator': 'Nd', 'Expon_numerator_b': 'Nn_b', 'R_0': 'R0', 'Expon_numerator': 'Nn'}
+        self._aliases = {'R_0': 'R0', 'Expon_numerator': 'Nn', 'Expon_denominator': 'Nd', 'R_0_b': 'R0_b', 'Expon_numerator_b': 'Nn_b', 'Expon_denominator_b': 'Nd_b'}
         self._repeated_aliases = {'Points_from': 'Atoms_from', 'Points_to': 'Atoms_to', 'Points_to_b': 'Atoms_to_b'}
         self._attributes = ['POINT_list']
 

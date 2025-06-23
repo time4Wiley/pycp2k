@@ -5,7 +5,7 @@ from ._outer_scf3 import _outer_scf3
 from ._smear2 import _smear2
 from ._mixing4 import _mixing4
 from ._mom2 import _mom2
-from ._print33 import _print33
+from ._print62 import _print62
 
 
 class _scf2(InputSection):
@@ -29,17 +29,19 @@ class _scf2(InputSection):
         self.Roks_scheme = None
         self.Roks_f = None
         self.Roks_parameters = None
+        self.Ignore_convergence_failure = None
+        self.Force_scf_calculation = None
         self.OT = _ot3()
         self.DIAGONALIZATION = _diagonalization2()
         self.OUTER_SCF = _outer_scf3()
         self.SMEAR = _smear2()
         self.MIXING = _mixing4()
         self.MOM = _mom2()
-        self.PRINT = _print33()
+        self.PRINT = _print62()
         self._name = "SCF"
-        self._keywords = {'Roks_scheme': 'ROKS_SCHEME', 'Eps_diis': 'EPS_DIIS', 'Max_scf_history': 'MAX_SCF_HISTORY', 'Roks_f': 'ROKS_F', 'Eps_lumo': 'EPS_LUMO', 'Added_mos': 'ADDED_MOS', 'Eps_scf': 'EPS_SCF', 'Cholesky': 'CHOLESKY', 'Max_scf': 'MAX_SCF', 'Ncol_block': 'NCOL_BLOCK', 'Max_iter_lumo': 'MAX_ITER_LUMO', 'Scf_guess': 'SCF_GUESS', 'Max_diis': 'MAX_DIIS', 'Roks_parameters': 'ROKS_PARAMETERS', 'Eps_scf_history': 'EPS_SCF_HISTORY', 'Level_shift': 'LEVEL_SHIFT', 'Nrow_block': 'NROW_BLOCK', 'Eps_eigval': 'EPS_EIGVAL'}
-        self._subsections = {'DIAGONALIZATION': 'DIAGONALIZATION', 'PRINT': 'PRINT', 'MOM': 'MOM', 'OUTER_SCF': 'OUTER_SCF', 'MIXING': 'MIXING', 'SMEAR': 'SMEAR', 'OT': 'OT'}
-        self._aliases = {'Max_iter_lumos': 'Max_iter_lumo', 'Lshift': 'Level_shift', 'Eps_lumos': 'Eps_lumo', 'Max_scf_hist': 'Max_scf_history', 'Eps_scf_hist': 'Eps_scf_history', 'Max_diis_buffer_size': 'Max_diis', 'F_roks': 'Roks_f', 'Roks_parameter': 'Roks_parameters'}
+        self._keywords = {'Max_iter_lumo': 'MAX_ITER_LUMO', 'Eps_lumo': 'EPS_LUMO', 'Max_scf': 'MAX_SCF', 'Max_scf_history': 'MAX_SCF_HISTORY', 'Max_diis': 'MAX_DIIS', 'Level_shift': 'LEVEL_SHIFT', 'Eps_scf': 'EPS_SCF', 'Eps_scf_history': 'EPS_SCF_HISTORY', 'Cholesky': 'CHOLESKY', 'Eps_eigval': 'EPS_EIGVAL', 'Eps_diis': 'EPS_DIIS', 'Scf_guess': 'SCF_GUESS', 'Nrow_block': 'NROW_BLOCK', 'Ncol_block': 'NCOL_BLOCK', 'Added_mos': 'ADDED_MOS', 'Roks_scheme': 'ROKS_SCHEME', 'Roks_f': 'ROKS_F', 'Roks_parameters': 'ROKS_PARAMETERS', 'Ignore_convergence_failure': 'IGNORE_CONVERGENCE_FAILURE', 'Force_scf_calculation': 'FORCE_SCF_CALCULATION'}
+        self._subsections = {'OT': 'OT', 'DIAGONALIZATION': 'DIAGONALIZATION', 'OUTER_SCF': 'OUTER_SCF', 'SMEAR': 'SMEAR', 'MIXING': 'MIXING', 'MOM': 'MOM', 'PRINT': 'PRINT'}
+        self._aliases = {'Max_iter_lumos': 'Max_iter_lumo', 'Eps_lumos': 'Eps_lumo', 'Max_scf_hist': 'Max_scf_history', 'Max_diis_buffer_size': 'Max_diis', 'Lshift': 'Level_shift', 'Eps_scf_hist': 'Eps_scf_history', 'F_roks': 'Roks_f', 'Roks_parameter': 'Roks_parameters'}
 
 
     @property

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each266 import _each266
+from ._each351 import _each351
 
 
 class _s_csr_write1(InputSection):
@@ -12,9 +12,11 @@ class _s_csr_write1(InputSection):
         self.Log_print_key = None
         self.Threshold = None
         self.Upper_triangular = None
-        self.EACH = _each266()
+        self.Binary = None
+        self.Real_space = None
+        self.EACH = _each351()
         self._name = "S_CSR_WRITE"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Upper_triangular': 'UPPER_TRIANGULAR', 'Threshold': 'THRESHOLD', 'Filename': 'FILENAME'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Threshold': 'THRESHOLD', 'Upper_triangular': 'UPPER_TRIANGULAR', 'Binary': 'BINARY', 'Real_space': 'REAL_SPACE'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

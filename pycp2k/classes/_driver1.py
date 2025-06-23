@@ -9,5 +9,5 @@ class _driver1(InputSection):
         self.Host = None
         self.Sleep_time = None
         self._name = "DRIVER"
-        self._keywords = {'Host': 'HOST', 'Sleep_time': 'SLEEP_TIME', 'Port': 'PORT', 'Unix': 'UNIX'}
+        self._keywords = {'Unix': 'UNIX', 'Port': 'PORT', 'Host': 'HOST', 'Sleep_time': 'SLEEP_TIME'}
 

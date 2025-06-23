@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each54 import _each54
+from ._each57 import _each57
 
 
 class _projected_area_2_avg1(InputSection):
@@ -10,9 +10,9 @@ class _projected_area_2_avg1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each54()
+        self.EACH = _each57()
         self._name = "PROJECTED_AREA_2_AVG"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

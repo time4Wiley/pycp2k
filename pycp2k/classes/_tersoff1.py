@@ -20,5 +20,5 @@ class _tersoff1(InputSection):
         self.Bigd = None
         self.Rcut = None
         self._name = "TERSOFF"
-        self._keywords = {'Lambda3': 'LAMBDA3', 'B': 'B', 'Bigd': 'BIGD', 'Lambda2': 'LAMBDA2', 'N': 'N', 'C': 'C', 'D': 'D', 'Beta': 'BETA', 'Lambda1': 'LAMBDA1', 'Atoms': 'ATOMS', 'Bigr': 'BIGR', 'A': 'A', 'Alpha': 'ALPHA', 'H': 'H', 'Rcut': 'RCUT'}
+        self._keywords = {'Atoms': 'ATOMS', 'A': 'A', 'B': 'B', 'Lambda1': 'LAMBDA1', 'Lambda2': 'LAMBDA2', 'Alpha': 'ALPHA', 'Beta': 'BETA', 'N': 'N', 'C': 'C', 'D': 'D', 'H': 'H', 'Lambda3': 'LAMBDA3', 'Bigr': 'BIGR', 'Bigd': 'BIGD', 'Rcut': 'RCUT'}
 

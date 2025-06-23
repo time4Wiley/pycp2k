@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print60 import _print60
+from ._print99 import _print99
 from ._interpolator13 import _interpolator13
 
 
@@ -8,10 +8,11 @@ class _polar1(InputSection):
         InputSection.__init__(self)
         self.Section_parameters = None
         self.Do_raman = None
-        self.PRINT = _print60()
+        self.Periodic_dipole_operator = None
+        self.PRINT = _print99()
         self.INTERPOLATOR = _interpolator13()
         self._name = "POLAR"
-        self._keywords = {'Do_raman': 'DO_RAMAN'}
-        self._subsections = {'INTERPOLATOR': 'INTERPOLATOR', 'PRINT': 'PRINT'}
+        self._keywords = {'Do_raman': 'DO_RAMAN', 'Periodic_dipole_operator': 'PERIODIC_DIPOLE_OPERATOR'}
+        self._subsections = {'PRINT': 'PRINT', 'INTERPOLATOR': 'INTERPOLATOR'}
         self._attributes = ['Section_parameters']
 

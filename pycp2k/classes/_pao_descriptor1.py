@@ -8,5 +8,5 @@ class _pao_descriptor1(InputSection):
         self.Screening = None
         self.Weight = None
         self._name = "PAO_DESCRIPTOR"
-        self._keywords = {'Screening': 'SCREENING', 'Weight': 'WEIGHT', 'Beta': 'BETA'}
+        self._keywords = {'Beta': 'BETA', 'Screening': 'SCREENING', 'Weight': 'WEIGHT'}
 

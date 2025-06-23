@@ -8,6 +8,6 @@ class _kpoint_set1(InputSection):
         self.Npoints = None
         self.Units = None
         self._name = "KPOINT_SET"
-        self._keywords = {'Units': 'UNITS', 'Npoints': 'NPOINTS'}
+        self._keywords = {'Npoints': 'NPOINTS', 'Units': 'UNITS'}
         self._repeated_keywords = {'Special_point': 'SPECIAL_POINT'}
 

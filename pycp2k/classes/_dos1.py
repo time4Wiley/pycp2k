@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each115 import _each115
+from ._each119 import _each119
 
 
 class _dos1(InputSection):
@@ -11,9 +11,9 @@ class _dos1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.N_gridpoints = None
-        self.EACH = _each115()
+        self.EACH = _each119()
         self._name = "DOS"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'N_gridpoints': 'N_GRIDPOINTS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'N_gridpoints': 'N_GRIDPOINTS'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

@@ -15,15 +15,15 @@ class _dirichlet_bc3(InputSection):
         self.AA_CUBOIDAL_list = []
         self._name = "DIRICHLET_BC"
         self._keywords = {'Verbose_output': 'VERBOSE_OUTPUT'}
-        self._repeated_subsections = {'AA_CYLINDRICAL': '_aa_cylindrical3', 'PLANAR': '_planar3', 'AA_PLANAR': '_aa_planar3', 'AA_CUBOIDAL': '_aa_cuboidal3'}
+        self._repeated_subsections = {'AA_PLANAR': '_aa_planar3', 'PLANAR': '_planar3', 'AA_CYLINDRICAL': '_aa_cylindrical3', 'AA_CUBOIDAL': '_aa_cuboidal3'}
         self._attributes = ['AA_PLANAR_list', 'PLANAR_list', 'AA_CYLINDRICAL_list', 'AA_CUBOIDAL_list']
 
-    def AA_CYLINDRICAL_add(self, section_parameters=None):
-        new_section = _aa_cylindrical3()
+    def AA_PLANAR_add(self, section_parameters=None):
+        new_section = _aa_planar3()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters
-        self.AA_CYLINDRICAL_list.append(new_section)
+        self.AA_PLANAR_list.append(new_section)
         return new_section
 
     def PLANAR_add(self, section_parameters=None):
@@ -34,12 +34,12 @@ class _dirichlet_bc3(InputSection):
         self.PLANAR_list.append(new_section)
         return new_section
 
-    def AA_PLANAR_add(self, section_parameters=None):
-        new_section = _aa_planar3()
+    def AA_CYLINDRICAL_add(self, section_parameters=None):
+        new_section = _aa_cylindrical3()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters
-        self.AA_PLANAR_list.append(new_section)
+        self.AA_CYLINDRICAL_list.append(new_section)
         return new_section
 
     def AA_CUBOIDAL_add(self, section_parameters=None):

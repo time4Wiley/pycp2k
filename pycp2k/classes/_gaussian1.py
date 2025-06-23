@@ -7,5 +7,5 @@ class _gaussian1(InputSection):
         self.Ww = None
         self.Sigma = None
         self._name = "GAUSSIAN"
-        self._keywords = {'Sigma': 'SIGMA', 'Ww': 'WW'}
+        self._keywords = {'Ww': 'WW', 'Sigma': 'SIGMA'}
 

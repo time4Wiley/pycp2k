@@ -11,7 +11,7 @@ class _thermostat_slow1(InputSection):
         self.DEFINE_REGION_list = []
         self.NOSE = _nose5()
         self._name = "THERMOSTAT_SLOW"
-        self._keywords = {'Region': 'REGION', 'Type': 'TYPE'}
+        self._keywords = {'Type': 'TYPE', 'Region': 'REGION'}
         self._subsections = {'NOSE': 'NOSE'}
         self._repeated_subsections = {'DEFINE_REGION': '_define_region4'}
         self._attributes = ['DEFINE_REGION_list']

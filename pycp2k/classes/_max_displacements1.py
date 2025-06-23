@@ -9,5 +9,5 @@ class _max_displacements1(InputSection):
         self.MOL_DISPLACEMENTS = _mol_displacements1()
         self.BOX_DISPLACEMENTS = _box_displacements1()
         self._name = "MAX_DISPLACEMENTS"
-        self._subsections = {'BOX_DISPLACEMENTS': 'BOX_DISPLACEMENTS', 'MOL_DISPLACEMENTS': 'MOL_DISPLACEMENTS'}
+        self._subsections = {'MOL_DISPLACEMENTS': 'MOL_DISPLACEMENTS', 'BOX_DISPLACEMENTS': 'BOX_DISPLACEMENTS'}
 

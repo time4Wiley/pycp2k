@@ -8,5 +8,5 @@ class _xc_grid4(InputSection):
         self.Xc_deriv = None
         self.Use_finer_grid = None
         self._name = "XC_GRID"
-        self._keywords = {'Use_finer_grid': 'USE_FINER_GRID', 'Xc_deriv': 'XC_DERIV', 'Xc_smooth_rho': 'XC_SMOOTH_RHO'}
+        self._keywords = {'Xc_smooth_rho': 'XC_SMOOTH_RHO', 'Xc_deriv': 'XC_DERIV', 'Use_finer_grid': 'USE_FINER_GRID'}
 

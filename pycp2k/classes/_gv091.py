@@ -9,6 +9,6 @@ class _gv091(InputSection):
         self.Cutoff_radius = None
         self.Gamma = None
         self._name = "GV09"
-        self._keywords = {'Cutoff_radius': 'CUTOFF_RADIUS', 'Scale_x': 'SCALE_X', 'Gamma': 'GAMMA'}
+        self._keywords = {'Scale_x': 'SCALE_X', 'Cutoff_radius': 'CUTOFF_RADIUS', 'Gamma': 'GAMMA'}
         self._attributes = ['Section_parameters']
 

@@ -18,6 +18,6 @@ class _barostat1(InputSection):
         self.THERMOSTAT = _thermostat1()
         self.PRINT = _print7()
         self._name = "BAROSTAT"
-        self._keywords = {'Temp_tol': 'TEMP_TOL', 'Virial': 'VIRIAL', 'Temperature': 'TEMPERATURE', 'Pressure': 'PRESSURE', 'Timecon': 'TIMECON'}
-        self._subsections = {'VELOCITY': 'VELOCITY', 'THERMOSTAT': 'THERMOSTAT', 'PRINT': 'PRINT', 'MASS': 'MASS'}
+        self._keywords = {'Pressure': 'PRESSURE', 'Timecon': 'TIMECON', 'Temperature': 'TEMPERATURE', 'Temp_tol': 'TEMP_TOL', 'Virial': 'VIRIAL'}
+        self._subsections = {'VELOCITY': 'VELOCITY', 'MASS': 'MASS', 'THERMOSTAT': 'THERMOSTAT', 'PRINT': 'PRINT'}
 

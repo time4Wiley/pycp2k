@@ -14,9 +14,9 @@ class _virtual_site1(InputSection):
         self.Exclude_mm = None
         self.RESTRAINT = _restraint4()
         self._name = "VIRTUAL_SITE"
-        self._keywords = {'Molname': 'MOLNAME', 'Exclude_qm': 'EXCLUDE_QM', 'Atoms': 'ATOMS', 'Parameters': 'PARAMETERS', 'Exclude_mm': 'EXCLUDE_MM', 'Intermolecular': 'INTERMOLECULAR', 'Molecule': 'MOLECULE'}
+        self._keywords = {'Molecule': 'MOLECULE', 'Molname': 'MOLNAME', 'Intermolecular': 'INTERMOLECULAR', 'Atoms': 'ATOMS', 'Parameters': 'PARAMETERS', 'Exclude_qm': 'EXCLUDE_QM', 'Exclude_mm': 'EXCLUDE_MM'}
         self._subsections = {'RESTRAINT': 'RESTRAINT'}
-        self._aliases = {'Segname': 'Molname', 'Mol': 'Molecule'}
+        self._aliases = {'Mol': 'Molecule', 'Segname': 'Molname'}
 
 
     @property

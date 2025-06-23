@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._restart16 import _restart16
+from ._restart18 import _restart18
 
 
 class _zmp1(InputSection):
@@ -9,8 +9,8 @@ class _zmp1(InputSection):
         self.Grid_tol = None
         self.Lambda = None
         self.Dm = None
-        self.RESTART = _restart16()
+        self.RESTART = _restart18()
         self._name = "ZMP"
-        self._keywords = {'Grid_tol': 'GRID_TOL', 'Dm': 'DM', 'Lambda': 'LAMBDA', 'File_density': 'FILE_DENSITY'}
+        self._keywords = {'File_density': 'FILE_DENSITY', 'Grid_tol': 'GRID_TOL', 'Lambda': 'LAMBDA', 'Dm': 'DM'}
         self._subsections = {'RESTART': 'RESTART'}
 

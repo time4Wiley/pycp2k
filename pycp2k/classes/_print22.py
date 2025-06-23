@@ -1,13 +1,25 @@
 from pycp2k.inputsection import InputSection
-from ._almo_eda_ct1 import _almo_eda_ct1
-from ._almo_cta1 import _almo_cta1
+from ._run_info1 import _run_info1
+from ._atom_info1 import _atom_info1
+from ._fock_gap1 import _fock_gap1
+from ._fock_eigenvalues1 import _fock_eigenvalues1
+from ._ml_variance1 import _ml_variance1
+from ._ml_training_data1 import _ml_training_data1
+from ._opt_info1 import _opt_info1
+from ._restart7 import _restart7
 
 
 class _print22(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.ALMO_EDA_CT = _almo_eda_ct1()
-        self.ALMO_CTA = _almo_cta1()
+        self.RUN_INFO = _run_info1()
+        self.ATOM_INFO = _atom_info1()
+        self.FOCK_GAP = _fock_gap1()
+        self.FOCK_EIGENVALUES = _fock_eigenvalues1()
+        self.ML_VARIANCE = _ml_variance1()
+        self.ML_TRAINING_DATA = _ml_training_data1()
+        self.OPT_INFO = _opt_info1()
+        self.RESTART = _restart7()
         self._name = "PRINT"
-        self._subsections = {'ALMO_CTA': 'ALMO_CTA', 'ALMO_EDA_CT': 'ALMO_EDA_CT'}
+        self._subsections = {'RUN_INFO': 'RUN_INFO', 'ATOM_INFO': 'ATOM_INFO', 'FOCK_GAP': 'FOCK_GAP', 'FOCK_EIGENVALUES': 'FOCK_EIGENVALUES', 'ML_VARIANCE': 'ML_VARIANCE', 'ML_TRAINING_DATA': 'ML_TRAINING_DATA', 'OPT_INFO': 'OPT_INFO', 'RESTART': 'RESTART'}
 

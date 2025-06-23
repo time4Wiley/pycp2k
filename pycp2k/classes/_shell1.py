@@ -11,6 +11,6 @@ class _shell1(InputSection):
         self.Displacement_shell_tol = None
         self.THERMOSTAT = _thermostat3()
         self._name = "SHELL"
-        self._keywords = {'Nose_particle': 'NOSE_PARTICLE', 'Displacement_shell_tol': 'DISPLACEMENT_SHELL_TOL', 'Temperature': 'TEMPERATURE', 'Temp_tol': 'TEMP_TOL'}
+        self._keywords = {'Temperature': 'TEMPERATURE', 'Temp_tol': 'TEMP_TOL', 'Nose_particle': 'NOSE_PARTICLE', 'Displacement_shell_tol': 'DISPLACEMENT_SHELL_TOL'}
         self._subsections = {'THERMOSTAT': 'THERMOSTAT'}
 

@@ -8,6 +8,6 @@ class _pw922(InputSection):
         self.Scale = None
         self.Parametrization = None
         self._name = "PW92"
-        self._keywords = {'Parametrization': 'PARAMETRIZATION', 'Scale': 'SCALE'}
+        self._keywords = {'Scale': 'SCALE', 'Parametrization': 'PARAMETRIZATION'}
         self._attributes = ['Section_parameters']
 

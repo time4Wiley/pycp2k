@@ -11,5 +11,5 @@ class _line_search4(InputSection):
         self.GOLD = _gold4()
         self._name = "LINE_SEARCH"
         self._keywords = {'Type': 'TYPE'}
-        self._subsections = {'GOLD': 'GOLD', '_2PNT': '2PNT'}
+        self._subsections = {'_2PNT': '2PNT', 'GOLD': 'GOLD'}
 

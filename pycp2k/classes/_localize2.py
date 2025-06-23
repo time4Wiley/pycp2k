@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print36 import _print36
+from ._print66 import _print66
 
 
 class _localize2(InputSection):
@@ -16,19 +16,25 @@ class _localize2(InputSection):
         self.Eps_localization = None
         self.Min_or_max = None
         self.Method = None
+        self.Cpo_guess = None
+        self.Cpo_guess_space = None
+        self.Cg_po = None
         self.Jacobi_fallback = None
+        self.Jacobi_refinement = None
         self.Restart = None
         self.Lochomo_restart_file_name = None
+        self.Locmixd_restart_file_name = None
         self.Loclumo_restart_file_name = None
         self.Operator = None
         self.List = []
         self.List_unoccupied = []
+        self.Nextra = None
         self.States = None
         self.Energy_range = None
-        self.PRINT = _print36()
+        self.PRINT = _print66()
         self._name = "LOCALIZE"
-        self._keywords = {'Method': 'METHOD', 'States': 'STATES', 'Loclumo_restart_file_name': 'LOCLUMO_RESTART_FILE_NAME', 'Energy_range': 'ENERGY_RANGE', 'Use_history': 'USE_HISTORY', 'Lochomo_restart_file_name': 'LOCHOMO_RESTART_FILE_NAME', 'Max_iter': 'MAX_ITER', 'Eps_localization': 'EPS_LOCALIZATION', 'Crazy_scale': 'CRAZY_SCALE', 'Max_crazy_angle': 'MAX_CRAZY_ANGLE', 'Crazy_use_diag': 'CRAZY_USE_DIAG', 'Operator': 'OPERATOR', 'Restart': 'RESTART', 'Out_iter_each': 'OUT_ITER_EACH', 'Eps_occupation': 'EPS_OCCUPATION', 'Jacobi_fallback': 'JACOBI_FALLBACK', 'Min_or_max': 'MIN_OR_MAX'}
-        self._repeated_keywords = {'List_unoccupied': 'LIST_UNOCCUPIED', 'List': 'LIST'}
+        self._keywords = {'Max_iter': 'MAX_ITER', 'Max_crazy_angle': 'MAX_CRAZY_ANGLE', 'Crazy_scale': 'CRAZY_SCALE', 'Crazy_use_diag': 'CRAZY_USE_DIAG', 'Use_history': 'USE_HISTORY', 'Eps_occupation': 'EPS_OCCUPATION', 'Out_iter_each': 'OUT_ITER_EACH', 'Eps_localization': 'EPS_LOCALIZATION', 'Min_or_max': 'MIN_OR_MAX', 'Method': 'METHOD', 'Cpo_guess': 'CPO_GUESS', 'Cpo_guess_space': 'CPO_GUESS_SPACE', 'Cg_po': 'CG_PO', 'Jacobi_fallback': 'JACOBI_FALLBACK', 'Jacobi_refinement': 'JACOBI_REFINEMENT', 'Restart': 'RESTART', 'Lochomo_restart_file_name': 'LOCHOMO_RESTART_FILE_NAME', 'Locmixd_restart_file_name': 'LOCMIXD_RESTART_FILE_NAME', 'Loclumo_restart_file_name': 'LOCLUMO_RESTART_FILE_NAME', 'Operator': 'OPERATOR', 'Nextra': 'NEXTRA', 'States': 'STATES', 'Energy_range': 'ENERGY_RANGE'}
+        self._repeated_keywords = {'List': 'LIST', 'List_unoccupied': 'LIST_UNOCCUPIED'}
         self._subsections = {'PRINT': 'PRINT'}
         self._attributes = ['Section_parameters']
 

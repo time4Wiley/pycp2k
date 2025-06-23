@@ -17,9 +17,9 @@ class _nose4(InputSection):
         self.MASS = _mass8()
         self.FORCE = _force4()
         self._name = "NOSE"
-        self._keywords = {'Yoshida': 'YOSHIDA', 'Length': 'LENGTH', 'Mts': 'MTS', 'Timecon': 'TIMECON'}
-        self._subsections = {'VELOCITY': 'VELOCITY', 'COORD': 'COORD', 'FORCE': 'FORCE', 'MASS': 'MASS'}
-        self._aliases = {'Mult_t_steps': 'Mts', 'Multiple_time_steps': 'Mts'}
+        self._keywords = {'Length': 'LENGTH', 'Yoshida': 'YOSHIDA', 'Timecon': 'TIMECON', 'Mts': 'MTS'}
+        self._subsections = {'COORD': 'COORD', 'VELOCITY': 'VELOCITY', 'MASS': 'MASS', 'FORCE': 'FORCE'}
+        self._aliases = {'Multiple_time_steps': 'Mts', 'Mult_t_steps': 'Mts'}
 
 
     @property

@@ -12,7 +12,7 @@ class _hbp3(InputSection):
         self.Points = self.Atoms
         self.POINT_list = []
         self._name = "HBP"
-        self._keywords = {'Shift': 'SHIFT', 'Npoints': 'NPOINTS', 'Rcut': 'RCUT'}
+        self._keywords = {'Rcut': 'RCUT', 'Shift': 'SHIFT', 'Npoints': 'NPOINTS'}
         self._repeated_keywords = {'Atoms': 'ATOMS'}
         self._repeated_subsections = {'POINT': '_point49'}
         self._repeated_aliases = {'Points': 'Atoms'}

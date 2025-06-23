@@ -9,6 +9,6 @@ class _becke972(InputSection):
         self.Scale_c = None
         self.Parametrization = None
         self._name = "BECKE97"
-        self._keywords = {'Parametrization': 'PARAMETRIZATION', 'Scale_x': 'SCALE_X', 'Scale_c': 'SCALE_C'}
+        self._keywords = {'Scale_x': 'SCALE_X', 'Scale_c': 'SCALE_C', 'Parametrization': 'PARAMETRIZATION'}
         self._attributes = ['Section_parameters']
 

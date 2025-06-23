@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each88 import _each88
+from ._each91 import _each91
 
 
 class _structure_data1(InputSection):
@@ -22,11 +22,11 @@ class _structure_data1(InputSection):
         self.Dihedral_angle = []
         self.Dihedral = self.Dihedral_angle
         self.Dih = self.Dihedral_angle
-        self.EACH = _each88()
+        self.EACH = _each91()
         self._name = "STRUCTURE_DATA"
-        self._keywords = {'Log_print_key': 'LOG_PRINT_KEY', 'Filename': 'FILENAME', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Unit': 'UNIT'}
-        self._repeated_keywords = {'Dihedral_angle': 'DIHEDRAL_ANGLE', 'Position': 'POSITION', 'Distance': 'DISTANCE', 'Position_scaled': 'POSITION_SCALED', 'Angle': 'ANGLE'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT'}
+        self._repeated_keywords = {'Position': 'POSITION', 'Position_scaled': 'POSITION_SCALED', 'Distance': 'DISTANCE', 'Angle': 'ANGLE', 'Dihedral_angle': 'DIHEDRAL_ANGLE'}
         self._subsections = {'EACH': 'EACH'}
-        self._repeated_aliases = {'Dis': 'Distance', 'Dih': 'Dihedral_angle', 'Pos': 'Position', 'Dihedral': 'Dihedral_angle', 'Pos_scaled': 'Position_scaled', 'Ang': 'Angle'}
+        self._repeated_aliases = {'Pos': 'Position', 'Pos_scaled': 'Position_scaled', 'Dis': 'Distance', 'Ang': 'Angle', 'Dihedral': 'Dihedral_angle', 'Dih': 'Dihedral_angle'}
         self._attributes = ['Section_parameters']
 

@@ -10,6 +10,6 @@ class _bs1(InputSection):
         self.ALPHA = _alpha1()
         self.BETA = _beta1()
         self._name = "BS"
-        self._subsections = {'BETA': 'BETA', 'ALPHA': 'ALPHA'}
+        self._subsections = {'ALPHA': 'ALPHA', 'BETA': 'BETA'}
         self._attributes = ['Section_parameters']
 

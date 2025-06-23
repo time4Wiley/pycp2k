@@ -13,5 +13,5 @@ class _merge_molecules1(InputSection):
         self.TORSIONS = _torsions1()
         self.IMPROPERS = _impropers1()
         self._name = "MERGE_MOLECULES"
-        self._subsections = {'ANGLES': 'ANGLES', 'TORSIONS': 'TORSIONS', 'BONDS': 'BONDS', 'IMPROPERS': 'IMPROPERS'}
+        self._subsections = {'BONDS': 'BONDS', 'ANGLES': 'ANGLES', 'TORSIONS': 'TORSIONS', 'IMPROPERS': 'IMPROPERS'}
 

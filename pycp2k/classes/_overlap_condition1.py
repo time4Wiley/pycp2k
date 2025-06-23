@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each243 import _each243
+from ._each313 import _each313
 
 
 class _overlap_condition1(InputSection):
@@ -13,9 +13,9 @@ class _overlap_condition1(InputSection):
         self.Num1_norm = None
         self.Diagonalization = None
         self.Arnoldi = None
-        self.EACH = _each243()
+        self.EACH = _each313()
         self._name = "OVERLAP_CONDITION"
-        self._keywords = {'Num1_norm': '1-NORM', 'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Diagonalization': 'DIAGONALIZATION', 'Arnoldi': 'ARNOLDI', 'Filename': 'FILENAME'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Num1_norm': '1-NORM', 'Diagonalization': 'DIAGONALIZATION', 'Arnoldi': 'ARNOLDI'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

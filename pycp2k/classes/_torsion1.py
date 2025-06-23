@@ -10,5 +10,5 @@ class _torsion1(InputSection):
         self.Phi0 = None
         self.M = None
         self._name = "TORSION"
-        self._keywords = {'Atoms': 'ATOMS', 'M': 'M', 'Kind': 'KIND', 'K': 'K', 'Phi0': 'PHI0'}
+        self._keywords = {'Atoms': 'ATOMS', 'Kind': 'KIND', 'K': 'K', 'Phi0': 'PHI0', 'M': 'M'}
 

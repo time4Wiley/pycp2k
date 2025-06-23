@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each205 import _each205
+from ._each277 import _each277
 
 
 class _wannier_centers3(InputSection):
@@ -16,9 +16,10 @@ class _wannier_centers3(InputSection):
         self.Charge_occup = None
         self.Charge_beta = None
         self.Charge_extended = None
-        self.EACH = _each205()
+        self.Print_atom_kind = None
+        self.EACH = _each277()
         self._name = "WANNIER_CENTERS"
-        self._keywords = {'Charge_extended': 'CHARGE_EXTENDED', 'Ionspluscenters': 'IONS+CENTERS', 'Charge_occup': 'CHARGE_OCCUP', 'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Format': 'FORMAT', 'Filename': 'FILENAME', 'Charge_beta': 'CHARGE_BETA', 'Unit': 'UNIT'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Ionspluscenters': 'IONS+CENTERS', 'Format': 'FORMAT', 'Charge_occup': 'CHARGE_OCCUP', 'Charge_beta': 'CHARGE_BETA', 'Charge_extended': 'CHARGE_EXTENDED', 'Print_atom_kind': 'PRINT_ATOM_KIND'}
         self._subsections = {'EACH': 'EACH'}
         self._aliases = {'Charge_o': 'Charge_occup', 'Charge_b': 'Charge_beta'}
         self._attributes = ['Section_parameters']

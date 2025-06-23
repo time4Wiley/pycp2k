@@ -20,8 +20,8 @@ class _optimize_basis1(InputSection):
         self.TRAINING_FILES_list = []
         self.OPTIMIZATION = _optimization1()
         self._name = "OPTIMIZE_BASIS"
-        self._keywords = {'Use_condition_number': 'USE_CONDITION_NUMBER', 'Basis_template_file': 'BASIS_TEMPLATE_FILE', 'Write_frequency': 'WRITE_FREQUENCY', 'Basis_work_file': 'BASIS_WORK_FILE', 'Basis_output_file': 'BASIS_OUTPUT_FILE'}
-        self._repeated_keywords = {'Basis_combinations': 'BASIS_COMBINATIONS', 'Condition_weight': 'CONDITION_WEIGHT', 'Group_partition': 'GROUP_PARTITION', 'Residuum_weight': 'RESIDUUM_WEIGHT'}
+        self._keywords = {'Basis_template_file': 'BASIS_TEMPLATE_FILE', 'Basis_work_file': 'BASIS_WORK_FILE', 'Basis_output_file': 'BASIS_OUTPUT_FILE', 'Write_frequency': 'WRITE_FREQUENCY', 'Use_condition_number': 'USE_CONDITION_NUMBER'}
+        self._repeated_keywords = {'Basis_combinations': 'BASIS_COMBINATIONS', 'Residuum_weight': 'RESIDUUM_WEIGHT', 'Condition_weight': 'CONDITION_WEIGHT', 'Group_partition': 'GROUP_PARTITION'}
         self._subsections = {'OPTIMIZATION': 'OPTIMIZATION'}
         self._repeated_subsections = {'FIT_KIND': '_fit_kind1', 'TRAINING_FILES': '_training_files1'}
         self._attributes = ['FIT_KIND_list', 'TRAINING_FILES_list']

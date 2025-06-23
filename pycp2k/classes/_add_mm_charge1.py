@@ -11,7 +11,7 @@ class _add_mm_charge1(InputSection):
         self.Corr_radius = None
         self.Charge = None
         self._name = "ADD_MM_CHARGE"
-        self._keywords = {'Atom_index_2': 'ATOM_INDEX_2', 'Corr_radius': 'CORR_RADIUS', 'Atom_index_1': 'ATOM_INDEX_1', 'Radius': 'RADIUS', 'Alpha': 'ALPHA', 'Charge': 'CHARGE'}
+        self._keywords = {'Atom_index_1': 'ATOM_INDEX_1', 'Atom_index_2': 'ATOM_INDEX_2', 'Alpha': 'ALPHA', 'Radius': 'RADIUS', 'Corr_radius': 'CORR_RADIUS', 'Charge': 'CHARGE'}
         self._aliases = {'Mm1': 'Atom_index_1', 'Mm2': 'Atom_index_2'}
 
 

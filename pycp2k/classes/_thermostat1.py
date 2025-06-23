@@ -17,5 +17,5 @@ class _thermostat1(InputSection):
         self.PRINT = _print6()
         self._name = "THERMOSTAT"
         self._keywords = {'Type': 'TYPE'}
-        self._subsections = {'AD_LANGEVIN': 'AD_LANGEVIN', 'NOSE': 'NOSE', 'GLE': 'GLE', 'CSVR': 'CSVR', 'PRINT': 'PRINT'}
+        self._subsections = {'NOSE': 'NOSE', 'CSVR': 'CSVR', 'GLE': 'GLE', 'AD_LANGEVIN': 'AD_LANGEVIN', 'PRINT': 'PRINT'}
 

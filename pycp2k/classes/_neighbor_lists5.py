@@ -8,5 +8,5 @@ class _neighbor_lists5(InputSection):
         self.Neighbor_lists_from_scratch = None
         self.Geo_check = None
         self._name = "NEIGHBOR_LISTS"
-        self._keywords = {'Geo_check': 'GEO_CHECK', 'Verlet_skin': 'VERLET_SKIN', 'Neighbor_lists_from_scratch': 'NEIGHBOR_LISTS_FROM_SCRATCH'}
+        self._keywords = {'Verlet_skin': 'VERLET_SKIN', 'Neighbor_lists_from_scratch': 'NEIGHBOR_LISTS_FROM_SCRATCH', 'Geo_check': 'GEO_CHECK'}
 

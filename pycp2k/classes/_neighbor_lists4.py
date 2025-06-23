@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each221 import _each221
+from ._each302 import _each302
 
 
 class _neighbor_lists4(InputSection):
@@ -24,12 +24,15 @@ class _neighbor_lists4(InputSection):
         self.Sab_se = None
         self.Sab_lrc = None
         self.Sab_tbe = None
+        self.Sab_xtbe = None
         self.Sab_core = None
+        self.Sab_xb = None
+        self.Sab_xtb_nonbond = None
         self.Soo_list = None
         self.Sip_list = None
-        self.EACH = _each221()
+        self.EACH = _each302()
         self._name = "NEIGHBOR_LISTS"
-        self._keywords = {'Sab_cn': 'SAB_CN', 'Log_print_key': 'LOG_PRINT_KEY', 'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Sap_oce': 'SAP_OCE', 'Sac_ae': 'SAC_AE', 'Sac_ppl': 'SAC_PPL', 'Sab_scp': 'SAB_SCP', 'Soo_list': 'SOO_LIST', 'Sap_ppnl': 'SAP_PPNL', 'Sab_orb': 'SAB_ORB', 'Sab_se': 'SAB_SE', 'Sab_vdw': 'SAB_VDW', 'Sab_lrc': 'SAB_LRC', 'Sab_tbe': 'SAB_TBE', 'Sab_aux_fit': 'SAB_AUX_FIT', 'Filename': 'FILENAME', 'Sip_list': 'SIP_LIST', 'Sab_core': 'SAB_CORE', 'Unit': 'UNIT', 'Sab_aux_fit_vs_orb': 'SAB_AUX_FIT_VS_ORB'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Sab_orb': 'SAB_ORB', 'Sab_aux_fit': 'SAB_AUX_FIT', 'Sab_aux_fit_vs_orb': 'SAB_AUX_FIT_VS_ORB', 'Sab_scp': 'SAB_SCP', 'Sab_vdw': 'SAB_VDW', 'Sab_cn': 'SAB_CN', 'Sac_ae': 'SAC_AE', 'Sac_ppl': 'SAC_PPL', 'Sap_ppnl': 'SAP_PPNL', 'Sap_oce': 'SAP_OCE', 'Sab_se': 'SAB_SE', 'Sab_lrc': 'SAB_LRC', 'Sab_tbe': 'SAB_TBE', 'Sab_xtbe': 'SAB_XTBE', 'Sab_core': 'SAB_CORE', 'Sab_xb': 'SAB_XB', 'Sab_xtb_nonbond': 'SAB_XTB_NONBOND', 'Soo_list': 'SOO_LIST', 'Sip_list': 'SIP_LIST'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 
