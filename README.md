@@ -9,6 +9,51 @@ PYCP2K: a python interface to CP2K
 5. [Implementation Notes](#notes)
 6. [Contact](#contact)
 
+# pycp2k
+
+Python interface to CP2K
+
+## Python 3.11 Compatibility ✅
+
+This repository has been updated to work with **Python 3.11** and is ready for **CP2K 2025.1**.
+
+### Quick Setup
+
+1. **Install Anaconda3 2023.09** (includes Python 3.11.5)
+2. **Activate conda environment**:
+   ```bash
+   export PATH="$HOME/anaconda3/bin:$PATH"
+   source ~/anaconda3/etc/profile.d/conda.sh
+   conda activate base
+   ```
+3. **Import and use pycp2k**:
+   ```python
+   from pycp2k import CP2K
+   c = CP2K()
+   c.CP2K_INPUT.GLOBAL.PROJECT_NAME = 'my_project'
+   c.CP2K_INPUT.GLOBAL.RUN_TYPE = 'ENERGY'
+   ```
+
+### Fixed Issues
+
+- ✅ Invalid import syntax (`_bs.subsystemsboundaries1` → `_bs_subsystemsboundaries1`)
+- ✅ Missing configuration variables in `config.py`
+- ✅ Python 3.11 compatibility verified
+
+### For CP2K 2025.1 Support
+
+When CP2K 2025.1 is available, run:
+```bash
+python setup_manual.py install --user
+```
+
+This will regenerate the Python classes from the CP2K 2025.1 XML description.
+
+### Reference Documentation
+
+- [PyCP2K + CP2K 2025.1 Reference](docs/pycp2k-cp2k-2025.1-reference.md)
+- [PyCP2K + Python 3.11 Reference](docs/pycp2k-python3.11-reference.md)
+
 <a name="introduction"></a>
 1\. Introduction
 --------------------------------------------------
