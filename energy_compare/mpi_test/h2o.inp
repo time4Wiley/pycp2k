@@ -7,8 +7,8 @@
 &FORCE_EVAL
   METHOD Quickstep
   &DFT
-    BASIS_SET_FILE_NAME ../cp2k_computation/basis_sets/BASIS_MOLOPT
-    POTENTIAL_FILE_NAME ../cp2k_computation/basis_sets/GTH_POTENTIALS
+    BASIS_SET_FILE_NAME ../../cp2k_computation/basis_sets/BASIS_MOLOPT
+    POTENTIAL_FILE_NAME ../../cp2k_computation/basis_sets/GTH_POTENTIALS
     &MGRID
       CUTOFF 400
     &END MGRID
@@ -23,9 +23,9 @@
       PERIODIC NONE
     &END CELL
     &COORD
-      O 0.000 0.000 0.000
-      H 0.757 0.586 0.000
-      H -0.757 0.586 0.000
+      O 0.000000 0.000000 0.000000
+      H 0.000000 0.000000 1.000000
+      H 0.942809 0.000000 -0.333333
     &END COORD
     &KIND H
       BASIS_SET DZVP-MOLOPT-SR-GTH

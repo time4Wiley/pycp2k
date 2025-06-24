@@ -7,8 +7,8 @@
 &FORCE_EVAL
   METHOD Quickstep
   &DFT
-    BASIS_SET_FILE_NAME ../../basis_sets/BASIS_MOLOPT
-    POTENTIAL_FILE_NAME ../../basis_sets/GTH_POTENTIALS
+    BASIS_SET_FILE_NAME ../cp2k_computation/basis_sets/BASIS_MOLOPT
+    POTENTIAL_FILE_NAME ../cp2k_computation/basis_sets/GTH_POTENTIALS
     &MGRID
       CUTOFF 400
     &END MGRID
