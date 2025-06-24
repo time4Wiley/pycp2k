@@ -2,7 +2,6 @@
 #SBATCH --job-name=pva_borate
 #SBATCH --partition=xhacnormalc
 #SBATCH --nodes=1
-#SBATCH --mpi=pmix_v3
 #SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=2
 #SBATCH --time=00:30:00

@@ -7,7 +7,6 @@
 #SBATCH --time=00:30:00
 #SBATCH --output=cba_borate_%j.out
 #SBATCH --error=cba_borate_%j.err
-#SBATCH --mpi=pmix_v3
 
 module purge
 module load cp2k-2024.1-gcc-930-nopython
