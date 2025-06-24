@@ -1,13 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._local_bandgap1 import _local_bandgap1
-from ._gw_dos1 import _gw_dos1
+from ._ri_info2 import _ri_info2
+from ._ri_density_coeffs2 import _ri_density_coeffs2
+from ._ri_metric_2c_ints2 import _ri_metric_2c_ints2
 
 
 class _print29(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.LOCAL_BANDGAP = _local_bandgap1()
-        self.GW_DOS = _gw_dos1()
+        self.RI_INFO = _ri_info2()
+        self.RI_DENSITY_COEFFS = _ri_density_coeffs2()
+        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints2()
         self._name = "PRINT"
-        self._subsections = {'LOCAL_BANDGAP': 'LOCAL_BANDGAP', 'GW_DOS': 'GW_DOS'}
+        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
 

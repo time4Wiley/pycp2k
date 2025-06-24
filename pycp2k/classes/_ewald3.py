@@ -1,7 +1,7 @@
 from pycp2k.inputsection import InputSection
 from ._rs_grid5 import _rs_grid5
 from ._multipoles3 import _multipoles3
-from ._print68 import _print68
+from ._print75 import _print75
 
 
 class _ewald3(InputSection):
@@ -17,7 +17,7 @@ class _ewald3(InputSection):
         self.Epsilon = None
         self.RS_GRID_list = []
         self.MULTIPOLES = _multipoles3()
-        self.PRINT = _print68()
+        self.PRINT = _print75()
         self._name = "EWALD"
         self._keywords = {'Ewald_type': 'EWALD_TYPE', 'Ewald_accuracy': 'EWALD_ACCURACY', 'Rcut': 'RCUT', 'Alpha': 'ALPHA', 'Gmax': 'GMAX', 'Ns_max': 'NS_MAX', 'O_spline': 'O_SPLINE', 'Epsilon': 'EPSILON'}
         self._subsections = {'MULTIPOLES': 'MULTIPOLES', 'PRINT': 'PRINT'}

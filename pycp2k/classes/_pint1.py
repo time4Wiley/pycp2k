@@ -9,7 +9,7 @@ from ._piglet1 import _piglet1
 from ._qtb1 import _qtb1
 from ._init1 import _init1
 from ._helium1 import _helium1
-from ._print16 import _print16
+from ._print15 import _print15
 
 
 class _pint1(InputSection):
@@ -39,7 +39,7 @@ class _pint1(InputSection):
         self.QTB = _qtb1()
         self.INIT = _init1()
         self.HELIUM = _helium1()
-        self.PRINT = _print16()
+        self.PRINT = _print15()
         self._name = "PINT"
         self._keywords = {'P': 'P', 'Proc_per_replica': 'PROC_PER_REPLICA', 'Num_steps': 'NUM_STEPS', 'Max_step': 'MAX_STEP', 'Iteration': 'ITERATION', 'Temp': 'TEMP', 'Kt_correction': 'KT_CORRECTION', 'T_tol': 'T_TOL', 'Dt': 'DT', 'Harm_int': 'HARM_INT', 'Nrespa': 'NRESPA', 'Transformation': 'TRANSFORMATION', 'Propagator': 'PROPAGATOR', 'Fix_centroid_pos': 'FIX_CENTROID_POS'}
         self._subsections = {'NORMALMODE': 'NORMALMODE', 'STAGING': 'STAGING', 'BEADS': 'BEADS', 'NOSE': 'NOSE', 'GLE': 'GLE', 'PILE': 'PILE', 'PIGLET': 'PIGLET', 'QTB': 'QTB', 'INIT': 'INIT', 'HELIUM': 'HELIUM', 'PRINT': 'PRINT'}

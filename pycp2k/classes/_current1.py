@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each202 import _each202
+from ._each291 import _each291
 
 
 class _current1(InputSection):
@@ -12,7 +12,7 @@ class _current1(InputSection):
         self.Log_print_key = None
         self.Stride = None
         self.Append = None
-        self.EACH = _each202()
+        self.EACH = _each291()
         self._name = "CURRENT"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}

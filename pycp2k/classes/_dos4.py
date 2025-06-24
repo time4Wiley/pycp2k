@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each540 import _each540
+from ._each661 import _each661
 
 
 class _dos4(InputSection):
@@ -13,7 +13,7 @@ class _dos4(InputSection):
         self.From_energy = None
         self.Till_energy = None
         self.N_gridpoints = None
-        self.EACH = _each540()
+        self.EACH = _each661()
         self._name = "DOS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'From_energy': 'FROM_ENERGY', 'Till_energy': 'TILL_ENERGY', 'N_gridpoints': 'N_GRIDPOINTS'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,13 +1,13 @@
 from pycp2k.inputsection import InputSection
-from ._local_bandgap5 import _local_bandgap5
-from ._gw_dos5 import _gw_dos5
+from ._current_cubes1 import _current_cubes1
+from ._response_function_cubes1 import _response_function_cubes1
 
 
 class _print86(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.LOCAL_BANDGAP = _local_bandgap5()
-        self.GW_DOS = _gw_dos5()
+        self.CURRENT_CUBES = _current_cubes1()
+        self.RESPONSE_FUNCTION_CUBES = _response_function_cubes1()
         self._name = "PRINT"
-        self._subsections = {'LOCAL_BANDGAP': 'LOCAL_BANDGAP', 'GW_DOS': 'GW_DOS'}
+        self._subsections = {'CURRENT_CUBES': 'CURRENT_CUBES', 'RESPONSE_FUNCTION_CUBES': 'RESPONSE_FUNCTION_CUBES'}
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each370 import _each370
+from ._each449 import _each449
 
 
 class _sum_force1(InputSection):
@@ -11,7 +11,7 @@ class _sum_force1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Atom_list = None
-        self.EACH = _each370()
+        self.EACH = _each449()
         self._name = "SUM_FORCE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Atom_list': 'ATOM_LIST'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each336 import _each336
+from ._each427 import _each427
 
 
 class _polarisation_potential1(InputSection):
@@ -12,7 +12,7 @@ class _polarisation_potential1(InputSection):
         self.Log_print_key = None
         self.Stride = None
         self.Append = None
-        self.EACH = _each336()
+        self.EACH = _each427()
         self._name = "POLARISATION_POTENTIAL"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}

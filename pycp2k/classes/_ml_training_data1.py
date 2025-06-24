@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each126 import _each126
+from ._each123 import _each123
 
 
 class _ml_training_data1(InputSection):
@@ -10,7 +10,7 @@ class _ml_training_data1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each126()
+        self.EACH = _each123()
         self._name = "ML_TRAINING_DATA"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

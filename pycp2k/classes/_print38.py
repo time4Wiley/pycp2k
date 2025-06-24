@@ -1,15 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._e_density_bqb1 import _e_density_bqb1
-from ._voronoi1 import _voronoi1
-from ._moments1 import _moments1
+from ._ri_info4 import _ri_info4
+from ._ri_density_coeffs4 import _ri_density_coeffs4
+from ._ri_metric_2c_ints4 import _ri_metric_2c_ints4
 
 
 class _print38(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.E_DENSITY_BQB = _e_density_bqb1()
-        self.VORONOI = _voronoi1()
-        self.MOMENTS = _moments1()
+        self.RI_INFO = _ri_info4()
+        self.RI_DENSITY_COEFFS = _ri_density_coeffs4()
+        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints4()
         self._name = "PRINT"
-        self._subsections = {'E_DENSITY_BQB': 'E_DENSITY_BQB', 'VORONOI': 'VORONOI', 'MOMENTS': 'MOMENTS'}
+        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
 

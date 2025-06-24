@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each307 import _each307
+from ._each407 import _each407
 from ._minbas_cube1 import _minbas_cube1
 from ._minbas_molden1 import _minbas_molden1
 
@@ -15,7 +15,7 @@ class _minbas_analysis1(InputSection):
         self.Eps_filter = None
         self.Full_orthogonalization = None
         self.Bond_order = None
-        self.EACH = _each307()
+        self.EACH = _each407()
         self.MINBAS_CUBE = _minbas_cube1()
         self.MINBAS_MOLDEN = _minbas_molden1()
         self._name = "MINBAS_ANALYSIS"

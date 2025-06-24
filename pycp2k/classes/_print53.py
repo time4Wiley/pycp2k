@@ -1,11 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._program_run_info18 import _program_run_info18
+from ._ri_info7 import _ri_info7
+from ._ri_density_coeffs7 import _ri_density_coeffs7
+from ._ri_metric_2c_ints7 import _ri_metric_2c_ints7
 
 
 class _print53(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.PROGRAM_RUN_INFO = _program_run_info18()
+        self.RI_INFO = _ri_info7()
+        self.RI_DENSITY_COEFFS = _ri_density_coeffs7()
+        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints7()
         self._name = "PRINT"
-        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
+        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
 

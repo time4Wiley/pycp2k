@@ -22,7 +22,6 @@ class _global1(InputSection):
         self.Elpa_neigvec_min = None
         self.Elpa_qr = None
         self.Elpa_qr_unsafe = None
-        self.Dlaf_neigvec_min = None
         self.Preferred_fft_library = None
         self.Fftw_wisdom_file_name = None
         self.Fftw_plan_type = None
@@ -57,7 +56,7 @@ class _global1(InputSection):
         self.FM_DIAG_SETTINGS = _fm_diag_settings1()
         self.GRID = _grid1()
         self._name = "GLOBAL"
-        self._keywords = {'Blacs_grid': 'BLACS_GRID', 'Blacs_repeatable': 'BLACS_REPEATABLE', 'Preferred_diag_library': 'PREFERRED_DIAG_LIBRARY', 'Preferred_dgemm_library': 'PREFERRED_DGEMM_LIBRARY', 'Eps_check_diag': 'EPS_CHECK_DIAG', 'Elpa_kernel': 'ELPA_KERNEL', 'Elpa_neigvec_min': 'ELPA_NEIGVEC_MIN', 'Elpa_qr': 'ELPA_QR', 'Elpa_qr_unsafe': 'ELPA_QR_UNSAFE', 'Dlaf_neigvec_min': 'DLAF_NEIGVEC_MIN', 'Preferred_fft_library': 'PREFERRED_FFT_LIBRARY', 'Fftw_wisdom_file_name': 'FFTW_WISDOM_FILE_NAME', 'Fftw_plan_type': 'FFTW_PLAN_TYPE', 'Extended_fft_lengths': 'EXTENDED_FFT_LENGTHS', 'Fft_pool_scratch_limit': 'FFT_POOL_SCRATCH_LIMIT', 'Alltoall_sgl': 'ALLTOALL_SGL', 'Print_level': 'PRINT_LEVEL', 'Program_name': 'PROGRAM_NAME', 'Project_name': 'PROJECT_NAME', 'Output_file_name': 'OUTPUT_FILE_NAME', 'Run_type': 'RUN_TYPE', 'Walltime': 'WALLTIME', 'Echo_input': 'ECHO_INPUT', 'Echo_all_hosts': 'ECHO_ALL_HOSTS', 'Enable_mpi_io': 'ENABLE_MPI_IO', 'Trace': 'TRACE', 'Trace_master': 'TRACE_MASTER', 'Trace_max': 'TRACE_MAX', 'Trace_routines': 'TRACE_ROUTINES', 'Flush_should_flush': 'FLUSH_SHOULD_FLUSH', 'Callgraph': 'CALLGRAPH', 'Callgraph_file_name': 'CALLGRAPH_FILE_NAME', 'Seed': 'SEED', 'Save_mem': 'SAVE_MEM'}
+        self._keywords = {'Blacs_grid': 'BLACS_GRID', 'Blacs_repeatable': 'BLACS_REPEATABLE', 'Preferred_diag_library': 'PREFERRED_DIAG_LIBRARY', 'Preferred_dgemm_library': 'PREFERRED_DGEMM_LIBRARY', 'Eps_check_diag': 'EPS_CHECK_DIAG', 'Elpa_kernel': 'ELPA_KERNEL', 'Elpa_neigvec_min': 'ELPA_NEIGVEC_MIN', 'Elpa_qr': 'ELPA_QR', 'Elpa_qr_unsafe': 'ELPA_QR_UNSAFE', 'Preferred_fft_library': 'PREFERRED_FFT_LIBRARY', 'Fftw_wisdom_file_name': 'FFTW_WISDOM_FILE_NAME', 'Fftw_plan_type': 'FFTW_PLAN_TYPE', 'Extended_fft_lengths': 'EXTENDED_FFT_LENGTHS', 'Fft_pool_scratch_limit': 'FFT_POOL_SCRATCH_LIMIT', 'Alltoall_sgl': 'ALLTOALL_SGL', 'Print_level': 'PRINT_LEVEL', 'Program_name': 'PROGRAM_NAME', 'Project_name': 'PROJECT_NAME', 'Output_file_name': 'OUTPUT_FILE_NAME', 'Run_type': 'RUN_TYPE', 'Walltime': 'WALLTIME', 'Echo_input': 'ECHO_INPUT', 'Echo_all_hosts': 'ECHO_ALL_HOSTS', 'Enable_mpi_io': 'ENABLE_MPI_IO', 'Trace': 'TRACE', 'Trace_master': 'TRACE_MASTER', 'Trace_max': 'TRACE_MAX', 'Trace_routines': 'TRACE_ROUTINES', 'Flush_should_flush': 'FLUSH_SHOULD_FLUSH', 'Callgraph': 'CALLGRAPH', 'Callgraph_file_name': 'CALLGRAPH_FILE_NAME', 'Seed': 'SEED', 'Save_mem': 'SAVE_MEM'}
         self._subsections = {'PRINT_ELPA': 'PRINT_ELPA', 'TIMINGS': 'TIMINGS', 'REFERENCES': 'REFERENCES', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'PRINT': 'PRINT', 'FM': 'FM', 'DBCSR': 'DBCSR', 'FM_DIAG_SETTINGS': 'FM_DIAG_SETTINGS', 'GRID': 'GRID'}
         self._aliases = {'Iolevel': 'Print_level', 'Program': 'Program_name', 'Project': 'Project_name', 'Wallti': 'Walltime'}
 

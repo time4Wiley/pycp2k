@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each550 import _each550
+from ._each671 import _each671
 
 
 class _response_basis1(InputSection):
@@ -12,7 +12,7 @@ class _response_basis1(InputSection):
         self.Log_print_key = None
         self.Delta_charge = None
         self.Derivatives = None
-        self.EACH = _each550()
+        self.EACH = _each671()
         self._name = "RESPONSE_BASIS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Delta_charge': 'DELTA_CHARGE', 'Derivatives': 'DERIVATIVES'}
         self._subsections = {'EACH': 'EACH'}

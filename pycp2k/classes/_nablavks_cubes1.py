@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each448 import _each448
+from ._each527 import _each527
 
 
 class _nablavks_cubes1(InputSection):
@@ -12,7 +12,7 @@ class _nablavks_cubes1(InputSection):
         self.Log_print_key = None
         self.Stride = None
         self.Append = None
-        self.EACH = _each448()
+        self.EACH = _each527()
         self._name = "NABLAVKS_CUBES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}

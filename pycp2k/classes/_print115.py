@@ -1,13 +1,11 @@
 from pycp2k.inputsection import InputSection
-from ._local_bandgap7 import _local_bandgap7
-from ._gw_dos7 import _gw_dos7
+from ._ms_restart1 import _ms_restart1
 
 
 class _print115(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.LOCAL_BANDGAP = _local_bandgap7()
-        self.GW_DOS = _gw_dos7()
+        self.MS_RESTART = _ms_restart1()
         self._name = "PRINT"
-        self._subsections = {'LOCAL_BANDGAP': 'LOCAL_BANDGAP', 'GW_DOS': 'GW_DOS'}
+        self._subsections = {'MS_RESTART': 'MS_RESTART'}
 

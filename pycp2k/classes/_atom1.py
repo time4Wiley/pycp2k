@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print110 import _print110
+from ._print119 import _print119
 from ._ae_basis1 import _ae_basis1
 from ._pp_basis1 import _pp_basis1
 from ._method1 import _method1
@@ -22,7 +22,7 @@ class _atom1(InputSection):
         self.Calculate_states = None
         self.Use_gauss_hermite = None
         self.Grid_points_gh = None
-        self.PRINT = _print110()
+        self.PRINT = _print119()
         self.AE_BASIS = _ae_basis1()
         self.PP_BASIS = _pp_basis1()
         self.METHOD_list = []

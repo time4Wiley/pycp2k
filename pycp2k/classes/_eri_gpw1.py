@@ -5,14 +5,12 @@ class _eri_gpw1(InputSection):
     def __init__(self):
         InputSection.__init__(self)
         self.Eps_grid = None
-        self.Eps_filter = None
         self.Cutoff = None
         self.Rel_cutoff = None
         self.Store_wfn = None
-        self.Group_size = None
         self.Print_level = None
         self._name = "ERI_GPW"
-        self._keywords = {'Eps_grid': 'EPS_GRID', 'Eps_filter': 'EPS_FILTER', 'Cutoff': 'CUTOFF', 'Rel_cutoff': 'REL_CUTOFF', 'Store_wfn': 'STORE_WFN', 'Group_size': 'GROUP_SIZE', 'Print_level': 'PRINT_LEVEL'}
+        self._keywords = {'Eps_grid': 'EPS_GRID', 'Cutoff': 'CUTOFF', 'Rel_cutoff': 'REL_CUTOFF', 'Store_wfn': 'STORE_WFN', 'Print_level': 'PRINT_LEVEL'}
         self._aliases = {'Relative_cutoff': 'Rel_cutoff', 'Store_wavefunction': 'Store_wfn', 'Iolevel': 'Print_level'}
 
 

@@ -1,5 +1,4 @@
 from pycp2k.inputsection import InputSection
-from ._nnp1 import _nnp1
 from ._ceperley1 import _ceperley1
 from ._worm1 import _worm1
 from ._rdf1 import _rdf1
@@ -9,7 +8,7 @@ from ._perm1 import _perm1
 from ._averages2 import _averages2
 from ._force6 import _force6
 from ._rng_state1 import _rng_state1
-from ._print15 import _print15
+from ._print14 import _print14
 
 
 class _helium1(InputSection):
@@ -36,7 +35,6 @@ class _helium1(InputSection):
         self.Droplet_radius = None
         self.Density = None
         self.Presample = None
-        self.NNP = _nnp1()
         self.CEPERLEY = _ceperley1()
         self.WORM = _worm1()
         self.RDF = _rdf1()
@@ -46,10 +44,10 @@ class _helium1(InputSection):
         self.AVERAGES = _averages2()
         self.FORCE = _force6()
         self.RNG_STATE = _rng_state1()
-        self.PRINT = _print15()
+        self.PRINT = _print14()
         self._name = "HELIUM"
         self._keywords = {'Helium_only': 'HELIUM_ONLY', 'Interaction_pot_scan': 'INTERACTION_POT_SCAN', 'Num_env': 'NUM_ENV', 'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Get_forces': 'GET_FORCES', 'Solute_interaction': 'SOLUTE_INTERACTION', 'Natoms': 'NATOMS', 'Nbeads': 'NBEADS', 'Rng_seed': 'RNG_SEED', 'N_inner': 'N_INNER', 'N_outer': 'N_OUTER', 'Sampling_method': 'SAMPLING_METHOD', 'Coord_init_temp': 'COORD_INIT_TEMP', 'Solute_radius': 'SOLUTE_RADIUS', 'Periodic': 'PERIODIC', 'Cell_size': 'CELL_SIZE', 'Cell_shape': 'CELL_SHAPE', 'Droplet_radius': 'DROPLET_RADIUS', 'Density': 'DENSITY', 'Presample': 'PRESAMPLE'}
-        self._subsections = {'NNP': 'NNP', 'CEPERLEY': 'CEPERLEY', 'WORM': 'WORM', 'RDF': 'RDF', 'RHO': 'RHO', 'COORD': 'COORD', 'PERM': 'PERM', 'AVERAGES': 'AVERAGES', 'FORCE': 'FORCE', 'RNG_STATE': 'RNG_STATE', 'PRINT': 'PRINT'}
+        self._subsections = {'CEPERLEY': 'CEPERLEY', 'WORM': 'WORM', 'RDF': 'RDF', 'RHO': 'RHO', 'COORD': 'COORD', 'PERM': 'PERM', 'AVERAGES': 'AVERAGES', 'FORCE': 'FORCE', 'RNG_STATE': 'RNG_STATE', 'PRINT': 'PRINT'}
         self._aliases = {'Inorot': 'N_inner', 'Irot': 'N_outer'}
         self._attributes = ['Section_parameters']
 

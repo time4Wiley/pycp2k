@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
-from ._each348 import _each348
-from ._cubes7 import _cubes7
+from ._each179 import _each179
+from ._cubes6 import _cubes6
 
 
 class _wannier_states3(InputSection):
@@ -13,8 +13,8 @@ class _wannier_states3(InputSection):
         self.Log_print_key = None
         self.Cube_eval_range = None
         self.Mark_states = []
-        self.EACH = _each348()
-        self.CUBES = _cubes7()
+        self.EACH = _each179()
+        self.CUBES = _cubes6()
         self._name = "WANNIER_STATES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cube_eval_range': 'CUBE_EVAL_RANGE'}
         self._repeated_keywords = {'Mark_states': 'MARK_STATES'}

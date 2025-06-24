@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each246 import _each246
+from ._each335 import _each335
 
 
 class _spectrum1(InputSection):
@@ -10,7 +10,7 @@ class _spectrum1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each246()
+        self.EACH = _each335()
         self._name = "SPECTRUM"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

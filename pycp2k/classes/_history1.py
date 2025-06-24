@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each525 import _each525
+from ._each646 import _each646
 
 
 class _history1(InputSection):
@@ -10,7 +10,7 @@ class _history1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each525()
+        self.EACH = _each646()
         self._name = "HISTORY"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

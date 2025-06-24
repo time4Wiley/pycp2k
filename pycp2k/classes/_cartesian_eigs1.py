@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each537 import _each537
+from ._each658 import _each658
 
 
 class _cartesian_eigs1(InputSection):
@@ -11,7 +11,7 @@ class _cartesian_eigs1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Backup_copies = None
-        self.EACH = _each537()
+        self.EACH = _each658()
         self._name = "CARTESIAN_EIGS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Backup_copies': 'BACKUP_COPIES'}
         self._subsections = {'EACH': 'EACH'}

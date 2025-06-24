@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each481 import _each481
+from ._each581 import _each581
 
 
 class _coord_fit_points1(InputSection):
@@ -10,7 +10,7 @@ class _coord_fit_points1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each481()
+        self.EACH = _each581()
         self._name = "COORD_FIT_POINTS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

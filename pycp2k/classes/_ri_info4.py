@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each154 import _each154
+from ._each198 import _each198
 
 
 class _ri_info4(InputSection):
@@ -10,7 +10,7 @@ class _ri_info4(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each154()
+        self.EACH = _each198()
         self._name = "RI_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

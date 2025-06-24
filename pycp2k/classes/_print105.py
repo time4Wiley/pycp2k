@@ -1,15 +1,29 @@
 from pycp2k.inputsection import InputSection
-from ._worker_run_info1 import _worker_run_info1
-from ._master_run_info1 import _master_run_info1
-from ._communication_log1 import _communication_log1
+from ._program_run_info56 import _program_run_info56
+from ._wannier_cubes16 import _wannier_cubes16
+from ._wannier_centers16 import _wannier_centers16
+from ._wannier_spreads16 import _wannier_spreads16
+from ._loc_restart16 import _loc_restart16
+from ._total_dipole15 import _total_dipole15
+from ._molecular_dipoles15 import _molecular_dipoles15
+from ._molecular_moments15 import _molecular_moments15
+from ._molecular_states15 import _molecular_states15
+from ._wannier_states15 import _wannier_states15
 
 
 class _print105(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.WORKER_RUN_INFO = _worker_run_info1()
-        self.MASTER_RUN_INFO = _master_run_info1()
-        self.COMMUNICATION_LOG = _communication_log1()
+        self.PROGRAM_RUN_INFO = _program_run_info56()
+        self.WANNIER_CUBES = _wannier_cubes16()
+        self.WANNIER_CENTERS = _wannier_centers16()
+        self.WANNIER_SPREADS = _wannier_spreads16()
+        self.LOC_RESTART = _loc_restart16()
+        self.TOTAL_DIPOLE = _total_dipole15()
+        self.MOLECULAR_DIPOLES = _molecular_dipoles15()
+        self.MOLECULAR_MOMENTS = _molecular_moments15()
+        self.MOLECULAR_STATES = _molecular_states15()
+        self.WANNIER_STATES = _wannier_states15()
         self._name = "PRINT"
-        self._subsections = {'WORKER_RUN_INFO': 'WORKER_RUN_INFO', 'MASTER_RUN_INFO': 'MASTER_RUN_INFO', 'COMMUNICATION_LOG': 'COMMUNICATION_LOG'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'WANNIER_CUBES': 'WANNIER_CUBES', 'WANNIER_CENTERS': 'WANNIER_CENTERS', 'WANNIER_SPREADS': 'WANNIER_SPREADS', 'LOC_RESTART': 'LOC_RESTART', 'TOTAL_DIPOLE': 'TOTAL_DIPOLE', 'MOLECULAR_DIPOLES': 'MOLECULAR_DIPOLES', 'MOLECULAR_MOMENTS': 'MOLECULAR_MOMENTS', 'MOLECULAR_STATES': 'MOLECULAR_STATES', 'WANNIER_STATES': 'WANNIER_STATES'}
 

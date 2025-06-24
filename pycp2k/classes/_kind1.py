@@ -27,7 +27,6 @@ class _kind1(InputSection):
         self.Potential = None
         self.Kg_potential_file_name = None
         self.Kg_potential = None
-        self.Ecp_semi_local = None
         self.Covalent_radius = None
         self.Vdw_radius = None
         self.Hard_exp_radius = None
@@ -53,7 +52,7 @@ class _kind1(InputSection):
         self.DFT_PLUS_U = _dft_plus_u1()
         self.BS = _bs1()
         self._name = "KIND"
-        self._keywords = {'Aux_basis_set': 'AUX_BASIS_SET', 'Ri_aux_basis_set': 'RI_AUX_BASIS_SET', 'Lri_basis_set': 'LRI_BASIS_SET', 'Aux_fit_basis_set': 'AUX_FIT_BASIS_SET', 'Elec_conf': 'ELEC_CONF', 'Core_correction': 'CORE_CORRECTION', 'Magnetization': 'MAGNETIZATION', 'Element': 'ELEMENT', 'Mass': 'MASS', 'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Potential_type': 'POTENTIAL_TYPE', 'Potential': 'POTENTIAL', 'Kg_potential_file_name': 'KG_POTENTIAL_FILE_NAME', 'Kg_potential': 'KG_POTENTIAL', 'Ecp_semi_local': 'ECP_SEMI_LOCAL', 'Covalent_radius': 'COVALENT_RADIUS', 'Vdw_radius': 'VDW_RADIUS', 'Hard_exp_radius': 'HARD_EXP_RADIUS', 'Max_rad_local': 'MAX_RAD_LOCAL', 'Rho0_exp_radius': 'RHO0_EXP_RADIUS', 'Lebedev_grid': 'LEBEDEV_GRID', 'Radial_grid': 'RADIAL_GRID', 'Mm_radius': 'MM_RADIUS', 'Dftb3_param': 'DFTB3_PARAM', 'Lmax_dftb': 'LMAX_DFTB', 'Mao': 'MAO', 'Se_p_orbitals_on_h': 'SE_P_ORBITALS_ON_H', 'Gpw_type': 'GPW_TYPE', 'Ghost': 'GHOST', 'Floating_basis_center': 'FLOATING_BASIS_CENTER', 'No_optimize': 'NO_OPTIMIZE', 'Pao_basis_size': 'PAO_BASIS_SIZE'}
+        self._keywords = {'Aux_basis_set': 'AUX_BASIS_SET', 'Ri_aux_basis_set': 'RI_AUX_BASIS_SET', 'Lri_basis_set': 'LRI_BASIS_SET', 'Aux_fit_basis_set': 'AUX_FIT_BASIS_SET', 'Elec_conf': 'ELEC_CONF', 'Core_correction': 'CORE_CORRECTION', 'Magnetization': 'MAGNETIZATION', 'Element': 'ELEMENT', 'Mass': 'MASS', 'Potential_file_name': 'POTENTIAL_FILE_NAME', 'Potential_type': 'POTENTIAL_TYPE', 'Potential': 'POTENTIAL', 'Kg_potential_file_name': 'KG_POTENTIAL_FILE_NAME', 'Kg_potential': 'KG_POTENTIAL', 'Covalent_radius': 'COVALENT_RADIUS', 'Vdw_radius': 'VDW_RADIUS', 'Hard_exp_radius': 'HARD_EXP_RADIUS', 'Max_rad_local': 'MAX_RAD_LOCAL', 'Rho0_exp_radius': 'RHO0_EXP_RADIUS', 'Lebedev_grid': 'LEBEDEV_GRID', 'Radial_grid': 'RADIAL_GRID', 'Mm_radius': 'MM_RADIUS', 'Dftb3_param': 'DFTB3_PARAM', 'Lmax_dftb': 'LMAX_DFTB', 'Mao': 'MAO', 'Se_p_orbitals_on_h': 'SE_P_ORBITALS_ON_H', 'Gpw_type': 'GPW_TYPE', 'Ghost': 'GHOST', 'Floating_basis_center': 'FLOATING_BASIS_CENTER', 'No_optimize': 'NO_OPTIMIZE', 'Pao_basis_size': 'PAO_BASIS_SIZE'}
         self._repeated_keywords = {'Basis_set': 'BASIS_SET'}
         self._subsections = {'POTENTIAL': 'POTENTIAL', 'KG_POTENTIAL': 'KG_POTENTIAL', 'DFT_PLUS_U': 'DFT_PLUS_U', 'BS': 'BS'}
         self._repeated_subsections = {'PAO_POTENTIAL': '_pao_potential1', 'PAO_DESCRIPTOR': '_pao_descriptor1', 'BASIS': '_basis2'}

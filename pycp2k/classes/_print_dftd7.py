@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each573 import _each573
+from ._each717 import _each717
 
 
 class _print_dftd7(InputSection):
@@ -10,7 +10,7 @@ class _print_dftd7(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each573()
+        self.EACH = _each717()
         self._name = "PRINT_DFTD"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

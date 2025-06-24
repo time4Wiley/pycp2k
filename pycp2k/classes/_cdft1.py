@@ -2,7 +2,7 @@ from pycp2k.inputsection import InputSection
 from ._outer_scf2 import _outer_scf2
 from ._becke_constraint1 import _becke_constraint1
 from ._hirshfeld_constraint1 import _hirshfeld_constraint1
-from ._program_run_info16 import _program_run_info16
+from ._program_run_info20 import _program_run_info20
 from ._atom_group1 import _atom_group1
 from ._dummy_atoms1 import _dummy_atoms1
 
@@ -31,7 +31,7 @@ class _cdft1(InputSection):
         self.OUTER_SCF = _outer_scf2()
         self.BECKE_CONSTRAINT = _becke_constraint1()
         self.HIRSHFELD_CONSTRAINT = _hirshfeld_constraint1()
-        self.PROGRAM_RUN_INFO = _program_run_info16()
+        self.PROGRAM_RUN_INFO = _program_run_info20()
         self.ATOM_GROUP_list = []
         self.DUMMY_ATOMS_list = []
         self._name = "CDFT"

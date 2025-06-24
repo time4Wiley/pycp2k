@@ -11,7 +11,7 @@ from ._shell_coord1 import _shell_coord1
 from ._shell_velocity1 import _shell_velocity1
 from ._core_coord1 import _core_coord1
 from ._core_velocity1 import _core_velocity1
-from ._print77 import _print77
+from ._print84 import _print84
 
 
 class _subsys1(InputSection):
@@ -30,7 +30,7 @@ class _subsys1(InputSection):
         self.SHELL_VELOCITY = _shell_velocity1()
         self.CORE_COORD = _core_coord1()
         self.CORE_VELOCITY = _core_velocity1()
-        self.PRINT = _print77()
+        self.PRINT = _print84()
         self._name = "SUBSYS"
         self._keywords = {'Seed': 'SEED'}
         self._subsections = {'RNG_INIT': 'RNG_INIT', 'CELL': 'CELL', 'COORD': 'COORD', 'VELOCITY': 'VELOCITY', 'TOPOLOGY': 'TOPOLOGY', 'MULTIPOLES': 'MULTIPOLES', 'SHELL_COORD': 'SHELL_COORD', 'SHELL_VELOCITY': 'SHELL_VELOCITY', 'CORE_COORD': 'CORE_COORD', 'CORE_VELOCITY': 'CORE_VELOCITY', 'PRINT': 'PRINT'}

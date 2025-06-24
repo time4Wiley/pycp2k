@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each446 import _each446
+from ._each525 import _each525
 
 
 class _k_matrix1(InputSection):
@@ -11,7 +11,7 @@ class _k_matrix1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Atoms_list = []
-        self.EACH = _each446()
+        self.EACH = _each525()
         self._name = "K_MATRIX"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._repeated_keywords = {'Atoms_list': 'ATOMS_LIST'}

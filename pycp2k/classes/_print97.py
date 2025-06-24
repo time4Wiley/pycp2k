@@ -1,15 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._ri_info11 import _ri_info11
-from ._ri_density_coeffs11 import _ri_density_coeffs11
-from ._ri_metric_2c_ints11 import _ri_metric_2c_ints11
+from ._nablavks_cubes1 import _nablavks_cubes1
+from ._g_tensor1 import _g_tensor1
+from ._response_function_cubes3 import _response_function_cubes3
 
 
 class _print97(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.RI_INFO = _ri_info11()
-        self.RI_DENSITY_COEFFS = _ri_density_coeffs11()
-        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints11()
+        self.NABLAVKS_CUBES = _nablavks_cubes1()
+        self.G_TENSOR = _g_tensor1()
+        self.RESPONSE_FUNCTION_CUBES = _response_function_cubes3()
         self._name = "PRINT"
-        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
+        self._subsections = {'NABLAVKS_CUBES': 'NABLAVKS_CUBES', 'G_TENSOR': 'G_TENSOR', 'RESPONSE_FUNCTION_CUBES': 'RESPONSE_FUNCTION_CUBES'}
 

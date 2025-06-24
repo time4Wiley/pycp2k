@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
-from ._each435 import _each435
-from ._cubes8 import _cubes8
+from ._each194 import _each194
+from ._cubes7 import _cubes7
 
 
 class _molecular_states4(InputSection):
@@ -13,8 +13,8 @@ class _molecular_states4(InputSection):
         self.Log_print_key = None
         self.Cube_eval_range = None
         self.Mark_states = []
-        self.EACH = _each435()
-        self.CUBES = _cubes8()
+        self.EACH = _each194()
+        self.CUBES = _cubes7()
         self._name = "MOLECULAR_STATES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cube_eval_range': 'CUBE_EVAL_RANGE'}
         self._repeated_keywords = {'Mark_states': 'MARK_STATES'}

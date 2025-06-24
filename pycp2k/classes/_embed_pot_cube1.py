@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each170 import _each170
+from ._each213 import _each213
 
 
 class _embed_pot_cube1(InputSection):
@@ -11,7 +11,7 @@ class _embed_pot_cube1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Stride = None
-        self.EACH = _each170()
+        self.EACH = _each213()
         self._name = "EMBED_POT_CUBE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each75 import _each75
+from ._each72 import _each72
 
 
 class _centroid_vel1(InputSection):
@@ -13,7 +13,7 @@ class _centroid_vel1(InputSection):
         self.Unit = None
         self.Format = None
         self.Print_atom_kind = None
-        self.EACH = _each75()
+        self.EACH = _each72()
         self._name = "CENTROID_VEL"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Format': 'FORMAT', 'Print_atom_kind': 'PRINT_ATOM_KIND'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print81 import _print81
+from ._print88 import _print88
 from ._interpolator11 import _interpolator11
 
 
@@ -13,7 +13,7 @@ class _spinspin1(InputSection):
         self.Do_sd = None
         self.Do_pso = None
         self.Do_dso = None
-        self.PRINT = _print81()
+        self.PRINT = _print88()
         self.INTERPOLATOR = _interpolator11()
         self._name = "SPINSPIN"
         self._keywords = {'Restart_spinspin': 'RESTART_SPINSPIN', 'Do_fc': 'DO_FC', 'Do_sd': 'DO_SD', 'Do_pso': 'DO_PSO', 'Do_dso': 'DO_DSO'}

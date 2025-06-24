@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each95 import _each95
+from ._each92 import _each92
 
 
 class _core_forces1(InputSection):
@@ -13,7 +13,7 @@ class _core_forces1(InputSection):
         self.Unit = None
         self.Format = None
         self.Print_atom_kind = None
-        self.EACH = _each95()
+        self.EACH = _each92()
         self._name = "CORE_FORCES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Format': 'FORMAT', 'Print_atom_kind': 'PRINT_ATOM_KIND'}
         self._subsections = {'EACH': 'EACH'}

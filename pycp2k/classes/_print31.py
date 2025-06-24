@@ -1,11 +1,18 @@
 from pycp2k.inputsection import InputSection
-from ._neighbor_lists1 import _neighbor_lists1
+from ._each164 import _each164
 
 
 class _print31(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.NEIGHBOR_LISTS = _neighbor_lists1()
+        self.Section_parameters = None
+        self.Add_last = None
+        self.Common_iteration_levels = None
+        self.Filename = None
+        self.Log_print_key = None
+        self.EACH = _each164()
         self._name = "PRINT"
-        self._subsections = {'NEIGHBOR_LISTS': 'NEIGHBOR_LISTS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
+        self._subsections = {'EACH': 'EACH'}
+        self._attributes = ['Section_parameters']
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each90 import _each90
+from ._each87 import _each87
 
 
 class _core_velocities1(InputSection):
@@ -13,7 +13,7 @@ class _core_velocities1(InputSection):
         self.Unit = None
         self.Format = None
         self.Print_atom_kind = None
-        self.EACH = _each90()
+        self.EACH = _each87()
         self._name = "CORE_VELOCITIES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Format': 'FORMAT', 'Print_atom_kind': 'PRINT_ATOM_KIND'}
         self._subsections = {'EACH': 'EACH'}

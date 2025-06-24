@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each331 import _each331
+from ._each422 import _each422
 from ._density_gradient1 import _density_gradient1
 from ._dielectric_function1 import _dielectric_function1
 from ._total_charge_density1 import _total_charge_density1
@@ -15,7 +15,7 @@ class _sccs1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each331()
+        self.EACH = _each422()
         self.DENSITY_GRADIENT = _density_gradient1()
         self.DIELECTRIC_FUNCTION = _dielectric_function1()
         self.TOTAL_CHARGE_DENSITY = _total_charge_density1()

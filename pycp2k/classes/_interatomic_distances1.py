@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each420 import _each420
+from ._each499 import _each499
 
 
 class _interatomic_distances1(InputSection):
@@ -12,7 +12,7 @@ class _interatomic_distances1(InputSection):
         self.Log_print_key = None
         self.Unit = None
         self.Check_interatomic_distances = None
-        self.EACH = _each420()
+        self.EACH = _each499()
         self._name = "INTERATOMIC_DISTANCES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Check_interatomic_distances': 'CHECK_INTERATOMIC_DISTANCES'}
         self._subsections = {'EACH': 'EACH'}

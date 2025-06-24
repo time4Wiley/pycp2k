@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each91 import _each91
+from ._each88 import _each88
 
 
 class _structure_data1(InputSection):
@@ -22,7 +22,7 @@ class _structure_data1(InputSection):
         self.Dihedral_angle = []
         self.Dihedral = self.Dihedral_angle
         self.Dih = self.Dihedral_angle
-        self.EACH = _each91()
+        self.EACH = _each88()
         self._name = "STRUCTURE_DATA"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT'}
         self._repeated_keywords = {'Position': 'POSITION', 'Position_scaled': 'POSITION_SCALED', 'Distance': 'DISTANCE', 'Angle': 'ANGLE', 'Dihedral_angle': 'DIHEDRAL_ANGLE'}

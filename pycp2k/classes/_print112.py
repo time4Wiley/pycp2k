@@ -1,15 +1,29 @@
 from pycp2k.inputsection import InputSection
-from ._ri_info13 import _ri_info13
-from ._ri_density_coeffs13 import _ri_density_coeffs13
-from ._ri_metric_2c_ints13 import _ri_metric_2c_ints13
+from ._program_banner4 import _program_banner4
+from ._guess_vectors1 import _guess_vectors1
+from ._iteration_info4 import _iteration_info4
+from ._detailed_energy3 import _detailed_energy3
+from ._basis_set_file2 import _basis_set_file2
+from ._restart14 import _restart14
+from ._nto_analysis1 import _nto_analysis1
+from ._mos_molden1 import _mos_molden1
+from ._namd_print1 import _namd_print1
+from ._forces5 import _forces5
 
 
 class _print112(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.RI_INFO = _ri_info13()
-        self.RI_DENSITY_COEFFS = _ri_density_coeffs13()
-        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints13()
+        self.PROGRAM_BANNER = _program_banner4()
+        self.GUESS_VECTORS = _guess_vectors1()
+        self.ITERATION_INFO = _iteration_info4()
+        self.DETAILED_ENERGY = _detailed_energy3()
+        self.BASIS_SET_FILE = _basis_set_file2()
+        self.RESTART = _restart14()
+        self.NTO_ANALYSIS = _nto_analysis1()
+        self.MOS_MOLDEN = _mos_molden1()
+        self.NAMD_PRINT = _namd_print1()
+        self.FORCES = _forces5()
         self._name = "PRINT"
-        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
+        self._subsections = {'PROGRAM_BANNER': 'PROGRAM_BANNER', 'GUESS_VECTORS': 'GUESS_VECTORS', 'ITERATION_INFO': 'ITERATION_INFO', 'DETAILED_ENERGY': 'DETAILED_ENERGY', 'BASIS_SET_FILE': 'BASIS_SET_FILE', 'RESTART': 'RESTART', 'NTO_ANALYSIS': 'NTO_ANALYSIS', 'MOS_MOLDEN': 'MOS_MOLDEN', 'NAMD_PRINT': 'NAMD_PRINT', 'FORCES': 'FORCES'}
 

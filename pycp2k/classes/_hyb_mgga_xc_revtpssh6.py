@@ -6,8 +6,7 @@ class _hyb_mgga_xc_revtpssh6(InputSection):
         InputSection.__init__(self)
         self.Section_parameters = None
         self.Scale = None
-        self._cx = None
         self._name = "HYB_MGGA_XC_REVTPSSH"
-        self._keywords = {'Scale': 'SCALE', '_cx': '_CX'}
+        self._keywords = {'Scale': 'SCALE'}
         self._attributes = ['Section_parameters']
 

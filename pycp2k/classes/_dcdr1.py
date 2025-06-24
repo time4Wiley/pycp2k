@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print90 import _print90
+from ._print99 import _print99
 from ._interpolator14 import _interpolator14
 
 
@@ -12,7 +12,7 @@ class _dcdr1(InputSection):
         self.Orbital_center = None
         self.Reference = None
         self.Reference_point = None
-        self.PRINT = _print90()
+        self.PRINT = _print99()
         self.INTERPOLATOR = _interpolator14()
         self._name = "DCDR"
         self._keywords = {'Distributed_origin': 'DISTRIBUTED_ORIGIN', 'Orbital_center': 'ORBITAL_CENTER', 'Reference': 'REFERENCE', 'Reference_point': 'REFERENCE_POINT'}

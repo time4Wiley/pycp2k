@@ -1,23 +1,41 @@
 from pycp2k.inputsection import InputSection
-from ._banner2 import _banner2
-from ._program_run_info48 import _program_run_info48
-from ._molden_vib1 import _molden_vib1
-from ._rotational_info3 import _rotational_info3
-from ._cartesian_eigs1 import _cartesian_eigs1
-from ._namd_print2 import _namd_print2
-from ._hessian1 import _hessian1
+from ._program_banner5 import _program_banner5
+from ._method_info1 import _method_info1
+from ._basis_set1 import _basis_set1
+from ._potential3 import _potential3
+from ._fit_density1 import _fit_density1
+from ._fit_kgpot1 import _fit_kgpot1
+from ._response_basis1 import _response_basis1
+from ._geometrical_response_basis1 import _geometrical_response_basis1
+from ._scf_info1 import _scf_info1
+from ._orbitals1 import _orbitals1
+from ._analyze_basis1 import _analyze_basis1
+from ._fit_pseudo1 import _fit_pseudo1
+from ._fit_basis1 import _fit_basis1
+from ._upf_file1 import _upf_file1
+from ._separable_gaussian_pseudo1 import _separable_gaussian_pseudo1
+from ._admm1 import _admm1
 
 
 class _print119(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.BANNER = _banner2()
-        self.PROGRAM_RUN_INFO = _program_run_info48()
-        self.MOLDEN_VIB = _molden_vib1()
-        self.ROTATIONAL_INFO = _rotational_info3()
-        self.CARTESIAN_EIGS = _cartesian_eigs1()
-        self.NAMD_PRINT = _namd_print2()
-        self.HESSIAN = _hessian1()
+        self.PROGRAM_BANNER = _program_banner5()
+        self.METHOD_INFO = _method_info1()
+        self.BASIS_SET = _basis_set1()
+        self.POTENTIAL = _potential3()
+        self.FIT_DENSITY = _fit_density1()
+        self.FIT_KGPOT = _fit_kgpot1()
+        self.RESPONSE_BASIS = _response_basis1()
+        self.GEOMETRICAL_RESPONSE_BASIS = _geometrical_response_basis1()
+        self.SCF_INFO = _scf_info1()
+        self.ORBITALS = _orbitals1()
+        self.ANALYZE_BASIS = _analyze_basis1()
+        self.FIT_PSEUDO = _fit_pseudo1()
+        self.FIT_BASIS = _fit_basis1()
+        self.UPF_FILE = _upf_file1()
+        self.SEPARABLE_GAUSSIAN_PSEUDO = _separable_gaussian_pseudo1()
+        self.ADMM = _admm1()
         self._name = "PRINT"
-        self._subsections = {'BANNER': 'BANNER', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'MOLDEN_VIB': 'MOLDEN_VIB', 'ROTATIONAL_INFO': 'ROTATIONAL_INFO', 'CARTESIAN_EIGS': 'CARTESIAN_EIGS', 'NAMD_PRINT': 'NAMD_PRINT', 'HESSIAN': 'HESSIAN'}
+        self._subsections = {'PROGRAM_BANNER': 'PROGRAM_BANNER', 'METHOD_INFO': 'METHOD_INFO', 'BASIS_SET': 'BASIS_SET', 'POTENTIAL': 'POTENTIAL', 'FIT_DENSITY': 'FIT_DENSITY', 'FIT_KGPOT': 'FIT_KGPOT', 'RESPONSE_BASIS': 'RESPONSE_BASIS', 'GEOMETRICAL_RESPONSE_BASIS': 'GEOMETRICAL_RESPONSE_BASIS', 'SCF_INFO': 'SCF_INFO', 'ORBITALS': 'ORBITALS', 'ANALYZE_BASIS': 'ANALYZE_BASIS', 'FIT_PSEUDO': 'FIT_PSEUDO', 'FIT_BASIS': 'FIT_BASIS', 'UPF_FILE': 'UPF_FILE', 'SEPARABLE_GAUSSIAN_PSEUDO': 'SEPARABLE_GAUSSIAN_PSEUDO', 'ADMM': 'ADMM'}
 

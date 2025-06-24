@@ -5,7 +5,7 @@ from ._torsion2 import _torsion2
 from ._improper2 import _improper2
 from ._isolated_atoms1 import _isolated_atoms1
 from ._neighbor_lists8 import _neighbor_lists8
-from ._print72 import _print72
+from ._print79 import _print79
 
 
 class _generate1(InputSection):
@@ -23,7 +23,7 @@ class _generate1(InputSection):
         self.IMPROPER_list = []
         self.ISOLATED_ATOMS = _isolated_atoms1()
         self.NEIGHBOR_LISTS = _neighbor_lists8()
-        self.PRINT = _print72()
+        self.PRINT = _print79()
         self._name = "GENERATE"
         self._keywords = {'Reorder': 'REORDER', 'Create_molecules': 'CREATE_MOLECULES', 'Bondparm': 'BONDPARM', 'Bondparm_factor': 'BONDPARM_FACTOR', 'Bondlength_max': 'BONDLENGTH_MAX', 'Bondlength_min': 'BONDLENGTH_MIN'}
         self._subsections = {'ISOLATED_ATOMS': 'ISOLATED_ATOMS', 'NEIGHBOR_LISTS': 'NEIGHBOR_LISTS', 'PRINT': 'PRINT'}

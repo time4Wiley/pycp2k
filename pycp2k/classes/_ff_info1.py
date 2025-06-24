@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each363 import _each363
+from ._each442 import _each442
 
 
 class _ff_info1(InputSection):
@@ -12,7 +12,7 @@ class _ff_info1(InputSection):
         self.Log_print_key = None
         self.Spline_info = None
         self.Spline_data = None
-        self.EACH = _each363()
+        self.EACH = _each442()
         self._name = "FF_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Spline_info': 'SPLINE_INFO', 'Spline_data': 'SPLINE_DATA'}
         self._subsections = {'EACH': 'EACH'}

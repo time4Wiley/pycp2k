@@ -6,13 +6,13 @@ from ._embed1 import _embed1
 from ._dft1 import _dft1
 from ._pw_dft1 import _pw_dft1
 from ._mm1 import _mm1
-from ._nnp2 import _nnp2
+from ._nnp1 import _nnp1
 from ._qmmm1 import _qmmm1
 from ._eip1 import _eip1
 from ._bsse1 import _bsse1
 from ._subsys1 import _subsys1
 from ._properties1 import _properties1
-from ._print104 import _print104
+from ._print113 import _print113
 
 
 class _force_eval3(InputSection):
@@ -27,13 +27,13 @@ class _force_eval3(InputSection):
         self.DFT = _dft1()
         self.PW_DFT = _pw_dft1()
         self.MM = _mm1()
-        self.NNP = _nnp2()
+        self.NNP = _nnp1()
         self.QMMM = _qmmm1()
         self.EIP = _eip1()
         self.BSSE = _bsse1()
         self.SUBSYS = _subsys1()
         self.PROPERTIES = _properties1()
-        self.PRINT = _print104()
+        self.PRINT = _print113()
         self._name = "FORCE_EVAL"
         self._keywords = {'Method': 'METHOD', 'Stress_tensor': 'STRESS_TENSOR'}
         self._subsections = {'RESCALE_FORCES': 'RESCALE_FORCES', 'MIXED': 'MIXED', 'EMBED': 'EMBED', 'DFT': 'DFT', 'PW_DFT': 'PW_DFT', 'MM': 'MM', 'NNP': 'NNP', 'QMMM': 'QMMM', 'EIP': 'EIP', 'BSSE': 'BSSE', 'SUBSYS': 'SUBSYS', 'PROPERTIES': 'PROPERTIES', 'PRINT': 'PRINT'}

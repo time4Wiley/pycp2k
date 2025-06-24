@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each364 import _each364
+from ._each443 import _each443
 
 
 class _bias_energy1(InputSection):
@@ -10,7 +10,7 @@ class _bias_energy1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each364()
+        self.EACH = _each443()
         self._name = "BIAS_ENERGY"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

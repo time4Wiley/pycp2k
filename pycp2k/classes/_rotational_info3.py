@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each536 import _each536
+from ._each657 import _each657
 
 
 class _rotational_info3(InputSection):
@@ -11,7 +11,7 @@ class _rotational_info3(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Coordinates = None
-        self.EACH = _each536()
+        self.EACH = _each657()
         self._name = "ROTATIONAL_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Coordinates': 'COORDINATES'}
         self._subsections = {'EACH': 'EACH'}

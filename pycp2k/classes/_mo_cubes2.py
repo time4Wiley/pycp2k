@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each477 import _each477
+from ._each577 import _each577
 
 
 class _mo_cubes2(InputSection):
@@ -14,7 +14,7 @@ class _mo_cubes2(InputSection):
         self.Mo_list = []
         self.Nlumo = None
         self.Nhomo = None
-        self.EACH = _each477()
+        self.EACH = _each577()
         self._name = "MO_CUBES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Nlumo': 'NLUMO', 'Nhomo': 'NHOMO'}
         self._repeated_keywords = {'Mo_list': 'MO_LIST'}

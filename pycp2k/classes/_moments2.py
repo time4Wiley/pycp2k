@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each302 import _each302
+from ._each402 import _each402
 
 
 class _moments2(InputSection):
@@ -20,7 +20,7 @@ class _moments2(InputSection):
         self.Second_reference_point = None
         self.Reference_2 = None
         self.Reference_point_2 = None
-        self.EACH = _each302()
+        self.EACH = _each402()
         self._name = "MOMENTS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Periodic': 'PERIODIC', 'Reference': 'REFERENCE', 'Reference_point': 'REFERENCE_POINT', 'Max_moment': 'MAX_MOMENT', 'Magnetic': 'MAGNETIC', 'Vel_reprs': 'VEL_REPRS', 'Com_nl': 'COM_NL', 'Second_reference_point': 'SECOND_REFERENCE_POINT', 'Reference_2': 'REFERENCE_2', 'Reference_point_2': 'REFERENCE_POINT_2'}
         self._subsections = {'EACH': 'EACH'}

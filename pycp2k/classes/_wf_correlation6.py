@@ -7,7 +7,7 @@ from ._low_scaling6 import _low_scaling6
 from ._ri18 import _ri18
 from ._integrals6 import _integrals6
 from ._canonical_gradients6 import _canonical_gradients6
-from ._print101 import _print101
+from ._print111 import _print111
 
 
 class _wf_correlation6(InputSection):
@@ -27,7 +27,7 @@ class _wf_correlation6(InputSection):
         self.RI = _ri18()
         self.INTEGRALS = _integrals6()
         self.CANONICAL_GRADIENTS = _canonical_gradients6()
-        self.PRINT = _print101()
+        self.PRINT = _print111()
         self._name = "WF_CORRELATION"
         self._keywords = {'Memory': 'MEMORY', 'E_gap': 'E_GAP', 'E_range': 'E_RANGE', 'Scale_s': 'SCALE_S', 'Scale_t': 'SCALE_T', 'Group_size': 'GROUP_SIZE'}
         self._subsections = {'MP2': 'MP2', 'RI_MP2': 'RI_MP2', 'RI_RPA': 'RI_RPA', 'RI_SOS_MP2': 'RI_SOS_MP2', 'LOW_SCALING': 'LOW_SCALING', 'RI': 'RI', 'INTEGRALS': 'INTEGRALS', 'CANONICAL_GRADIENTS': 'CANONICAL_GRADIENTS', 'PRINT': 'PRINT'}

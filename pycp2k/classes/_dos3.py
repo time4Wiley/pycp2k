@@ -1,18 +1,20 @@
 from pycp2k.inputsection import InputSection
-from ._ldos4 import _ldos4
+from ._each428 import _each428
 
 
 class _dos3(InputSection):
     def __init__(self):
         InputSection.__init__(self)
         self.Section_parameters = None
-        self.Energy_window = None
-        self.Energy_step = None
-        self.Broadening = None
-        self.Kpoints = None
-        self.LDOS = _ldos4()
+        self.Add_last = None
+        self.Common_iteration_levels = None
+        self.Filename = None
+        self.Log_print_key = None
+        self.Append = None
+        self.Delta_e = None
+        self.EACH = _each428()
         self._name = "DOS"
-        self._keywords = {'Energy_window': 'ENERGY_WINDOW', 'Energy_step': 'ENERGY_STEP', 'Broadening': 'BROADENING', 'Kpoints': 'KPOINTS'}
-        self._subsections = {'LDOS': 'LDOS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Append': 'APPEND', 'Delta_e': 'DELTA_E'}
+        self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

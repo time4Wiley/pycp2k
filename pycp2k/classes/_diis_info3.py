@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each216 import _each216
+from ._each305 import _each305
 
 
 class _diis_info3(InputSection):
@@ -10,7 +10,7 @@ class _diis_info3(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each216()
+        self.EACH = _each305()
         self._name = "DIIS_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

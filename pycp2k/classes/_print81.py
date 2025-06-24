@@ -1,11 +1,11 @@
 from pycp2k.inputsection import InputSection
-from ._k_matrix1 import _k_matrix1
+from ._program_run_info44 import _program_run_info44
 
 
 class _print81(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.K_MATRIX = _k_matrix1()
+        self.PROGRAM_RUN_INFO = _program_run_info44()
         self._name = "PRINT"
-        self._subsections = {'K_MATRIX': 'K_MATRIX'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}
 

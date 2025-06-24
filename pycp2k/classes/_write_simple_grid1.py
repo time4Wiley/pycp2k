@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each172 import _each172
+from ._each215 import _each215
 
 
 class _write_simple_grid1(InputSection):
@@ -13,7 +13,7 @@ class _write_simple_grid1(InputSection):
         self.Stride = None
         self.Units = None
         self.Fold_coord = None
-        self.EACH = _each172()
+        self.EACH = _each215()
         self._name = "WRITE_SIMPLE_GRID"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Units': 'UNITS', 'Fold_coord': 'FOLD_COORD'}
         self._subsections = {'EACH': 'EACH'}

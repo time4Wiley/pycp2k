@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each529 import _each529
+from ._each650 import _each650
 
 
 class _communication_log1(InputSection):
@@ -11,7 +11,7 @@ class _communication_log1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Unit = None
-        self.EACH = _each529()
+        self.EACH = _each650()
         self._name = "COMMUNICATION_LOG"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each559 import _each559
+from ._each680 import _each680
 from ._admm_basis1 import _admm_basis1
 
 
@@ -11,7 +11,7 @@ class _admm1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each559()
+        self.EACH = _each680()
         self.ADMM_BASIS = _admm_basis1()
         self._name = "ADMM"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}

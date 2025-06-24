@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each428 import _each428
+from ._each219 import _each219
 
 
 class _wannier_cubes5(InputSection):
@@ -14,7 +14,7 @@ class _wannier_cubes5(InputSection):
         self.Cubes_lu_bounds = None
         self.Cubes_list = []
         self.Append = None
-        self.EACH = _each428()
+        self.EACH = _each219()
         self._name = "WANNIER_CUBES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Cubes_lu_bounds': 'CUBES_LU_BOUNDS', 'Append': 'APPEND'}
         self._repeated_keywords = {'Cubes_list': 'CUBES_LIST'}

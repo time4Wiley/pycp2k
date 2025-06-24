@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each143 import _each143
+from ._each163 import _each163
 
 
 class _eri_mme_info2(InputSection):
@@ -10,7 +10,7 @@ class _eri_mme_info2(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each143()
+        self.EACH = _each163()
         self._name = "ERI_MME_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

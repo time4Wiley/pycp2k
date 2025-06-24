@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each375 import _each375
+from ._each311 import _each311
 
 
 class _program_run_info30(InputSection):
@@ -10,7 +10,7 @@ class _program_run_info30(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each375()
+        self.EACH = _each311()
         self._name = "PROGRAM_RUN_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

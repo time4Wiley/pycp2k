@@ -23,7 +23,6 @@ class _forcefield1(InputSection):
         self.Ei_scale14 = None
         self.Shift_cutoff = None
         self.Do_nonbonded = None
-        self.Do_electrostatics = None
         self.Ignore_missing_critical_params = None
         self.Multiple_potential = None
         self.Zbl_scattering = None
@@ -41,7 +40,7 @@ class _forcefield1(InputSection):
         self.DIPOLE_list = []
         self.QUADRUPOLE_list = []
         self._name = "FORCEFIELD"
-        self._keywords = {'Parmtype': 'PARMTYPE', 'Parm_file_name': 'PARM_FILE_NAME', 'Vdw_scale14': 'VDW_SCALE14', 'Ei_scale14': 'EI_SCALE14', 'Shift_cutoff': 'SHIFT_CUTOFF', 'Do_nonbonded': 'DO_NONBONDED', 'Do_electrostatics': 'DO_ELECTROSTATICS', 'Ignore_missing_critical_params': 'IGNORE_MISSING_CRITICAL_PARAMS', 'Multiple_potential': 'MULTIPLE_POTENTIAL', 'Zbl_scattering': 'ZBL_SCATTERING'}
+        self._keywords = {'Parmtype': 'PARMTYPE', 'Parm_file_name': 'PARM_FILE_NAME', 'Vdw_scale14': 'VDW_SCALE14', 'Ei_scale14': 'EI_SCALE14', 'Shift_cutoff': 'SHIFT_CUTOFF', 'Do_nonbonded': 'DO_NONBONDED', 'Ignore_missing_critical_params': 'IGNORE_MISSING_CRITICAL_PARAMS', 'Multiple_potential': 'MULTIPLE_POTENTIAL', 'Zbl_scattering': 'ZBL_SCATTERING'}
         self._subsections = {'NONBONDED': 'NONBONDED', 'NONBONDED14': 'NONBONDED14', 'CHARGES': 'CHARGES'}
         self._repeated_subsections = {'SPLINE': '_spline1', 'CHARGE': '_charge3', 'SHELL': '_shell2', 'BOND': '_bond1', 'BEND': '_bend1', 'TORSION': '_torsion1', 'IMPROPER': '_improper1', 'OPBEND': '_opbend1', 'DIPOLE': '_dipole2', 'QUADRUPOLE': '_quadrupole1'}
         self._attributes = ['SPLINE_list', 'CHARGE_list', 'SHELL_list', 'BOND_list', 'BEND_list', 'TORSION_list', 'IMPROPER_list', 'OPBEND_list', 'DIPOLE_list', 'QUADRUPOLE_list']

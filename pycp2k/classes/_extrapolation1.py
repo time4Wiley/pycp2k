@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each55 import _each55
+from ._each448 import _each448
 
 
 class _extrapolation1(InputSection):
@@ -10,7 +10,7 @@ class _extrapolation1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each55()
+        self.EACH = _each448()
         self._name = "EXTRAPOLATION"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
 from ._mapping2 import _mapping2
-from ._print20 import _print20
+from ._print19 import _print19
 
 
 class _embed1(InputSection):
@@ -10,7 +10,7 @@ class _embed1(InputSection):
         self.Group_partition = None
         self.Ngroups = None
         self.MAPPING_list = []
-        self.PRINT = _print20()
+        self.PRINT = _print19()
         self._name = "EMBED"
         self._keywords = {'Embed_method': 'EMBED_METHOD', 'Group_partition': 'GROUP_PARTITION', 'Ngroups': 'NGROUPS'}
         self._subsections = {'PRINT': 'PRINT'}

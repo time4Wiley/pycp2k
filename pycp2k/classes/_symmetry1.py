@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each424 import _each424
+from ._each503 import _each503
 
 
 class _symmetry1(InputSection):
@@ -18,7 +18,7 @@ class _symmetry1(InputSection):
         self.All = None
         self.Rotation_matrices = None
         self.Check_symmetry = None
-        self.EACH = _each424()
+        self.EACH = _each503()
         self._name = "SYMMETRY"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Molecule': 'MOLECULE', 'Eps_geo': 'EPS_GEO', 'Standard_orientation': 'STANDARD_ORIENTATION', 'Inertia': 'INERTIA', 'Symmetry_elements': 'SYMMETRY_ELEMENTS', 'All': 'ALL', 'Rotation_matrices': 'ROTATION_MATRICES', 'Check_symmetry': 'CHECK_SYMMETRY'}
         self._subsections = {'EACH': 'EACH'}

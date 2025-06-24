@@ -5,7 +5,7 @@ from ._coupling1 import _coupling1
 from ._restraint7 import _restraint7
 from ._generic1 import _generic1
 from ._mapping1 import _mapping1
-from ._print19 import _print19
+from ._print18 import _print18
 
 
 class _mixed1(InputSection):
@@ -20,7 +20,7 @@ class _mixed1(InputSection):
         self.RESTRAINT = _restraint7()
         self.GENERIC = _generic1()
         self.MAPPING_list = []
-        self.PRINT = _print19()
+        self.PRINT = _print18()
         self._name = "MIXED"
         self._keywords = {'Mixing_type': 'MIXING_TYPE', 'Group_partition': 'GROUP_PARTITION', 'Ngroups': 'NGROUPS'}
         self._subsections = {'LINEAR': 'LINEAR', 'MIXED_CDFT': 'MIXED_CDFT', 'COUPLING': 'COUPLING', 'RESTRAINT': 'RESTRAINT', 'GENERIC': 'GENERIC', 'PRINT': 'PRINT'}

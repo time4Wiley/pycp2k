@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each522 import _each522
+from ._each647 import _each647
 
 
 class _restart16(InputSection):
@@ -10,9 +10,10 @@ class _restart16(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each522()
+        self.Backup_copies = None
+        self.EACH = _each647()
         self._name = "RESTART"
-        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Backup_copies': 'BACKUP_COPIES'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
 from ._hf14 import _hf14
-from ._gw8 import _gw8
+from ._gw7 import _gw7
 from ._ri_axk7 import _ri_axk7
 
 
@@ -18,7 +18,7 @@ class _ri_rpa7(InputSection):
         self.Scale_rpa = None
         self.Print_dgemm_info = None
         self.HF_list = []
-        self.GW = _gw8()
+        self.GW = _gw7()
         self.RI_AXK = _ri_axk7()
         self._name = "RI_RPA"
         self._keywords = {'Quadrature_points': 'QUADRATURE_POINTS', 'Num_integ_groups': 'NUM_INTEG_GROUPS', 'Mm_style': 'MM_STYLE', 'Minimax_quadrature': 'MINIMAX_QUADRATURE', 'Ri_axk': 'RI_AXK', 'Rse': 'RSE', 'Admm': 'ADMM', 'Scale_rpa': 'SCALE_RPA', 'Print_dgemm_info': 'PRINT_DGEMM_INFO'}

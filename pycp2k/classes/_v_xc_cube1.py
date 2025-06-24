@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each294 import _each294
+from ._each394 import _each394
 
 
 class _v_xc_cube1(InputSection):
@@ -12,7 +12,7 @@ class _v_xc_cube1(InputSection):
         self.Log_print_key = None
         self.Stride = None
         self.Append = None
-        self.EACH = _each294()
+        self.EACH = _each394()
         self._name = "V_XC_CUBE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}

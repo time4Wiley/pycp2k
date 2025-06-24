@@ -1,15 +1,29 @@
 from pycp2k.inputsection import InputSection
-from ._ri_info2 import _ri_info2
-from ._ri_density_coeffs2 import _ri_density_coeffs2
-from ._ri_metric_2c_ints2 import _ri_metric_2c_ints2
+from ._program_run_info16 import _program_run_info16
+from ._wannier_cubes2 import _wannier_cubes2
+from ._wannier_centers2 import _wannier_centers2
+from ._wannier_spreads2 import _wannier_spreads2
+from ._loc_restart2 import _loc_restart2
+from ._total_dipole2 import _total_dipole2
+from ._molecular_dipoles2 import _molecular_dipoles2
+from ._molecular_moments2 import _molecular_moments2
+from ._molecular_states2 import _molecular_states2
+from ._wannier_states2 import _wannier_states2
 
 
 class _print28(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.RI_INFO = _ri_info2()
-        self.RI_DENSITY_COEFFS = _ri_density_coeffs2()
-        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints2()
+        self.PROGRAM_RUN_INFO = _program_run_info16()
+        self.WANNIER_CUBES = _wannier_cubes2()
+        self.WANNIER_CENTERS = _wannier_centers2()
+        self.WANNIER_SPREADS = _wannier_spreads2()
+        self.LOC_RESTART = _loc_restart2()
+        self.TOTAL_DIPOLE = _total_dipole2()
+        self.MOLECULAR_DIPOLES = _molecular_dipoles2()
+        self.MOLECULAR_MOMENTS = _molecular_moments2()
+        self.MOLECULAR_STATES = _molecular_states2()
+        self.WANNIER_STATES = _wannier_states2()
         self._name = "PRINT"
-        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'WANNIER_CUBES': 'WANNIER_CUBES', 'WANNIER_CENTERS': 'WANNIER_CENTERS', 'WANNIER_SPREADS': 'WANNIER_SPREADS', 'LOC_RESTART': 'LOC_RESTART', 'TOTAL_DIPOLE': 'TOTAL_DIPOLE', 'MOLECULAR_DIPOLES': 'MOLECULAR_DIPOLES', 'MOLECULAR_MOMENTS': 'MOLECULAR_MOMENTS', 'MOLECULAR_STATES': 'MOLECULAR_STATES', 'WANNIER_STATES': 'WANNIER_STATES'}
 

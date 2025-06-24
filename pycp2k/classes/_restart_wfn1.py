@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each247 import _each247
+from ._each336 import _each336
 
 
 class _restart_wfn1(InputSection):
@@ -12,7 +12,7 @@ class _restart_wfn1(InputSection):
         self.Log_print_key = None
         self.Excited_state_index = []
         self.Index = self.Excited_state_index
-        self.EACH = _each247()
+        self.EACH = _each336()
         self._name = "RESTART_WFN"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._repeated_keywords = {'Excited_state_index': 'EXCITED_STATE_INDEX'}

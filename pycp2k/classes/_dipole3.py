@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each356 import _each356
+from ._each435 import _each435
 
 
 class _dipole3(InputSection):
@@ -13,7 +13,7 @@ class _dipole3(InputSection):
         self.Periodic = None
         self.Reference = None
         self.Reference_point = None
-        self.EACH = _each356()
+        self.EACH = _each435()
         self._name = "DIPOLE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Periodic': 'PERIODIC', 'Reference': 'REFERENCE', 'Reference_point': 'REFERENCE_POINT'}
         self._subsections = {'EACH': 'EACH'}

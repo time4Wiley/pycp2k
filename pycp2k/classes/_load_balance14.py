@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print113 import _print113
+from ._print123 import _print123
 
 
 class _load_balance14(InputSection):
@@ -8,7 +8,7 @@ class _load_balance14(InputSection):
         self.Nbins = None
         self.Block_size = None
         self.Randomize = None
-        self.PRINT = _print113()
+        self.PRINT = _print123()
         self._name = "LOAD_BALANCE"
         self._keywords = {'Nbins': 'NBINS', 'Block_size': 'BLOCK_SIZE', 'Randomize': 'RANDOMIZE'}
         self._subsections = {'PRINT': 'PRINT'}

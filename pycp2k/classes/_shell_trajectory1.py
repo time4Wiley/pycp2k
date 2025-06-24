@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each85 import _each85
+from ._each82 import _each82
 
 
 class _shell_trajectory1(InputSection):
@@ -16,7 +16,7 @@ class _shell_trajectory1(InputSection):
         self.Charge_beta = None
         self.Charge_extended = None
         self.Print_atom_kind = None
-        self.EACH = _each85()
+        self.EACH = _each82()
         self._name = "SHELL_TRAJECTORY"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Format': 'FORMAT', 'Charge_occup': 'CHARGE_OCCUP', 'Charge_beta': 'CHARGE_BETA', 'Charge_extended': 'CHARGE_EXTENDED', 'Print_atom_kind': 'PRINT_ATOM_KIND'}
         self._subsections = {'EACH': 'EACH'}

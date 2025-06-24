@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print65 import _print65
+from ._print72 import _print72
 
 
 class _bias1(InputSection):
@@ -8,7 +8,7 @@ class _bias1(InputSection):
         self.K_b = None
         self.Sigma_0 = None
         self.Align_nnp_energies = None
-        self.PRINT = _print65()
+        self.PRINT = _print72()
         self._name = "BIAS"
         self._keywords = {'K_b': 'K_B', 'Sigma_0': 'SIGMA_0', 'Align_nnp_energies': 'ALIGN_NNP_ENERGIES'}
         self._subsections = {'PRINT': 'PRINT'}

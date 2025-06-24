@@ -2,7 +2,7 @@ from pycp2k.inputsection import InputSection
 from ._variable1 import _variable1
 from ._force_matching1 import _force_matching1
 from ._history1 import _history1
-from ._restart17 import _restart17
+from ._restart16 import _restart16
 
 
 class _optimize_input1(InputSection):
@@ -17,7 +17,7 @@ class _optimize_input1(InputSection):
         self.VARIABLE_list = []
         self.FORCE_MATCHING_list = []
         self.HISTORY = _history1()
-        self.RESTART = _restart17()
+        self.RESTART = _restart16()
         self._name = "OPTIMIZE_INPUT"
         self._keywords = {'Method': 'METHOD', 'Accuracy': 'ACCURACY', 'Step_size': 'STEP_SIZE', 'Max_fun': 'MAX_FUN', 'Iter_start_val': 'ITER_START_VAL', 'Randomize_variables': 'RANDOMIZE_VARIABLES'}
         self._subsections = {'HISTORY': 'HISTORY', 'RESTART': 'RESTART'}

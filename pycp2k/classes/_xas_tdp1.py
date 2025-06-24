@@ -3,7 +3,7 @@ from ._gw2x1 import _gw2x1
 from ._donor_states1 import _donor_states1
 from ._ot_solver1 import _ot_solver1
 from ._kernel1 import _kernel1
-from ._print57 import _print57
+from ._print64 import _print64
 
 
 class _xas_tdp1(InputSection):
@@ -18,7 +18,6 @@ class _xas_tdp1(InputSection):
         self.Eps_filter = None
         self.Dipole_form = None
         self.Quadrupole = None
-        self.Xyz_dipole = None
         self.Spin_orbit_coupling = None
         self.Tamm_dancoff = None
         self.Grid = []
@@ -29,12 +28,12 @@ class _xas_tdp1(InputSection):
         self.DONOR_STATES = _donor_states1()
         self.OT_SOLVER = _ot_solver1()
         self.KERNEL = _kernel1()
-        self.PRINT = _print57()
+        self.PRINT = _print64()
         self._name = "XAS_TDP"
-        self._keywords = {'Check_only': 'CHECK_ONLY', 'Restart_from_file': 'RESTART_FROM_FILE', 'Eps_pgf_xas': 'EPS_PGF_XAS', 'Eps_filter': 'EPS_FILTER', 'Dipole_form': 'DIPOLE_FORM', 'Quadrupole': 'QUADRUPOLE', 'Xyz_dipole': 'XYZ_DIPOLE', 'Spin_orbit_coupling': 'SPIN_ORBIT_COUPLING', 'Tamm_dancoff': 'TAMM_DANCOFF', 'N_excited': 'N_EXCITED', 'Energy_range': 'ENERGY_RANGE'}
+        self._keywords = {'Check_only': 'CHECK_ONLY', 'Restart_from_file': 'RESTART_FROM_FILE', 'Eps_pgf_xas': 'EPS_PGF_XAS', 'Eps_filter': 'EPS_FILTER', 'Dipole_form': 'DIPOLE_FORM', 'Quadrupole': 'QUADRUPOLE', 'Spin_orbit_coupling': 'SPIN_ORBIT_COUPLING', 'Tamm_dancoff': 'TAMM_DANCOFF', 'N_excited': 'N_EXCITED', 'Energy_range': 'ENERGY_RANGE'}
         self._repeated_keywords = {'Excitations': 'EXCITATIONS', 'Grid': 'GRID'}
         self._subsections = {'GW2X': 'GW2X', 'DONOR_STATES': 'DONOR_STATES', 'OT_SOLVER': 'OT_SOLVER', 'KERNEL': 'KERNEL', 'PRINT': 'PRINT'}
-        self._aliases = {'Restart_filename': 'Restart_from_file', 'Rst_filename': 'Restart_from_file', 'Restart_file': 'Restart_from_file', 'Rst_file': 'Restart_from_file', 'Eps_pgf': 'Eps_pgf_xas', 'Eps_pgf_xas_tdp': 'Eps_pgf_xas', 'Eps_filter_matrix': 'Eps_filter', 'Dip_form': 'Dipole_form', 'Do_quadrupole': 'Quadrupole', 'Do_quad': 'Quadrupole', 'Quad': 'Quadrupole', 'Dipole_xyz': 'Xyz_dipole', 'Soc': 'Spin_orbit_coupling', 'Tda': 'Tamm_dancoff', 'N_roots': 'N_excited', 'E_range': 'Energy_range'}
+        self._aliases = {'Restart_filename': 'Restart_from_file', 'Rst_filename': 'Restart_from_file', 'Restart_file': 'Restart_from_file', 'Rst_file': 'Restart_from_file', 'Eps_pgf': 'Eps_pgf_xas', 'Eps_pgf_xas_tdp': 'Eps_pgf_xas', 'Eps_filter_matrix': 'Eps_filter', 'Dip_form': 'Dipole_form', 'Do_quadrupole': 'Quadrupole', 'Do_quad': 'Quadrupole', 'Quad': 'Quadrupole', 'Soc': 'Spin_orbit_coupling', 'Tda': 'Tamm_dancoff', 'N_roots': 'N_excited', 'E_range': 'Energy_range'}
         self._repeated_aliases = {'Excitation': 'Excitations', 'Atomic_grid': 'Grid'}
         self._attributes = ['Section_parameters']
 
@@ -117,13 +116,6 @@ class _xas_tdp1(InputSection):
         return self.Quadrupole
 
     @property
-    def Dipole_xyz(self):
-        """
-        See documentation for Xyz_dipole
-        """
-        return self.Xyz_dipole
-
-    @property
     def Soc(self):
         """
         See documentation for Spin_orbit_coupling
@@ -194,10 +186,6 @@ class _xas_tdp1(InputSection):
     @Quad.setter
     def Quad(self, value):
         self.Quadrupole = value
-
-    @Dipole_xyz.setter
-    def Dipole_xyz(self, value):
-        self.Xyz_dipole = value
 
     @Soc.setter
     def Soc(self, value):

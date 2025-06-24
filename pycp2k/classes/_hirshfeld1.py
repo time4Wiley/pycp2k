@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each305 import _each305
+from ._each405 import _each405
 
 
 class _hirshfeld1(InputSection):
@@ -15,7 +15,7 @@ class _hirshfeld1(InputSection):
         self.Reference_charge = None
         self.User_radius = None
         self.Atomic_radii = None
-        self.EACH = _each305()
+        self.EACH = _each405()
         self._name = "HIRSHFELD"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Self_consistent': 'SELF_CONSISTENT', 'Shape_function': 'SHAPE_FUNCTION', 'Reference_charge': 'REFERENCE_CHARGE', 'User_radius': 'USER_RADIUS', 'Atomic_radii': 'ATOMIC_RADII'}
         self._subsections = {'EACH': 'EACH'}

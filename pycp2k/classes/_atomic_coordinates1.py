@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each418 import _each418
+from ._each497 import _each497
 
 
 class _atomic_coordinates1(InputSection):
@@ -11,7 +11,7 @@ class _atomic_coordinates1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Unit = None
-        self.EACH = _each418()
+        self.EACH = _each497()
         self._name = "ATOMIC_COORDINATES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT'}
         self._subsections = {'EACH': 'EACH'}

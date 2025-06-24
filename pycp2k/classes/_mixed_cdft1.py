@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
 from ._block_diagonalize1 import _block_diagonalize1
-from ._print18 import _print18
+from ._print17 import _print17
 
 
 class _mixed_cdft1(InputSection):
@@ -25,7 +25,7 @@ class _mixed_cdft1(InputSection):
         self.Very_overloaded = None
         self.Block_diagonalize = None
         self.BLOCK_DIAGONALIZE = _block_diagonalize1()
-        self.PRINT = _print18()
+        self.PRINT = _print17()
         self._name = "MIXED_CDFT"
         self._keywords = {'Lambda': 'LAMBDA', 'Force_states': 'FORCE_STATES', 'Coupling': 'COUPLING', 'Parallel_build': 'PARALLEL_BUILD', 'Dlb': 'DLB', 'Metric': 'METRIC', 'Wfn_overlap': 'WFN_OVERLAP', 'Lowdin': 'LOWDIN', 'Ci': 'CI', 'Nonorthogonal_coupling': 'NONORTHOGONAL_COUPLING', 'Scale_with_occupation_numbers': 'SCALE_WITH_OCCUPATION_NUMBERS', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME', 'Eps_svd': 'EPS_SVD', 'Eps_occupied': 'EPS_OCCUPIED', 'Load_scale': 'LOAD_SCALE', 'More_work': 'MORE_WORK', 'Very_overloaded': 'VERY_OVERLOADED', 'Block_diagonalize': 'BLOCK_DIAGONALIZE'}
         self._subsections = {'BLOCK_DIAGONALIZE': 'BLOCK_DIAGONALIZE', 'PRINT': 'PRINT'}

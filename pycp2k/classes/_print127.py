@@ -1,13 +1,18 @@
 from pycp2k.inputsection import InputSection
-from ._local_bandgap7 import _local_bandgap7
-from ._gw_dos7 import _gw_dos7
+from ._each716 import _each716
 
 
 class _print127(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.LOCAL_BANDGAP = _local_bandgap7()
-        self.GW_DOS = _gw_dos7()
+        self.Section_parameters = None
+        self.Add_last = None
+        self.Common_iteration_levels = None
+        self.Filename = None
+        self.Log_print_key = None
+        self.EACH = _each716()
         self._name = "PRINT"
-        self._subsections = {'LOCAL_BANDGAP': 'LOCAL_BANDGAP', 'GW_DOS': 'GW_DOS'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
+        self._subsections = {'EACH': 'EACH'}
+        self._attributes = ['Section_parameters']
 

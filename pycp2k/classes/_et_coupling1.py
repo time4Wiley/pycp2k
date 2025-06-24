@@ -2,7 +2,7 @@ from pycp2k.inputsection import InputSection
 from ._ddapc_restraint_a1 import _ddapc_restraint_a1
 from ._ddapc_restraint_b1 import _ddapc_restraint_b1
 from ._projection1 import _projection1
-from ._program_run_info44 import _program_run_info44
+from ._program_run_info54 import _program_run_info54
 
 
 class _et_coupling1(InputSection):
@@ -12,7 +12,7 @@ class _et_coupling1(InputSection):
         self.DDAPC_RESTRAINT_A_list = []
         self.DDAPC_RESTRAINT_B_list = []
         self.PROJECTION = _projection1()
-        self.PROGRAM_RUN_INFO = _program_run_info44()
+        self.PROGRAM_RUN_INFO = _program_run_info54()
         self._name = "ET_COUPLING"
         self._keywords = {'Type_of_constraint': 'TYPE_OF_CONSTRAINT'}
         self._subsections = {'PROJECTION': 'PROJECTION', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO'}

@@ -1,18 +1,14 @@
 from pycp2k.inputsection import InputSection
-from ._each497 import _each497
+from ._mo_cubes2 import _mo_cubes2
 
 
 class _print101(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Section_parameters = None
-        self.Add_last = None
-        self.Common_iteration_levels = None
-        self.Filename = None
-        self.Log_print_key = None
-        self.EACH = _each497()
+        self.Mo_coeff_atom = []
+        self.Mo_coeff_atom_state = []
+        self.MO_CUBES = _mo_cubes2()
         self._name = "PRINT"
-        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
-        self._subsections = {'EACH': 'EACH'}
-        self._attributes = ['Section_parameters']
+        self._repeated_keywords = {'Mo_coeff_atom': 'MO_COEFF_ATOM', 'Mo_coeff_atom_state': 'MO_COEFF_ATOM_STATE'}
+        self._subsections = {'MO_CUBES': 'MO_CUBES'}
 

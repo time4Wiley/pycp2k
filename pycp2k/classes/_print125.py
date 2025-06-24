@@ -1,19 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._each608 import _each608
+from ._ri_info14 import _ri_info14
+from ._ri_density_coeffs14 import _ri_density_coeffs14
+from ._ri_metric_2c_ints14 import _ri_metric_2c_ints14
 
 
 class _print125(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Section_parameters = None
-        self.Add_last = None
-        self.Common_iteration_levels = None
-        self.Filename = None
-        self.Log_print_key = None
-        self.Load_balance_info = None
-        self.EACH = _each608()
+        self.RI_INFO = _ri_info14()
+        self.RI_DENSITY_COEFFS = _ri_density_coeffs14()
+        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints14()
         self._name = "PRINT"
-        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Load_balance_info': 'LOAD_BALANCE_INFO'}
-        self._subsections = {'EACH': 'EACH'}
-        self._attributes = ['Section_parameters']
+        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
 
