@@ -21,3 +21,6 @@ examples/*.wfn
 examples/*.bak-1
 examples/*.bak-2
 examples/*.bak-3
+# Ignore CP2K test outputs
+*.out
+*_test.inp
