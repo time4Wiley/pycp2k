@@ -1,16 +1,25 @@
 #!/bin/bash
-#SBATCH --job-name=cba_borate
-#SBATCH --partition=xhacnormalc
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=32
-#SBATCH --cpus-per-task=2
-#SBATCH --time=00:30:00
-#SBATCH --output=cba_borate_%j.out
-#SBATCH --error=cba_borate_%j.err
+#SBATCH -J cba_borate_energy
+#SBATCH -p xhacnormalc
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=8       # 8 MPI ranks per node
+#SBATCH --cpus-per-task=2         # 2 threads per rank  
+#SBATCH -t 02:00:00
+#SBATCH -o %x-%j.out
+#SBATCH -e %x-%j.err
 
 module purge
-module load cp2k-2024.1-gcc-930-nopython
+module load compiler/intel/2021.3.0
+module load mpi/intelmpi/2021.3.0
+module load cp2k/2024.1-intelmpi-2021
 
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK   # 2
+export MKL_NUM_THREADS=$OMP_NUM_THREADS
+export KMP_AFFINITY=granularity=fine,compact,1,0
 
-srun --mpi=pmix_v3 cp2k.psmp -in bond_energy.inp -o bond_energy.out 
+echo "=== CBA-Borate Bond Energy Calculation ==="
+echo "Job started: $(date)"
+
+srun --mpi=pmix_v3 cp2k.psmp -i bond_energy.inp -o bond_energy.out
+
+echo "Job completed: $(date)" 
