@@ -24,3 +24,5 @@ examples/*.bak-3
 # Ignore CP2K test outputs
 *.out
 *_test.inp
+
+*.err
