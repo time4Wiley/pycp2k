@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each367 import _each367
+from ._each337 import _each337
 
 
 class _fcidump1(InputSection):
@@ -10,7 +10,7 @@ class _fcidump1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each367()
+        self.EACH = _each337()
         self._name = "FCIDUMP"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

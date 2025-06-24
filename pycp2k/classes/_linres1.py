@@ -7,7 +7,7 @@ from ._epr1 import _epr1
 from ._polar1 import _polar1
 from ._dcdr1 import _dcdr1
 from ._vcd2 import _vcd2
-from ._print102 import _print102
+from ._print92 import _print92
 
 
 class _linres1(InputSection):
@@ -19,7 +19,6 @@ class _linres1(InputSection):
         self.Restart_every = None
         self.Preconditioner = None
         self.Energy_gap = None
-        self.Every_n_step = None
         self.Restart = None
         self.Wfn_restart_file_name = None
         self.LOCALIZE = _localize4()
@@ -30,9 +29,9 @@ class _linres1(InputSection):
         self.POLAR = _polar1()
         self.DCDR = _dcdr1()
         self.VCD = _vcd2()
-        self.PRINT = _print102()
+        self.PRINT = _print92()
         self._name = "LINRES"
-        self._keywords = {'Eps': 'EPS', 'Eps_filter': 'EPS_FILTER', 'Max_iter': 'MAX_ITER', 'Restart_every': 'RESTART_EVERY', 'Preconditioner': 'PRECONDITIONER', 'Energy_gap': 'ENERGY_GAP', 'Every_n_step': 'EVERY_N_STEP', 'Restart': 'RESTART', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME'}
+        self._keywords = {'Eps': 'EPS', 'Eps_filter': 'EPS_FILTER', 'Max_iter': 'MAX_ITER', 'Restart_every': 'RESTART_EVERY', 'Preconditioner': 'PRECONDITIONER', 'Energy_gap': 'ENERGY_GAP', 'Restart': 'RESTART', 'Wfn_restart_file_name': 'WFN_RESTART_FILE_NAME'}
         self._subsections = {'LOCALIZE': 'LOCALIZE', 'CURRENT': 'CURRENT', 'NMR': 'NMR', 'SPINSPIN': 'SPINSPIN', 'EPR': 'EPR', 'POLAR': 'POLAR', 'DCDR': 'DCDR', 'VCD': 'VCD', 'PRINT': 'PRINT'}
         self._aliases = {'Restart_file_name': 'Wfn_restart_file_name'}
 

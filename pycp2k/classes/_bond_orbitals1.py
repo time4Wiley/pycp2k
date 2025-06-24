@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each345 import _each345
+from ._each315 import _each315
 from ._charge_center1 import _charge_center1
 from ._ibo_molden1 import _ibo_molden1
 from ._ibo_cubes1 import _ibo_cubes1
@@ -16,7 +16,7 @@ class _bond_orbitals1(InputSection):
         self.Localization_operator = None
         self.Energy_localization_function = None
         self.Energy_localization_weight = None
-        self.EACH = _each345()
+        self.EACH = _each315()
         self.CHARGE_CENTER = _charge_center1()
         self.IBO_MOLDEN = _ibo_molden1()
         self.IBO_CUBES = _ibo_cubes1()

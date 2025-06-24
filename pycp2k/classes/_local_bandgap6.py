@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each532 import _each532
+from ._each495 import _each495
 
 
 class _local_bandgap6(InputSection):
@@ -14,7 +14,7 @@ class _local_bandgap6(InputSection):
         self.Energy_spacing = None
         self.Ldos_threshold_gap = None
         self.Stride = None
-        self.EACH = _each532()
+        self.EACH = _each495()
         self._name = "LOCAL_BANDGAP"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Energy_window': 'ENERGY_WINDOW', 'Energy_spacing': 'ENERGY_SPACING', 'Ldos_threshold_gap': 'LDOS_THRESHOLD_GAP', 'Stride': 'STRIDE'}
         self._subsections = {'EACH': 'EACH'}

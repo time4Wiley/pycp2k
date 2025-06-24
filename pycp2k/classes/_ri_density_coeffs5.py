@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each161 import _each161
+from ._each176 import _each176
 
 
 class _ri_density_coeffs5(InputSection):
@@ -11,7 +11,7 @@ class _ri_density_coeffs5(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Multiply_by_ri_2c_integrals = None
-        self.EACH = _each161()
+        self.EACH = _each176()
         self._name = "RI_DENSITY_COEFFS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Multiply_by_ri_2c_integrals': 'MULTIPLY_BY_RI_2C_INTEGRALS'}
         self._subsections = {'EACH': 'EACH'}

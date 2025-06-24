@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each301 import _each301
+from ._each272 import _each272
 
 
 class _derivatives1(InputSection):
@@ -11,7 +11,7 @@ class _derivatives1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Ndigits = None
-        self.EACH = _each301()
+        self.EACH = _each272()
         self._name = "DERIVATIVES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Ndigits': 'NDIGITS'}
         self._subsections = {'EACH': 'EACH'}

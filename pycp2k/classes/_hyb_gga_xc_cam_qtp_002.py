@@ -6,11 +6,11 @@ class _hyb_gga_xc_cam_qtp_002(InputSection):
         InputSection.__init__(self)
         self.Section_parameters = None
         self.Scale = None
-        self._ac = None
         self._alpha = None
         self._beta = None
         self._omega = None
+        self._ac = None
         self._name = "HYB_GGA_XC_CAM_QTP_00"
-        self._keywords = {'Scale': 'SCALE', '_ac': '_AC', '_alpha': '_ALPHA', '_beta': '_BETA', '_omega': '_OMEGA'}
+        self._keywords = {'Scale': 'SCALE', '_alpha': '_ALPHA', '_beta': '_BETA', '_omega': '_OMEGA', '_ac': '_AC'}
         self._attributes = ['Section_parameters']
 

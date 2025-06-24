@@ -1,13 +1,13 @@
 from pycp2k.inputsection import InputSection
-from ._program_run_info34 import _program_run_info34
-from ._restart12 import _restart12
+from ._current_cubes1 import _current_cubes1
+from ._response_function_cubes1 import _response_function_cubes1
 
 
 class _print79(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.PROGRAM_RUN_INFO = _program_run_info34()
-        self.RESTART = _restart12()
+        self.CURRENT_CUBES = _current_cubes1()
+        self.RESPONSE_FUNCTION_CUBES = _response_function_cubes1()
         self._name = "PRINT"
-        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'RESTART': 'RESTART'}
+        self._subsections = {'CURRENT_CUBES': 'CURRENT_CUBES', 'RESPONSE_FUNCTION_CUBES': 'RESPONSE_FUNCTION_CUBES'}
 

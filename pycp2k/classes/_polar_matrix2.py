@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each502 import _each502
+from ._each466 import _each466
 
 
 class _polar_matrix2(InputSection):
@@ -10,7 +10,7 @@ class _polar_matrix2(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each502()
+        self.EACH = _each466()
         self._name = "POLAR_MATRIX"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

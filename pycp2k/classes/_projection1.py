@@ -1,7 +1,7 @@
 from pycp2k.inputsection import InputSection
 from ._program_run_info43 import _program_run_info43
 from ._block1 import _block1
-from ._print104 import _print104
+from ._print94 import _print94
 
 
 class _projection1(InputSection):
@@ -9,7 +9,7 @@ class _projection1(InputSection):
         InputSection.__init__(self)
         self.PROGRAM_RUN_INFO = _program_run_info43()
         self.BLOCK_list = []
-        self.PRINT = _print104()
+        self.PRINT = _print94()
         self._name = "PROJECTION"
         self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'PRINT': 'PRINT'}
         self._repeated_subsections = {'BLOCK': '_block1'}

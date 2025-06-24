@@ -1,15 +1,23 @@
 from pycp2k.inputsection import InputSection
-from ._ri_info16 import _ri_info16
-from ._ri_density_coeffs16 import _ri_density_coeffs16
-from ._ri_metric_2c_ints16 import _ri_metric_2c_ints16
+from ._banner2 import _banner2
+from ._program_run_info48 import _program_run_info48
+from ._molden_vib1 import _molden_vib1
+from ._rotational_info3 import _rotational_info3
+from ._cartesian_eigs1 import _cartesian_eigs1
+from ._namd_print2 import _namd_print2
+from ._hessian1 import _hessian1
 
 
 class _print107(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.RI_INFO = _ri_info16()
-        self.RI_DENSITY_COEFFS = _ri_density_coeffs16()
-        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints16()
+        self.BANNER = _banner2()
+        self.PROGRAM_RUN_INFO = _program_run_info48()
+        self.MOLDEN_VIB = _molden_vib1()
+        self.ROTATIONAL_INFO = _rotational_info3()
+        self.CARTESIAN_EIGS = _cartesian_eigs1()
+        self.NAMD_PRINT = _namd_print2()
+        self.HESSIAN = _hessian1()
         self._name = "PRINT"
-        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
+        self._subsections = {'BANNER': 'BANNER', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'MOLDEN_VIB': 'MOLDEN_VIB', 'ROTATIONAL_INFO': 'ROTATIONAL_INFO', 'CARTESIAN_EIGS': 'CARTESIAN_EIGS', 'NAMD_PRINT': 'NAMD_PRINT', 'HESSIAN': 'HESSIAN'}
 

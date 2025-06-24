@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each550 import _each550
+from ._each508 import _each508
 
 
 class _soc_print1(InputSection):
@@ -14,7 +14,7 @@ class _soc_print1(InputSection):
         self.Unit_wn = None
         self.Splitting = None
         self.Some = None
-        self.EACH = _each550()
+        self.EACH = _each508()
         self._name = "SOC_PRINT"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit_ev': 'UNIT_EV', 'Unit_wn': 'UNIT_WN', 'Splitting': 'SPLITTING', 'Some': 'SOME'}
         self._subsections = {'EACH': 'EACH'}

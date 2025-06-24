@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each330 import _each330
+from ._each301 import _each301
 
 
 class _wannier901(InputSection):
@@ -15,7 +15,7 @@ class _wannier901(InputSection):
         self.Added_mos = None
         self.Exclude_bands = []
         self.Wannier_functions = []
-        self.EACH = _each330()
+        self.EACH = _each301()
         self._name = "WANNIER90"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Seed_name': 'SEED_NAME', 'Mp_grid': 'MP_GRID', 'Added_mos': 'ADDED_MOS'}
         self._repeated_keywords = {'Exclude_bands': 'EXCLUDE_BANDS', 'Wannier_functions': 'WANNIER_FUNCTIONS'}

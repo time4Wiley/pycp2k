@@ -4,8 +4,8 @@ from pycp2k.inputsection import InputSection
 class _hfxlr7(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Rcut = None
-        self.Scale = None
+        self.Alpha = None
+        self.Beta = None
         self._name = "HFXLR"
-        self._keywords = {'Rcut': 'RCUT', 'Scale': 'SCALE'}
+        self._keywords = {'Alpha': 'ALPHA', 'Beta': 'BETA'}
 

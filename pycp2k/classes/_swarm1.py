@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print117 import _print117
+from ._print105 import _print105
 from ._global_opt1 import _global_opt1
 
 
@@ -15,11 +15,11 @@ class _swarm1(InputSection):
         self._name = "SWARM"
         self._keywords = {'Behavior': 'BEHAVIOR', 'Number_of_workers': 'NUMBER_OF_WORKERS', 'Replay_communication_log': 'REPLAY_COMMUNICATION_LOG', 'Max_iter': 'MAX_ITER'}
         self._subsections = {'GLOBAL_OPT': 'GLOBAL_OPT'}
-        self._repeated_subsections = {'PRINT': '_print117'}
+        self._repeated_subsections = {'PRINT': '_print105'}
         self._attributes = ['PRINT_list']
 
     def PRINT_add(self, section_parameters=None):
-        new_section = _print117()
+        new_section = _print105()
         if section_parameters is not None:
             if hasattr(new_section, 'Section_parameters'):
                 new_section.Section_parameters = section_parameters

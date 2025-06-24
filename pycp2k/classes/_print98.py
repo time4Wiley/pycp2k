@@ -1,15 +1,19 @@
 from pycp2k.inputsection import InputSection
-from ._nablavks_cubes1 import _nablavks_cubes1
-from ._g_tensor1 import _g_tensor1
-from ._response_function_cubes3 import _response_function_cubes3
+from ._each491 import _each491
 
 
 class _print98(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.NABLAVKS_CUBES = _nablavks_cubes1()
-        self.G_TENSOR = _g_tensor1()
-        self.RESPONSE_FUNCTION_CUBES = _response_function_cubes3()
+        self.Section_parameters = None
+        self.Add_last = None
+        self.Common_iteration_levels = None
+        self.Filename = None
+        self.Log_print_key = None
+        self.Load_balance_info = None
+        self.EACH = _each491()
         self._name = "PRINT"
-        self._subsections = {'NABLAVKS_CUBES': 'NABLAVKS_CUBES', 'G_TENSOR': 'G_TENSOR', 'RESPONSE_FUNCTION_CUBES': 'RESPONSE_FUNCTION_CUBES'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Load_balance_info': 'LOAD_BALANCE_INFO'}
+        self._subsections = {'EACH': 'EACH'}
+        self._attributes = ['Section_parameters']
 

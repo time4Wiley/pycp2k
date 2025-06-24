@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each479 import _each479
+from ._each449 import _each449
 from ._xc5 import _xc5
 
 
@@ -13,7 +13,7 @@ class _g_tensor1(InputSection):
         self.Log_print_key = None
         self.Gapw_max_alpha = None
         self.Soo_rho_hard = None
-        self.EACH = _each479()
+        self.EACH = _each449()
         self.XC = _xc5()
         self._name = "G_TENSOR"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Gapw_max_alpha': 'GAPW_MAX_ALPHA', 'Soo_rho_hard': 'SOO_RHO_HARD'}

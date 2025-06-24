@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each551 import _each551
+from ._each509 import _each509
 
 
 class _forces5(InputSection):
@@ -12,7 +12,7 @@ class _forces5(InputSection):
         self.Log_print_key = None
         self.List = []
         self.Threshold = None
-        self.EACH = _each551()
+        self.EACH = _each509()
         self._name = "FORCES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Threshold': 'THRESHOLD'}
         self._repeated_keywords = {'List': 'LIST'}

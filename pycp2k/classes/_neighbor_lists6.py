@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each387 import _each387
+from ._each357 import _each357
 
 
 class _neighbor_lists6(InputSection):
@@ -11,7 +11,7 @@ class _neighbor_lists6(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Unit = None
-        self.EACH = _each387()
+        self.EACH = _each357()
         self._name = "NEIGHBOR_LISTS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT'}
         self._subsections = {'EACH': 'EACH'}

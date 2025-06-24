@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each520 import _each520
+from ._each484 import _each484
 
 
 class _fit_charge1(InputSection):
@@ -11,7 +11,7 @@ class _fit_charge1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Type_of_density = None
-        self.EACH = _each520()
+        self.EACH = _each484()
         self._name = "FIT_CHARGE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Type_of_density': 'TYPE_OF_DENSITY'}
         self._subsections = {'EACH': 'EACH'}

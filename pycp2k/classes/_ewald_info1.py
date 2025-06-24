@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each178 import _each178
+from ._each166 import _each166
 
 
 class _ewald_info1(InputSection):
@@ -10,7 +10,7 @@ class _ewald_info1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each178()
+        self.EACH = _each166()
         self._name = "EWALD_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,11 +1,11 @@
 from pycp2k.inputsection import InputSection
-from ._k_matrix1 import _k_matrix1
+from ._polar_matrix2 import _polar_matrix2
 
 
 class _print89(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.K_MATRIX = _k_matrix1()
+        self.POLAR_MATRIX = _polar_matrix2()
         self._name = "PRINT"
-        self._subsections = {'K_MATRIX': 'K_MATRIX'}
+        self._subsections = {'POLAR_MATRIX': 'POLAR_MATRIX'}
 

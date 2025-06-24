@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each343 import _each343
+from ._each313 import _each313
 
 
 class _iao_cubes1(InputSection):
@@ -13,7 +13,7 @@ class _iao_cubes1(InputSection):
         self.Stride = None
         self.Append = None
         self.Atom_list = []
-        self.EACH = _each343()
+        self.EACH = _each313()
         self._name = "IAO_CUBES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._repeated_keywords = {'Atom_list': 'ATOM_LIST'}

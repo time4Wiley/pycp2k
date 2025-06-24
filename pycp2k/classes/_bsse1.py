@@ -2,7 +2,7 @@ from pycp2k.inputsection import InputSection
 from ._fragment5 import _fragment5
 from ._configuration1 import _configuration1
 from ._fragment_energies1 import _fragment_energies1
-from ._print79 import _print79
+from ._print71 import _print71
 
 
 class _bsse1(InputSection):
@@ -11,7 +11,7 @@ class _bsse1(InputSection):
         self.FRAGMENT_list = []
         self.CONFIGURATION_list = []
         self.FRAGMENT_ENERGIES_list = []
-        self.PRINT = _print79()
+        self.PRINT = _print71()
         self._name = "BSSE"
         self._subsections = {'PRINT': 'PRINT'}
         self._repeated_subsections = {'FRAGMENT': '_fragment5', 'CONFIGURATION': '_configuration1', 'FRAGMENT_ENERGIES': '_fragment_energies1'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each300 import _each300
+from ._each271 import _each271
 
 
 class _kinetic_energy1(InputSection):
@@ -10,7 +10,7 @@ class _kinetic_energy1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each300()
+        self.EACH = _each271()
         self._name = "KINETIC_ENERGY"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

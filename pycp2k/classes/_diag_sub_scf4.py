@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each243 import _each243
+from ._each219 import _each219
 
 
 class _diag_sub_scf4(InputSection):
@@ -10,7 +10,7 @@ class _diag_sub_scf4(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each243()
+        self.EACH = _each219()
         self._name = "DIAG_SUB_SCF"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,27 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._atomic_coordinates1 import _atomic_coordinates1
-from ._structure_data2 import _structure_data2
-from ._interatomic_distances1 import _interatomic_distances1
-from ._topology_info1 import _topology_info1
-from ._cell5 import _cell5
-from ._kinds1 import _kinds1
-from ._symmetry1 import _symmetry1
-from ._molecules1 import _molecules1
-from ._radii1 import _radii1
+from ._ri_info10 import _ri_info10
+from ._ri_density_coeffs10 import _ri_density_coeffs10
+from ._ri_metric_2c_ints10 import _ri_metric_2c_ints10
 
 
 class _print85(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.ATOMIC_COORDINATES = _atomic_coordinates1()
-        self.STRUCTURE_DATA = _structure_data2()
-        self.INTERATOMIC_DISTANCES = _interatomic_distances1()
-        self.TOPOLOGY_INFO = _topology_info1()
-        self.CELL = _cell5()
-        self.KINDS = _kinds1()
-        self.SYMMETRY = _symmetry1()
-        self.MOLECULES = _molecules1()
-        self.RADII = _radii1()
+        self.RI_INFO = _ri_info10()
+        self.RI_DENSITY_COEFFS = _ri_density_coeffs10()
+        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints10()
         self._name = "PRINT"
-        self._subsections = {'ATOMIC_COORDINATES': 'ATOMIC_COORDINATES', 'STRUCTURE_DATA': 'STRUCTURE_DATA', 'INTERATOMIC_DISTANCES': 'INTERATOMIC_DISTANCES', 'TOPOLOGY_INFO': 'TOPOLOGY_INFO', 'CELL': 'CELL', 'KINDS': 'KINDS', 'SYMMETRY': 'SYMMETRY', 'MOLECULES': 'MOLECULES', 'RADII': 'RADII'}
+        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
 

@@ -3,7 +3,7 @@ from ._gw2x1 import _gw2x1
 from ._donor_states1 import _donor_states1
 from ._ot_solver1 import _ot_solver1
 from ._kernel1 import _kernel1
-from ._print65 import _print65
+from ._print57 import _print57
 
 
 class _xas_tdp1(InputSection):
@@ -29,7 +29,7 @@ class _xas_tdp1(InputSection):
         self.DONOR_STATES = _donor_states1()
         self.OT_SOLVER = _ot_solver1()
         self.KERNEL = _kernel1()
-        self.PRINT = _print65()
+        self.PRINT = _print57()
         self._name = "XAS_TDP"
         self._keywords = {'Check_only': 'CHECK_ONLY', 'Restart_from_file': 'RESTART_FROM_FILE', 'Eps_pgf_xas': 'EPS_PGF_XAS', 'Eps_filter': 'EPS_FILTER', 'Dipole_form': 'DIPOLE_FORM', 'Quadrupole': 'QUADRUPOLE', 'Xyz_dipole': 'XYZ_DIPOLE', 'Spin_orbit_coupling': 'SPIN_ORBIT_COUPLING', 'Tamm_dancoff': 'TAMM_DANCOFF', 'N_excited': 'N_EXCITED', 'Energy_range': 'ENERGY_RANGE'}
         self._repeated_keywords = {'Excitations': 'EXCITATIONS', 'Grid': 'GRID'}

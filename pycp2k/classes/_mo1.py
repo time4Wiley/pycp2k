@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each305 import _each305
+from ._each276 import _each276
 
 
 class _mo1(InputSection):
@@ -17,7 +17,7 @@ class _mo1(InputSection):
         self.Occupation_numbers_stats = None
         self.Ndigits = None
         self.Mo_index_range = None
-        self.EACH = _each305()
+        self.EACH = _each276()
         self._name = "MO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cartesian': 'CARTESIAN', 'Energies': 'ENERGIES', 'Coefficients': 'COEFFICIENTS', 'Occupation_numbers': 'OCCUPATION_NUMBERS', 'Occupation_numbers_stats': 'OCCUPATION_NUMBERS_STATS', 'Ndigits': 'NDIGITS', 'Mo_index_range': 'MO_INDEX_RANGE'}
         self._subsections = {'EACH': 'EACH'}

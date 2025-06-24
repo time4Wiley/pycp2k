@@ -1,15 +1,14 @@
 from pycp2k.inputsection import InputSection
-from ._ri_info14 import _ri_info14
-from ._ri_density_coeffs14 import _ri_density_coeffs14
-from ._ri_metric_2c_ints14 import _ri_metric_2c_ints14
+from ._mo_cubes2 import _mo_cubes2
 
 
 class _print93(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.RI_INFO = _ri_info14()
-        self.RI_DENSITY_COEFFS = _ri_density_coeffs14()
-        self.RI_METRIC_2C_INTS = _ri_metric_2c_ints14()
+        self.Mo_coeff_atom = []
+        self.Mo_coeff_atom_state = []
+        self.MO_CUBES = _mo_cubes2()
         self._name = "PRINT"
-        self._subsections = {'RI_INFO': 'RI_INFO', 'RI_DENSITY_COEFFS': 'RI_DENSITY_COEFFS', 'RI_METRIC_2C_INTS': 'RI_METRIC_2C_INTS'}
+        self._repeated_keywords = {'Mo_coeff_atom': 'MO_COEFF_ATOM', 'Mo_coeff_atom_state': 'MO_COEFF_ATOM_STATE'}
+        self._subsections = {'MO_CUBES': 'MO_CUBES'}
 

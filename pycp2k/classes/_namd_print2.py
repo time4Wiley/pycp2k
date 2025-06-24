@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each580 import _each580
+from ._each538 import _each538
 
 
 class _namd_print2(InputSection):
@@ -11,7 +11,7 @@ class _namd_print2(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Backup_copies = None
-        self.EACH = _each580()
+        self.EACH = _each538()
         self._name = "NAMD_PRINT"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Backup_copies': 'BACKUP_COPIES'}
         self._subsections = {'EACH': 'EACH'}

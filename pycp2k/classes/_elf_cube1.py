@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each325 import _each325
+from ._each296 import _each296
 
 
 class _elf_cube1(InputSection):
@@ -13,7 +13,7 @@ class _elf_cube1(InputSection):
         self.Stride = None
         self.Append = None
         self.Density_cutoff = None
-        self.EACH = _each325()
+        self.EACH = _each296()
         self._name = "ELF_CUBE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND', 'Density_cutoff': 'DENSITY_CUTOFF'}
         self._subsections = {'EACH': 'EACH'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each352 import _each352
+from ._each322 import _each322
 
 
 class _adjmat_write1(InputSection):
@@ -10,7 +10,7 @@ class _adjmat_write1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each352()
+        self.EACH = _each322()
         self._name = "ADJMAT_WRITE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

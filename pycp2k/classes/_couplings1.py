@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each514 import _each514
+from ._each478 import _each478
 
 
 class _couplings1(InputSection):
@@ -11,7 +11,7 @@ class _couplings1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Append = None
-        self.EACH = _each514()
+        self.EACH = _each478()
         self._name = "COUPLINGS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}

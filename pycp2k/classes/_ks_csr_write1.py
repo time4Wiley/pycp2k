@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each350 import _each350
+from ._each320 import _each320
 
 
 class _ks_csr_write1(InputSection):
@@ -14,7 +14,7 @@ class _ks_csr_write1(InputSection):
         self.Upper_triangular = None
         self.Binary = None
         self.Real_space = None
-        self.EACH = _each350()
+        self.EACH = _each320()
         self._name = "KS_CSR_WRITE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Threshold': 'THRESHOLD', 'Upper_triangular': 'UPPER_TRIANGULAR', 'Binary': 'BINARY', 'Real_space': 'REAL_SPACE'}
         self._subsections = {'EACH': 'EACH'}

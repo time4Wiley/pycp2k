@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each152 import _each152
+from ._each146 import _each146
 
 
 class _neighbor_lists1(InputSection):
@@ -14,7 +14,7 @@ class _neighbor_lists1(InputSection):
         self.Sab_orb_full = None
         self.Sab_orb_molecular = None
         self.Sac_kin = None
-        self.EACH = _each152()
+        self.EACH = _each146()
         self._name = "NEIGHBOR_LISTS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Unit': 'UNIT', 'Sab_orb_full': 'SAB_ORB_FULL', 'Sab_orb_molecular': 'SAB_ORB_MOLECULAR', 'Sac_kin': 'SAC_KIN'}
         self._subsections = {'EACH': 'EACH'}

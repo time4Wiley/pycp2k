@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each468 import _each468
+from ._each438 import _each438
 
 
 class _cubes9(InputSection):
@@ -11,7 +11,7 @@ class _cubes9(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Stride = None
-        self.EACH = _each468()
+        self.EACH = _each438()
         self._name = "CUBES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE'}
         self._subsections = {'EACH': 'EACH'}

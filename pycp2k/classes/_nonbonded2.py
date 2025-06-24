@@ -5,7 +5,6 @@ from ._eam1 import _eam1
 from ._quip1 import _quip1
 from ._nequip1 import _nequip1
 from ._allegro1 import _allegro1
-from ._deepmd1 import _deepmd1
 from ._goodwin1 import _goodwin1
 from ._ipbv1 import _ipbv1
 from ._bmhft1 import _bmhft1
@@ -29,7 +28,6 @@ class _nonbonded2(InputSection):
         self.QUIP_list = []
         self.NEQUIP = _nequip1()
         self.ALLEGRO = _allegro1()
-        self.DEEPMD = _deepmd1()
         self.GOODWIN_list = []
         self.IPBV_list = []
         self.BMHFT_list = []
@@ -43,7 +41,7 @@ class _nonbonded2(InputSection):
         self.GAL21_list = []
         self.TABPOT_list = []
         self._name = "NONBONDED"
-        self._subsections = {'NEQUIP': 'NEQUIP', 'ALLEGRO': 'ALLEGRO', 'DEEPMD': 'DEEPMD'}
+        self._subsections = {'NEQUIP': 'NEQUIP', 'ALLEGRO': 'ALLEGRO'}
         self._repeated_subsections = {'LENNARD_JONES': '_lennard_jones1', 'WILLIAMS': '_williams1', 'EAM': '_eam1', 'QUIP': '_quip1', 'GOODWIN': '_goodwin1', 'IPBV': '_ipbv1', 'BMHFT': '_bmhft1', 'BMHFTD': '_bmhftd1', 'BUCK4RANGES': '_buck4ranges1', 'BUCKMORSE': '_buckmorse1', 'GENPOT': '_genpot2', 'TERSOFF': '_tersoff1', 'SIEPMANN': '_siepmann1', 'GAL19': '_gal191', 'GAL21': '_gal211', 'TABPOT': '_tabpot1'}
         self._attributes = ['LENNARD_JONES_list', 'WILLIAMS_list', 'EAM_list', 'QUIP_list', 'GOODWIN_list', 'IPBV_list', 'BMHFT_list', 'BMHFTD_list', 'BUCK4RANGES_list', 'BUCKMORSE_list', 'GENPOT_list', 'TERSOFF_list', 'SIEPMANN_list', 'GAL19_list', 'GAL21_list', 'TABPOT_list']
 

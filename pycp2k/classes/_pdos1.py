@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each266 import _each266
+from ._each242 import _each242
 from ._ldos1 import _ldos1
 from ._r_ldos1 import _r_ldos1
 
@@ -16,7 +16,7 @@ class _pdos1(InputSection):
         self.Append = None
         self.Nlumo = None
         self.Out_each_mo = None
-        self.EACH = _each266()
+        self.EACH = _each242()
         self.LDOS_list = []
         self.R_LDOS_list = []
         self._name = "PDOS"

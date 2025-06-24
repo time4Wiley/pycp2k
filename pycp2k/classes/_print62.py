@@ -1,37 +1,29 @@
 from pycp2k.inputsection import InputSection
-from ._restart8 import _restart8
-from ._restart_history3 import _restart_history3
-from ._iteration_info2 import _iteration_info2
-from ._program_run_info21 import _program_run_info21
-from ._mo_orthonormality2 import _mo_orthonormality2
-from ._mo_magnitude2 import _mo_magnitude2
-from ._detailed_energy2 import _detailed_energy2
-from ._diis_info3 import _diis_info3
-from ._total_densities2 import _total_densities2
-from ._lanczos2 import _lanczos2
-from ._diag_sub_scf4 import _diag_sub_scf4
-from ._davidson4 import _davidson4
-from ._filter_matrix4 import _filter_matrix4
+from ._program_run_info26 import _program_run_info26
+from ._wannier_cubes4 import _wannier_cubes4
+from ._wannier_centers4 import _wannier_centers4
+from ._wannier_spreads4 import _wannier_spreads4
+from ._loc_restart4 import _loc_restart4
+from ._total_dipole3 import _total_dipole3
+from ._molecular_dipoles3 import _molecular_dipoles3
+from ._molecular_moments3 import _molecular_moments3
+from ._molecular_states3 import _molecular_states3
+from ._wannier_states3 import _wannier_states3
 
 
 class _print62(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.Dm_restart_write = None
-        self.RESTART = _restart8()
-        self.RESTART_HISTORY = _restart_history3()
-        self.ITERATION_INFO = _iteration_info2()
-        self.PROGRAM_RUN_INFO = _program_run_info21()
-        self.MO_ORTHONORMALITY = _mo_orthonormality2()
-        self.MO_MAGNITUDE = _mo_magnitude2()
-        self.DETAILED_ENERGY = _detailed_energy2()
-        self.DIIS_INFO = _diis_info3()
-        self.TOTAL_DENSITIES = _total_densities2()
-        self.LANCZOS = _lanczos2()
-        self.DIAG_SUB_SCF = _diag_sub_scf4()
-        self.DAVIDSON = _davidson4()
-        self.FILTER_MATRIX = _filter_matrix4()
+        self.PROGRAM_RUN_INFO = _program_run_info26()
+        self.WANNIER_CUBES = _wannier_cubes4()
+        self.WANNIER_CENTERS = _wannier_centers4()
+        self.WANNIER_SPREADS = _wannier_spreads4()
+        self.LOC_RESTART = _loc_restart4()
+        self.TOTAL_DIPOLE = _total_dipole3()
+        self.MOLECULAR_DIPOLES = _molecular_dipoles3()
+        self.MOLECULAR_MOMENTS = _molecular_moments3()
+        self.MOLECULAR_STATES = _molecular_states3()
+        self.WANNIER_STATES = _wannier_states3()
         self._name = "PRINT"
-        self._keywords = {'Dm_restart_write': 'DM_RESTART_WRITE'}
-        self._subsections = {'RESTART': 'RESTART', 'RESTART_HISTORY': 'RESTART_HISTORY', 'ITERATION_INFO': 'ITERATION_INFO', 'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'MO_ORTHONORMALITY': 'MO_ORTHONORMALITY', 'MO_MAGNITUDE': 'MO_MAGNITUDE', 'DETAILED_ENERGY': 'DETAILED_ENERGY', 'DIIS_INFO': 'DIIS_INFO', 'TOTAL_DENSITIES': 'TOTAL_DENSITIES', 'LANCZOS': 'LANCZOS', 'DIAG_SUB_SCF': 'DIAG_SUB_SCF', 'DAVIDSON': 'DAVIDSON', 'FILTER_MATRIX': 'FILTER_MATRIX'}
+        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'WANNIER_CUBES': 'WANNIER_CUBES', 'WANNIER_CENTERS': 'WANNIER_CENTERS', 'WANNIER_SPREADS': 'WANNIER_SPREADS', 'LOC_RESTART': 'LOC_RESTART', 'TOTAL_DIPOLE': 'TOTAL_DIPOLE', 'MOLECULAR_DIPOLES': 'MOLECULAR_DIPOLES', 'MOLECULAR_MOMENTS': 'MOLECULAR_MOMENTS', 'MOLECULAR_STATES': 'MOLECULAR_STATES', 'WANNIER_STATES': 'WANNIER_STATES'}
 

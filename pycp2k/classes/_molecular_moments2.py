@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each282 import _each282
+from ._each258 import _each258
 
 
 class _molecular_moments2(InputSection):
@@ -11,7 +11,7 @@ class _molecular_moments2(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Order = None
-        self.EACH = _each282()
+        self.EACH = _each258()
         self._name = "MOLECULAR_MOMENTS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Order': 'ORDER'}
         self._subsections = {'EACH': 'EACH'}

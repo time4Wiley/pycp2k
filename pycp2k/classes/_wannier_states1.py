@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each256 import _each256
+from ._each232 import _each232
 from ._cubes2 import _cubes2
 
 
@@ -13,11 +13,10 @@ class _wannier_states1(InputSection):
         self.Log_print_key = None
         self.Cube_eval_range = None
         self.Mark_states = []
-        self.Cartesian = None
-        self.EACH = _each256()
+        self.EACH = _each232()
         self.CUBES = _cubes2()
         self._name = "WANNIER_STATES"
-        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cube_eval_range': 'CUBE_EVAL_RANGE', 'Cartesian': 'CARTESIAN'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cube_eval_range': 'CUBE_EVAL_RANGE'}
         self._repeated_keywords = {'Mark_states': 'MARK_STATES'}
         self._subsections = {'EACH': 'EACH', 'CUBES': 'CUBES'}
         self._attributes = ['Section_parameters']

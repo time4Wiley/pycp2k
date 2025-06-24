@@ -6,11 +6,11 @@ class _hyb_gga_xc_rcam_b3lyp2(InputSection):
         InputSection.__init__(self)
         self.Section_parameters = None
         self.Scale = None
-        self._ab88 = None
         self._alpha = None
         self._beta = None
         self._omega = None
+        self._ab88 = None
         self._name = "HYB_GGA_XC_RCAM_B3LYP"
-        self._keywords = {'Scale': 'SCALE', '_ab88': '_AB88', '_alpha': '_ALPHA', '_beta': '_BETA', '_omega': '_OMEGA'}
+        self._keywords = {'Scale': 'SCALE', '_alpha': '_ALPHA', '_beta': '_BETA', '_omega': '_OMEGA', '_ab88': '_AB88'}
         self._attributes = ['Section_parameters']
 

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each181 import _each181
+from ._each169 import _each169
 
 
 class _embed_dens_diff1(InputSection):
@@ -11,7 +11,7 @@ class _embed_dens_diff1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Stride = None
-        self.EACH = _each181()
+        self.EACH = _each169()
         self._name = "EMBED_DENS_DIFF"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE'}
         self._subsections = {'EACH': 'EACH'}

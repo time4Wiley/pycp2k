@@ -1,7 +1,7 @@
 from pycp2k.inputsection import InputSection
 from ._bias1 import _bias1
 from ._model2 import _model2
-from ._print74 import _print74
+from ._print66 import _print66
 
 
 class _nnp2(InputSection):
@@ -11,7 +11,7 @@ class _nnp2(InputSection):
         self.Scale_file_name = None
         self.BIAS = _bias1()
         self.MODEL_list = []
-        self.PRINT = _print74()
+        self.PRINT = _print66()
         self._name = "NNP"
         self._keywords = {'Nnp_input_file_name': 'NNP_INPUT_FILE_NAME', 'Scale_file_name': 'SCALE_FILE_NAME'}
         self._subsections = {'BIAS': 'BIAS', 'PRINT': 'PRINT'}

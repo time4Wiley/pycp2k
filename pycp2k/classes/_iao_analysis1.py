@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each341 import _each341
+from ._each311 import _each311
 from ._iao_molden1 import _iao_molden1
 from ._iao_cubes1 import _iao_cubes1
 from ._one_center_expansion1 import _one_center_expansion1
@@ -17,7 +17,7 @@ class _iao_analysis1(InputSection):
         self.Eps_svd = None
         self.Eps_occ = None
         self.Atomic_charges = None
-        self.EACH = _each341()
+        self.EACH = _each311()
         self.IAO_MOLDEN = _iao_molden1()
         self.IAO_CUBES = _iao_cubes1()
         self.ONE_CENTER_EXPANSION = _one_center_expansion1()

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each428 import _each428
+from ._each398 import _each398
 
 
 class _image_charge_info1(InputSection):
@@ -10,7 +10,7 @@ class _image_charge_info1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each428()
+        self.EACH = _each398()
         self._name = "IMAGE_CHARGE_INFO"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

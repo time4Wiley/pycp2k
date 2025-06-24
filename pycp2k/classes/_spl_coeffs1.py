@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each413 import _each413
+from ._each383 import _each383
 
 
 class _spl_coeffs1(InputSection):
@@ -10,7 +10,7 @@ class _spl_coeffs1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each413()
+        self.EACH = _each383()
         self._name = "SPL_COEFFS"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

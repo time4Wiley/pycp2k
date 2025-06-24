@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each560 import _each560
+from ._each518 import _each518
 
 
 class _stress_tensor1(InputSection):
@@ -11,10 +11,9 @@ class _stress_tensor1(InputSection):
         self.Filename = None
         self.Log_print_key = None
         self.Components = None
-        self.Stress_unit = None
-        self.EACH = _each560()
+        self.EACH = _each518()
         self._name = "STRESS_TENSOR"
-        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Components': 'COMPONENTS', 'Stress_unit': 'STRESS_UNIT'}
+        self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Components': 'COMPONENTS'}
         self._subsections = {'EACH': 'EACH'}
         self._attributes = ['Section_parameters']
 

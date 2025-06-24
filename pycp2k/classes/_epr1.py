@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print98 import _print98
+from ._print88 import _print88
 from ._interpolator12 import _interpolator12
 
 
@@ -8,7 +8,7 @@ class _epr1(InputSection):
         InputSection.__init__(self)
         self.Section_parameters = None
         self.Restart_epr = None
-        self.PRINT = _print98()
+        self.PRINT = _print88()
         self.INTERPOLATOR = _interpolator12()
         self._name = "EPR"
         self._keywords = {'Restart_epr': 'RESTART_EPR'}

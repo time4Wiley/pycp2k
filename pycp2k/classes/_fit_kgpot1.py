@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each591 import _each591
+from ._each549 import _each549
 
 
 class _fit_kgpot1(InputSection):
@@ -12,7 +12,7 @@ class _fit_kgpot1(InputSection):
         self.Log_print_key = None
         self.Num_gaussian = None
         self.Num_polynom = None
-        self.EACH = _each591()
+        self.EACH = _each549()
         self._name = "FIT_KGPOT"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Num_gaussian': 'NUM_GAUSSIAN', 'Num_polynom': 'NUM_POLYNOM'}
         self._subsections = {'EACH': 'EACH'}

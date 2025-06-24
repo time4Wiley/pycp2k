@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print78 import _print78
+from ._print70 import _print70
 
 
 class _eip1(InputSection):
@@ -7,7 +7,7 @@ class _eip1(InputSection):
         InputSection.__init__(self)
         self.Eip_model = None
         self.Eip_model = None
-        self.PRINT = _print78()
+        self.PRINT = _print70()
         self._name = "EIP"
         self._keywords = {'Eip_model': 'EIP-MODEL'}
         self._subsections = {'PRINT': 'PRINT'}

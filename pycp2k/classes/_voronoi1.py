@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each174 import _each174
+from ._each162 import _each162
 
 
 class _voronoi1(InputSection):
@@ -25,7 +25,7 @@ class _voronoi1(InputSection):
         self.Jitter = None
         self.Jitter_seed = None
         self.Jitter_amplitude = None
-        self.EACH = _each174()
+        self.EACH = _each162()
         self._name = "VORONOI"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Append': 'APPEND', 'Sanity_check': 'SANITY_CHECK', 'Overwrite': 'OVERWRITE', 'Skip_first': 'SKIP_FIRST', 'Verbose': 'VERBOSE', 'Output_emp': 'OUTPUT_EMP', 'Output_text': 'OUTPUT_TEXT', 'Refinement_factor': 'REFINEMENT_FACTOR', 'Voronoi_radii': 'VORONOI_RADII', 'User_radii': 'USER_RADII', 'Molecular_properties': 'MOLECULAR_PROPERTIES', 'Molprop_file_name': 'MOLPROP_FILE_NAME', 'Jitter': 'JITTER', 'Jitter_seed': 'JITTER_SEED', 'Jitter_amplitude': 'JITTER_AMPLITUDE'}
         self._subsections = {'EACH': 'EACH'}

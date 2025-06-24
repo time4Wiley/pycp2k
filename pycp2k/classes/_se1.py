@@ -1,11 +1,11 @@
 from pycp2k.inputsection import InputSection
 from ._coulomb1 import _coulomb1
 from ._exchange1 import _exchange1
-from ._screening7 import _screening7
+from ._screening5 import _screening5
 from ._lr_correction1 import _lr_correction1
 from ._neighbor_lists2 import _neighbor_lists2
-from ._memory7 import _memory7
-from ._print43 import _print43
+from ._memory5 import _memory5
+from ._print39 import _print39
 from ._ga1 import _ga1
 
 
@@ -26,11 +26,11 @@ class _se1(InputSection):
         self.D3_scaling = None
         self.COULOMB = _coulomb1()
         self.EXCHANGE = _exchange1()
-        self.SCREENING = _screening7()
+        self.SCREENING = _screening5()
         self.LR_CORRECTION = _lr_correction1()
         self.NEIGHBOR_LISTS = _neighbor_lists2()
-        self.MEMORY = _memory7()
-        self.PRINT = _print43()
+        self.MEMORY = _memory5()
+        self.PRINT = _print39()
         self.GA = _ga1()
         self._name = "SE"
         self._keywords = {'Orthogonal_basis': 'ORTHOGONAL_BASIS', 'Sto_ng': 'STO_NG', 'Analytical_gradients': 'ANALYTICAL_GRADIENTS', 'Delta': 'DELTA', 'Integral_screening': 'INTEGRAL_SCREENING', 'Periodic': 'PERIODIC', 'Force_kdso_d_exchange': 'FORCE_KDSO-D_EXCHANGE', 'Dispersion': 'DISPERSION', 'Dispersion_parameter_file': 'DISPERSION_PARAMETER_FILE', 'Dispersion_radius': 'DISPERSION_RADIUS', 'Coordination_cutoff': 'COORDINATION_CUTOFF', 'D3_scaling': 'D3_SCALING'}

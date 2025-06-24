@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each283 import _each283
+from ._each259 import _each259
 from ._cubes4 import _cubes4
 
 
@@ -13,7 +13,7 @@ class _molecular_states2(InputSection):
         self.Log_print_key = None
         self.Cube_eval_range = None
         self.Mark_states = []
-        self.EACH = _each283()
+        self.EACH = _each259()
         self.CUBES = _cubes4()
         self._name = "MOLECULAR_STATES"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Cube_eval_range': 'CUBE_EVAL_RANGE'}

@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each589 import _each589
+from ._each547 import _each547
 
 
 class _potential3(InputSection):
@@ -10,7 +10,7 @@ class _potential3(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each589()
+        self.EACH = _each547()
         self._name = "POTENTIAL"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

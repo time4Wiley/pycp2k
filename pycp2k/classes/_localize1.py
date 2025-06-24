@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._print63 import _print63
+from ._print55 import _print55
 
 
 class _localize1(InputSection):
@@ -31,7 +31,7 @@ class _localize1(InputSection):
         self.Nextra = None
         self.States = None
         self.Energy_range = None
-        self.PRINT = _print63()
+        self.PRINT = _print55()
         self._name = "LOCALIZE"
         self._keywords = {'Max_iter': 'MAX_ITER', 'Max_crazy_angle': 'MAX_CRAZY_ANGLE', 'Crazy_scale': 'CRAZY_SCALE', 'Crazy_use_diag': 'CRAZY_USE_DIAG', 'Use_history': 'USE_HISTORY', 'Eps_occupation': 'EPS_OCCUPATION', 'Out_iter_each': 'OUT_ITER_EACH', 'Eps_localization': 'EPS_LOCALIZATION', 'Min_or_max': 'MIN_OR_MAX', 'Method': 'METHOD', 'Cpo_guess': 'CPO_GUESS', 'Cpo_guess_space': 'CPO_GUESS_SPACE', 'Cg_po': 'CG_PO', 'Jacobi_fallback': 'JACOBI_FALLBACK', 'Jacobi_refinement': 'JACOBI_REFINEMENT', 'Restart': 'RESTART', 'Lochomo_restart_file_name': 'LOCHOMO_RESTART_FILE_NAME', 'Locmixd_restart_file_name': 'LOCMIXD_RESTART_FILE_NAME', 'Loclumo_restart_file_name': 'LOCLUMO_RESTART_FILE_NAME', 'Operator': 'OPERATOR', 'Nextra': 'NEXTRA', 'States': 'STATES', 'Energy_range': 'ENERGY_RANGE'}
         self._repeated_keywords = {'List': 'LIST', 'List_unoccupied': 'LIST_UNOCCUPIED'}

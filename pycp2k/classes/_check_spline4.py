@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each408 import _each408
+from ._each378 import _each378
 
 
 class _check_spline4(InputSection):
@@ -10,7 +10,7 @@ class _check_spline4(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each408()
+        self.EACH = _each378()
         self._name = "CHECK_SPLINE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

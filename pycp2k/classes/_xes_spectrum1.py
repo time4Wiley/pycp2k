@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each264 import _each264
+from ._each240 import _each240
 
 
 class _xes_spectrum1(InputSection):
@@ -10,7 +10,7 @@ class _xes_spectrum1(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each264()
+        self.EACH = _each240()
         self._name = "XES_SPECTRUM"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

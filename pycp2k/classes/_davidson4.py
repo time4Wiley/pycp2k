@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each244 import _each244
+from ._each220 import _each220
 
 
 class _davidson4(InputSection):
@@ -10,7 +10,7 @@ class _davidson4(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each244()
+        self.EACH = _each220()
         self._name = "DAVIDSON"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

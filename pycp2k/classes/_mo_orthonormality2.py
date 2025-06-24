@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each237 import _each237
+from ._each213 import _each213
 
 
 class _mo_orthonormality2(InputSection):
@@ -10,7 +10,7 @@ class _mo_orthonormality2(InputSection):
         self.Common_iteration_levels = None
         self.Filename = None
         self.Log_print_key = None
-        self.EACH = _each237()
+        self.EACH = _each213()
         self._name = "MO_ORTHONORMALITY"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY'}
         self._subsections = {'EACH': 'EACH'}

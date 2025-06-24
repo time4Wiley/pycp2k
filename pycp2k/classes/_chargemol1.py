@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each360 import _each360
+from ._each330 import _each330
 
 
 class _chargemol1(InputSection):
@@ -12,7 +12,7 @@ class _chargemol1(InputSection):
         self.Log_print_key = None
         self.Backup_copies = None
         self.Periodic = None
-        self.EACH = _each360()
+        self.EACH = _each330()
         self._name = "CHARGEMOL"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Backup_copies': 'BACKUP_COPIES', 'Periodic': 'PERIODIC'}
         self._subsections = {'EACH': 'EACH'}

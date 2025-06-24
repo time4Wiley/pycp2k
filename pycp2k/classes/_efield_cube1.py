@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each324 import _each324
+from ._each295 import _each295
 
 
 class _efield_cube1(InputSection):
@@ -12,7 +12,7 @@ class _efield_cube1(InputSection):
         self.Log_print_key = None
         self.Stride = None
         self.Append = None
-        self.EACH = _each324()
+        self.EACH = _each295()
         self._name = "EFIELD_CUBE"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'Stride': 'STRIDE', 'Append': 'APPEND'}
         self._subsections = {'EACH': 'EACH'}

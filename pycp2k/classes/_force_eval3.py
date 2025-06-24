@@ -12,7 +12,7 @@ from ._eip1 import _eip1
 from ._bsse1 import _bsse1
 from ._subsys1 import _subsys1
 from ._properties1 import _properties1
-from ._print116 import _print116
+from ._print104 import _print104
 
 
 class _force_eval3(InputSection):
@@ -33,7 +33,7 @@ class _force_eval3(InputSection):
         self.BSSE = _bsse1()
         self.SUBSYS = _subsys1()
         self.PROPERTIES = _properties1()
-        self.PRINT = _print116()
+        self.PRINT = _print104()
         self._name = "FORCE_EVAL"
         self._keywords = {'Method': 'METHOD', 'Stress_tensor': 'STRESS_TENSOR'}
         self._subsections = {'RESCALE_FORCES': 'RESCALE_FORCES', 'MIXED': 'MIXED', 'EMBED': 'EMBED', 'DFT': 'DFT', 'PW_DFT': 'PW_DFT', 'MM': 'MM', 'NNP': 'NNP', 'QMMM': 'QMMM', 'EIP': 'EIP', 'BSSE': 'BSSE', 'SUBSYS': 'SUBSYS', 'PROPERTIES': 'PROPERTIES', 'PRINT': 'PRINT'}

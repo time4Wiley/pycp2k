@@ -1,17 +1,15 @@
 from pycp2k.inputsection import InputSection
-from ._program_run_info45 import _program_run_info45
-from ._coord_fit_points1 import _coord_fit_points1
-from ._resp_charges_to_file1 import _resp_charges_to_file1
-from ._v_resp_cube1 import _v_resp_cube1
+from ._worker_run_info1 import _worker_run_info1
+from ._master_run_info1 import _master_run_info1
+from ._communication_log1 import _communication_log1
 
 
 class _print105(InputSection):
     def __init__(self):
         InputSection.__init__(self)
-        self.PROGRAM_RUN_INFO = _program_run_info45()
-        self.COORD_FIT_POINTS = _coord_fit_points1()
-        self.RESP_CHARGES_TO_FILE = _resp_charges_to_file1()
-        self.V_RESP_CUBE = _v_resp_cube1()
+        self.WORKER_RUN_INFO = _worker_run_info1()
+        self.MASTER_RUN_INFO = _master_run_info1()
+        self.COMMUNICATION_LOG = _communication_log1()
         self._name = "PRINT"
-        self._subsections = {'PROGRAM_RUN_INFO': 'PROGRAM_RUN_INFO', 'COORD_FIT_POINTS': 'COORD_FIT_POINTS', 'RESP_CHARGES_TO_FILE': 'RESP_CHARGES_TO_FILE', 'V_RESP_CUBE': 'V_RESP_CUBE'}
+        self._subsections = {'WORKER_RUN_INFO': 'WORKER_RUN_INFO', 'MASTER_RUN_INFO': 'MASTER_RUN_INFO', 'COMMUNICATION_LOG': 'COMMUNICATION_LOG'}
 

@@ -3,21 +3,19 @@ from ._periodic_correction3 import _periodic_correction3
 from ._bse3 import _bse3
 from ._ic3 import _ic3
 from ._kpoint_set3 import _kpoint_set3
-from ._print48 import _print48
+from ._print44 import _print44
 
 
 class _gw3(InputSection):
     def __init__(self):
         InputSection.__init__(self)
         self.Section_parameters = None
-        self.Self_consistency = None
         self.Corr_mos_occ = None
         self.Corr_mos_virt = None
         self.Numb_poles = None
         self.Omega_max_fit = None
         self.Crossing_search = None
         self.Fermi_level_offset = None
-        self.Hedin_shift = None
         self.Ev_gw_iter = None
         self.Sc_gw0_iter = None
         self.Eps_iter = None
@@ -27,6 +25,7 @@ class _gw3(InputSection):
         self.Ic_corr_list = None
         self.Ic_corr_list_beta = None
         self.Periodic_correction = None
+        self.Bse = None
         self.Image_charge_model = None
         self.Analytic_continuation = None
         self.Nparam_pade = None
@@ -40,9 +39,9 @@ class _gw3(InputSection):
         self.BSE = _bse3()
         self.IC = _ic3()
         self.KPOINT_SET_list = []
-        self.PRINT = _print48()
+        self.PRINT = _print44()
         self._name = "GW"
-        self._keywords = {'Self_consistency': 'SELF_CONSISTENCY', 'Corr_mos_occ': 'CORR_MOS_OCC', 'Corr_mos_virt': 'CORR_MOS_VIRT', 'Numb_poles': 'NUMB_POLES', 'Omega_max_fit': 'OMEGA_MAX_FIT', 'Crossing_search': 'CROSSING_SEARCH', 'Fermi_level_offset': 'FERMI_LEVEL_OFFSET', 'Hedin_shift': 'HEDIN_SHIFT', 'Ev_gw_iter': 'EV_GW_ITER', 'Sc_gw0_iter': 'SC_GW0_ITER', 'Eps_iter': 'EPS_ITER', 'Print_exx': 'PRINT_EXX', 'Print_self_energy': 'PRINT_SELF_ENERGY', 'Ri_sigma_x': 'RI_SIGMA_X', 'Ic_corr_list': 'IC_CORR_LIST', 'Ic_corr_list_beta': 'IC_CORR_LIST_BETA', 'Periodic_correction': 'PERIODIC_CORRECTION', 'Image_charge_model': 'IMAGE_CHARGE_MODEL', 'Analytic_continuation': 'ANALYTIC_CONTINUATION', 'Nparam_pade': 'NPARAM_PADE', 'Gamma_only_sigma': 'GAMMA_ONLY_SIGMA', 'Update_xc_energy': 'UPDATE_XC_ENERGY', 'Regularization_minimax': 'REGULARIZATION_MINIMAX', 'Soc': 'SOC', 'Soc_energy_window': 'SOC_ENERGY_WINDOW'}
+        self._keywords = {'Corr_mos_occ': 'CORR_MOS_OCC', 'Corr_mos_virt': 'CORR_MOS_VIRT', 'Numb_poles': 'NUMB_POLES', 'Omega_max_fit': 'OMEGA_MAX_FIT', 'Crossing_search': 'CROSSING_SEARCH', 'Fermi_level_offset': 'FERMI_LEVEL_OFFSET', 'Ev_gw_iter': 'EV_GW_ITER', 'Sc_gw0_iter': 'SC_GW0_ITER', 'Eps_iter': 'EPS_ITER', 'Print_exx': 'PRINT_EXX', 'Print_self_energy': 'PRINT_SELF_ENERGY', 'Ri_sigma_x': 'RI_SIGMA_X', 'Ic_corr_list': 'IC_CORR_LIST', 'Ic_corr_list_beta': 'IC_CORR_LIST_BETA', 'Periodic_correction': 'PERIODIC_CORRECTION', 'Bse': 'BSE', 'Image_charge_model': 'IMAGE_CHARGE_MODEL', 'Analytic_continuation': 'ANALYTIC_CONTINUATION', 'Nparam_pade': 'NPARAM_PADE', 'Gamma_only_sigma': 'GAMMA_ONLY_SIGMA', 'Update_xc_energy': 'UPDATE_XC_ENERGY', 'Regularization_minimax': 'REGULARIZATION_MINIMAX', 'Soc': 'SOC', 'Soc_energy_window': 'SOC_ENERGY_WINDOW'}
         self._repeated_keywords = {'Kpoints_self_energy': 'KPOINTS_SELF_ENERGY'}
         self._subsections = {'PERIODIC_CORRECTION': 'PERIODIC_CORRECTION', 'BSE': 'BSE', 'IC': 'IC', 'PRINT': 'PRINT'}
         self._repeated_subsections = {'KPOINT_SET': '_kpoint_set3'}

@@ -1,6 +1,6 @@
 from pycp2k.inputsection import InputSection
-from ._ri_metric4 import _ri_metric4
-from ._opt_ri_basis4 import _opt_ri_basis4
+from ._ri_metric6 import _ri_metric6
+from ._opt_ri_basis5 import _opt_ri_basis5
 
 
 class _ri15(InputSection):
@@ -11,8 +11,8 @@ class _ri15(InputSection):
         self.Calc_cond_num = None
         self.Do_svd = None
         self.Eri_blksize = None
-        self.RI_METRIC = _ri_metric4()
-        self.OPT_RI_BASIS = _opt_ri_basis4()
+        self.RI_METRIC = _ri_metric6()
+        self.OPT_RI_BASIS = _opt_ri_basis5()
         self._name = "RI"
         self._keywords = {'Row_block': 'ROW_BLOCK', 'Col_block': 'COL_BLOCK', 'Calc_cond_num': 'CALC_COND_NUM', 'Do_svd': 'DO_SVD', 'Eri_blksize': 'ERI_BLKSIZE'}
         self._subsections = {'RI_METRIC': 'RI_METRIC', 'OPT_RI_BASIS': 'OPT_RI_BASIS'}

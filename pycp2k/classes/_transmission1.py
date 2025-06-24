@@ -1,5 +1,5 @@
 from pycp2k.inputsection import InputSection
-from ._each585 import _each585
+from ._each543 import _each543
 
 
 class _transmission1(InputSection):
@@ -13,7 +13,7 @@ class _transmission1(InputSection):
         self.From_energy = None
         self.Till_energy = None
         self.N_gridpoints = None
-        self.EACH = _each585()
+        self.EACH = _each543()
         self._name = "TRANSMISSION"
         self._keywords = {'Add_last': 'ADD_LAST', 'Common_iteration_levels': 'COMMON_ITERATION_LEVELS', 'Filename': 'FILENAME', 'Log_print_key': 'LOG_PRINT_KEY', 'From_energy': 'FROM_ENERGY', 'Till_energy': 'TILL_ENERGY', 'N_gridpoints': 'N_GRIDPOINTS'}
         self._subsections = {'EACH': 'EACH'}
