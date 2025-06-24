@@ -111,7 +111,6 @@ def create_cp2k_input_ultraminimal(coords, name, run_type="GEO_OPT"):
     # SCF settings for speed
     dft.SCF.Eps_scf = 1.0e-5    # Slightly relaxed
     dft.SCF.Max_scf = 20        # Fewer max iterations
-    dft.SCF.Guess = "RESTART"   # Will fallback to ATOMIC if no restart
     
     # Orbital transformation for speed
     dft.SCF.OT.Preconditioner = "FULL_SINGLE_INVERSE"
@@ -149,7 +148,7 @@ def create_cp2k_input_ultraminimal(coords, name, run_type="GEO_OPT"):
             kind.Basis_set = "SZV-MOLOPT-GTH"
             kind.Potential = "GTH-PBE-q6"
         elif element == "B":
-            kind.Basis_set = "SZV-MOLOPT-GTH"
+            kind.Basis_set = "SZV-MOLOPT-SR-GTH"
             kind.Potential = "GTH-PBE-q3"
         elif element == "Ti":
             kind.Basis_set = "SZV-MOLOPT-SR-GTH"
@@ -162,10 +161,7 @@ def create_cp2k_input_ultraminimal(coords, name, run_type="GEO_OPT"):
         motion.GEO_OPT.Max_iter = 50  # Fewer iterations
         motion.GEO_OPT.Max_force = 0.001  # Relaxed convergence
         
-        # Print settings
-        print_geo = motion.PRINT_add().TRAJECTORY
-        print_geo.Each.Geo_opt = 10
-        print_geo.Filename = f"ultramin_{name}_geo"
+        # No trajectory print needed for GEO_OPT in ultra-minimal tests
         
     elif run_type == "MD":
         motion = CP2K_INPUT.MOTION
@@ -175,10 +171,7 @@ def create_cp2k_input_ultraminimal(coords, name, run_type="GEO_OPT"):
         md.Timestep = 0.5   # Larger timestep
         md.Temperature = 300
         
-        # Print settings
-        print_traj = motion.PRINT_add().TRAJECTORY
-        print_traj.Each.Md = 10
-        print_traj.Filename = f"ultramin_{name}_md"
+        # No trajectory print for MD in ultra-minimal tests
     
     return calc
 
