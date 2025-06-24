@@ -1,6 +1,6 @@
 &GLOBAL
   PRINT_LEVEL LOW
-  PROJECT_NAME ultramin_combined_geo
+  PROJECT_NAME ultramin_boronate_diol_geo
   RUN_TYPE GEO_OPT
 &END GLOBAL
 &MOTION
@@ -42,30 +42,31 @@
       PERIODIC NONE
     &END CELL
     &COORD
-      Ti 0.0 0.0 0.0
-      Ti 3.0 0.0 0.0
-      Ti 6.0 0.0 0.0
-      C 1.5 0.0 1.0
-      C 4.5 0.0 1.0
-      B 3.0 0.0 3.0
-      O 2.0 0.0 3.5
-      O 4.0 0.0 3.5
+      B 0.0 0.0 0.0
+      O -0.5 1.2 0.0
+      O 1.3 0.0 0.0
+      H -1.4 1.3 0.0
+      H 2.0 0.2 0.0
+      C 0.0 -2.0 0.0
+      C 1.4 -2.0 0.0
+      O -0.8 -2.8 0.0
+      O 2.2 -2.8 0.0
     &END COORD
     &KIND C
       POTENTIAL GTH-PBE-q4
-      BASIS_SET SZV-MOLOPT-GTH
-    &END KIND
-    &KIND O
-      POTENTIAL GTH-PBE-q6
       BASIS_SET SZV-MOLOPT-GTH
     &END KIND
     &KIND B
       POTENTIAL GTH-PBE-q3
       BASIS_SET SZV-MOLOPT-SR-GTH
     &END KIND
-    &KIND Ti
-      POTENTIAL GTH-PBE-q12
-      BASIS_SET SZV-MOLOPT-SR-GTH
+    &KIND H
+      POTENTIAL GTH-PBE-q1
+      BASIS_SET SZV-MOLOPT-GTH
+    &END KIND
+    &KIND O
+      POTENTIAL GTH-PBE-q6
+      BASIS_SET SZV-MOLOPT-GTH
     &END KIND
   &END SUBSYS
 &END FORCE_EVAL

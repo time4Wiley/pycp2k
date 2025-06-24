@@ -1,6 +1,6 @@
 &GLOBAL
   PRINT_LEVEL LOW
-  PROJECT_NAME ultramin_combined_md
+  PROJECT_NAME ultramin_surface_md
   RUN_TYPE MD
 &END GLOBAL
 &MOTION
@@ -48,25 +48,14 @@
       Ti 6.0 0.0 0.0
       C 1.5 0.0 1.0
       C 4.5 0.0 1.0
-      B 3.0 0.0 3.0
-      O 2.0 0.0 3.5
-      O 4.0 0.0 3.5
     &END COORD
-    &KIND C
-      POTENTIAL GTH-PBE-q4
-      BASIS_SET SZV-MOLOPT-GTH
-    &END KIND
-    &KIND O
-      POTENTIAL GTH-PBE-q6
-      BASIS_SET SZV-MOLOPT-GTH
-    &END KIND
-    &KIND B
-      POTENTIAL GTH-PBE-q3
-      BASIS_SET SZV-MOLOPT-SR-GTH
-    &END KIND
     &KIND Ti
       POTENTIAL GTH-PBE-q12
       BASIS_SET SZV-MOLOPT-SR-GTH
+    &END KIND
+    &KIND C
+      POTENTIAL GTH-PBE-q4
+      BASIS_SET SZV-MOLOPT-GTH
     &END KIND
   &END SUBSYS
 &END FORCE_EVAL
