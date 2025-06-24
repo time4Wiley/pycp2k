@@ -1,0 +1,80 @@
+ # Version information for this restart file 
+ # current date 2025-06-25 04:44:46.874
+ # current working dir /work/home/acdad3pzwp/pycp2k/energy_compare/02_cba_borate
+ # Program compiled at                              Fri Mar 17 10:44:25 CST 2023
+ # Program compiled on                                                   login05
+ # Program compiled for                                                    local
+ # Source code revision number                                       git:b888bd8
+ &GLOBAL
+   PRINT_LEVEL  LOW
+   PROJECT_NAME cba_borate
+   RUN_TYPE  GEO_OPT
+ &END GLOBAL
+ &MOTION
+   &GEO_OPT
+     TYPE  MINIMIZATION
+     MAX_FORCE     5.0000000000000001E-04
+     RMS_FORCE     2.9999999999999997E-04
+     STEP_START_VAL  1
+   &END GEO_OPT
+ &END MOTION
+ &FORCE_EVAL
+   METHOD  QS
+   &DFT
+     BASIS_SET_FILE_NAME BASIS_MOLOPT
+     POTENTIAL_FILE_NAME GTH_POTENTIALS
+     &MGRID
+       CUTOFF     4.0000000000000000E+02
+     &END MGRID
+     &XC
+       DENSITY_CUTOFF     1.0000000000000000E-10
+       GRADIENT_CUTOFF     1.0000000000000000E-10
+       TAU_CUTOFF     1.0000000000000000E-10
+       &XC_FUNCTIONAL  NO_SHORTCUT
+         &PBE  T
+         &END PBE
+       &END XC_FUNCTIONAL
+     &END XC
+   &END DFT
+   &SUBSYS
+     &CELL
+       A     1.5000000000000002E+01    0.0000000000000000E+00    0.0000000000000000E+00
+       B     0.0000000000000000E+00    1.5000000000000002E+01    0.0000000000000000E+00
+       C     0.0000000000000000E+00    0.0000000000000000E+00    1.5000000000000002E+01
+       PERIODIC  NONE
+       MULTIPLE_UNIT_CELL  1 1 1
+     &END CELL
+     &COORD
+O    2.3299510832500663E-09    2.0959489785138170E-09    2.5279479884544702E-09
+     &END COORD
+     &KIND H
+       BASIS_SET DZVP-MOLOPT-SR-GTH
+       POTENTIAL GTH-PBE-q1
+     &END KIND
+     &KIND C
+       BASIS_SET DZVP-MOLOPT-SR-GTH
+       POTENTIAL GTH-PBE-q4
+     &END KIND
+     &KIND B
+       BASIS_SET DZVP-MOLOPT-SR-GTH
+       POTENTIAL GTH-PBE-q3
+     &END KIND
+     &KIND O
+       BASIS_SET DZVP-MOLOPT-SR-GTH
+       POTENTIAL GTH-PBE-q6
+       &POTENTIAL
+ 2 4
+  0.2445543000000000E+00 2 -0.1666721480000000E+02  0.2487311320000000E+01
+ 2
+  0.2209559200000000E+00 1  0.1833745811000000E+02
+  0.2113324700000000E+00 0
+         # Potential name:  GTH-PBE-Q6  for symbol:  O
+         # Potential read from the potential filename: GTH_POTENTIALS
+       &END POTENTIAL
+     &END KIND
+     &TOPOLOGY
+       NUMBER_OF_ATOMS  1
+       MULTIPLE_UNIT_CELL  1 1 1
+     &END TOPOLOGY
+   &END SUBSYS
+ &END FORCE_EVAL
