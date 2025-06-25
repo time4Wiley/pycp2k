@@ -69,7 +69,8 @@ BUILTIN_PROFILES = {
         ntasks_per_node=4,
         cpus_per_task=1,
         time="1:00:00",
-        memory="8GB"
+        memory="8GB",
+        partition="xhacnormalc"
     ),
     
     "short": ResourceProfile(

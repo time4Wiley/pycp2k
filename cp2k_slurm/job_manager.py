@@ -311,9 +311,23 @@ class JobManager:
             'job_name': job_name,
             'input_name': input_path.name,
             'output_name': output_name,
+            'output_pattern': f"{job_name}.out",
+            'error_pattern': f"{job_name}.err",
+            'cp2k_executable': 'cp2k.popt',
+            'mpi_command': 'mpirun',
             'modules': modules,
             **profile.__dict__
         }
+        
+        # Handle memory settings properly
+        if profile.memory:
+            if profile.memory.endswith('GB'):
+                # Convert to MB for SLURM --mem-per-cpu or --mem
+                mem_gb = int(profile.memory[:-2])
+                if profile.cpus_per_task > 1:
+                    template_vars['mem_per_cpu'] = f"{mem_gb * 1024 // (profile.ntasks_per_node * profile.cpus_per_task)}M"
+                else:
+                    template_vars['mem_per_node'] = f"{mem_gb * 1024}M"
         
         # Render script
         script_content = template.render(**template_vars)
@@ -332,7 +346,7 @@ class JobManager:
         """Submit batch script and return job ID."""
         try:
             result = subprocess.run(
-                ['sbatch', str(script_path)],
+                ['sbatch', str(script_path.absolute())],
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, 
                 universal_newlines=True, check=True,
                 cwd=self.work_dir

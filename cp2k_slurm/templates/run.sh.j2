@@ -6,14 +6,22 @@
 #SBATCH --nodes={{ nodes }}
 #SBATCH --ntasks-per-node={{ ntasks_per_node }}
 #SBATCH --cpus-per-task={{ cpus_per_task }}
-{% if mem_per_cpu %}#SBATCH --mem-per-cpu={{ mem_per_cpu }}{% endif %}
-{% if mem_per_node %}#SBATCH --mem={{ mem_per_node }}{% endif %}
-{% if gpus %}#SBATCH --gpus={{ gpus }}{% endif %}
-{% if gres %}#SBATCH --gres={{ gres }}{% endif %}
-{% if partition %}#SBATCH --partition={{ partition }}{% endif %}
-{% if qos %}#SBATCH --qos={{ qos }}{% endif %}
-{% if account %}#SBATCH --account={{ account }}{% endif %}
-{% if tmp_disk %}#SBATCH --tmp={{ tmp_disk }}{% endif %}
+{% if mem_per_cpu %}#SBATCH --mem-per-cpu={{ mem_per_cpu }}
+{% endif %}
+{% if mem_per_node %}#SBATCH --mem={{ mem_per_node }}
+{% endif %}
+{% if gpus %}#SBATCH --gpus={{ gpus }}
+{% endif %}
+{% if gres %}#SBATCH --gres={{ gres }}
+{% endif %}
+{% if partition %}#SBATCH --partition={{ partition }}
+{% endif %}
+{% if qos %}#SBATCH --qos={{ qos }}
+{% endif %}
+{% if account %}#SBATCH --account={{ account }}
+{% endif %}
+{% if tmp_disk %}#SBATCH --tmp={{ tmp_disk }}
+{% endif %}
 {% for key, value in extra_sbatch_opts.items() %}#SBATCH --{{ key }}={{ value }}
 {% endfor %}
 
@@ -36,9 +44,9 @@ module load {{ module }}
 {% endfor %}
 {% else %}
 # Load default modules - adapt these to your HPC environment
-module load intel/2023.1
-module load intel-mpi/2021.9
-module load cp2k/2023.1
+module load compiler/intel/2021.3.0
+module load mpi/intelmpi/2021.3.0
+module load cp2k-2023.1-intelmpi_2021
 {% endif %}
 
 # Set environment variables for MPI
