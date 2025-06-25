@@ -1,6 +1,6 @@
 &GLOBAL
-  PROJECT cba_borate_geo_opt_improved
-  RUN_TYPE GEO_OPT
+  PROJECT cba_monomer_sp
+  RUN_TYPE ENERGY
   PRINT_LEVEL MEDIUM
 &END GLOBAL
 
@@ -9,7 +9,7 @@
   &DFT
     BASIS_SET_FILE_NAME BASIS_MOLOPT
     POTENTIAL_FILE_NAME GTH_POTENTIALS
-    CHARGE -2
+    CHARGE -1
     MULTIPLICITY 1
     
     &QS
@@ -29,33 +29,19 @@
     
     &SCF
       SCF_GUESS ATOMIC
-      EPS_SCF 1.0E-6
-      MAX_SCF 300
-      ADDED_MOS 30
+      EPS_SCF 1.0E-7
+      MAX_SCF 200
       &MIXING
         METHOD BROYDEN_MIXING
-        ALPHA 0.1
+        ALPHA 0.2
         BETA 1.0
-        NBROYDEN 12
+        NBROYDEN 10
       &END MIXING
-      &OUTER_SCF
-        EPS_SCF 1.0E-6
-        MAX_SCF 100
-      &END OUTER_SCF
       &SMEAR
         METHOD FERMI_DIRAC
         ELECTRONIC_TEMPERATURE 300
       &END SMEAR
-      &PRINT
-        &RESTART
-          FILENAME =cba_borate_geo_opt_improved-RESTART.wfn
-        &END RESTART
-      &END PRINT
     &END SCF
-    
-    &KPOINTS
-      SCHEME MONKHORST-PACK 1 1 1
-    &END KPOINTS
     
     &POISSON
       PERIODIC NONE
@@ -63,9 +49,9 @@
     &END POISSON
   &END DFT
   
-      &SUBSYS
+  &SUBSYS
     &CELL
-      ABC 22.0 22.0 22.0
+      ABC 18.0 18.0 18.0
       PERIODIC NONE
     &END CELL
     
@@ -84,15 +70,6 @@
       H    1.900000    3.350000    0.000000
       H   -0.500000    3.350000    0.000000
       H   -1.790000    1.200000    0.000000
-      B    3.000000    0.000000    2.000000
-      O    4.200000    0.000000    1.200000
-      O    3.000000    1.200000    2.800000
-      O    3.000000   -1.200000    2.800000
-      O    1.800000    0.000000    1.200000
-      H    5.000000    0.000000    1.600000
-      H    3.800000    1.200000    3.200000
-      H    3.800000   -1.200000    3.200000
-      H    1.000000    0.000000    1.600000
     &END COORD
     
     &KIND O
@@ -109,39 +86,5 @@
       BASIS_SET DZVP-MOLOPT-SR-GTH
       POTENTIAL GTH-PBE-q1
     &END KIND
-    
-    &KIND B
-      BASIS_SET DZVP-MOLOPT-SR-GTH
-      POTENTIAL GTH-PBE-q3
-    &END KIND
   &END SUBSYS
 &END FORCE_EVAL
-
-&MOTION
-  &GEO_OPT
-    TYPE MINIMIZATION
-    OPTIMIZER BFGS
-    MAX_ITER 200
-    MAX_DR 1.0E-4
-    MAX_FORCE 1.0E-4
-    RMS_DR 1.0E-5
-    RMS_FORCE 1.0E-5
-    &BFGS
-      TRUST_RADIUS 0.15
-    &END BFGS
-  &END GEO_OPT
-  
-  &PRINT
-    &TRAJECTORY
-      FORMAT XYZ
-      &EACH
-        GEO_OPT 1
-      &END EACH
-    &END TRAJECTORY
-    &RESTART
-      &EACH
-        GEO_OPT 10
-      &END EACH
-    &END RESTART
-  &END PRINT
-&END MOTION

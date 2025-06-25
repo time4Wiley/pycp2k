@@ -1,0 +1,101 @@
+#!/bin/bash
+#SBATCH --job-name={{ job_name }}
+#SBATCH --output={{ output_pattern }}
+#SBATCH --error={{ error_pattern }}
+#SBATCH --time={{ time }}
+#SBATCH --nodes={{ nodes }}
+#SBATCH --ntasks-per-node={{ ntasks_per_node }}
+#SBATCH --cpus-per-task={{ cpus_per_task }}
+{% if mem_per_cpu %}#SBATCH --mem-per-cpu={{ mem_per_cpu }}{% endif %}
+{% if mem_per_node %}#SBATCH --mem={{ mem_per_node }}{% endif %}
+{% if gpus %}#SBATCH --gpus={{ gpus }}{% endif %}
+{% if gres %}#SBATCH --gres={{ gres }}{% endif %}
+{% if partition %}#SBATCH --partition={{ partition }}{% endif %}
+{% if qos %}#SBATCH --qos={{ qos }}{% endif %}
+{% if account %}#SBATCH --account={{ account }}{% endif %}
+{% if tmp_disk %}#SBATCH --tmp={{ tmp_disk }}{% endif %}
+{% for key, value in extra_sbatch_opts.items() %}#SBATCH --{{ key }}={{ value }}
+{% endfor %}
+
+# Job information
+echo "Job ID: $SLURM_JOB_ID"
+echo "Job Name: $SLURM_JOB_NAME"
+echo "Node List: $SLURM_JOB_NODELIST"
+echo "Number of nodes: $SLURM_JOB_NUM_NODES"
+echo "Number of tasks: $SLURM_NTASKS"
+echo "CPUs per task: $SLURM_CPUS_PER_TASK"
+echo "Working directory: $(pwd)"
+echo "Started at: $(date)"
+echo
+
+# Environment setup
+module purge
+{% if modules %}
+{% for module in modules %}
+module load {{ module }}
+{% endfor %}
+{% else %}
+# Load default modules - adapt these to your HPC environment
+module load intel/2023.1
+module load intel-mpi/2021.9
+module load cp2k/2023.1
+{% endif %}
+
+# Set environment variables for MPI
+export I_MPI_PMI_LIBRARY=/opt/gridview/slurm/lib/libpmi2.so
+export I_MPI_PMI=pmi2
+export I_MPI_FABRICS=shm:ofi
+export I_MPI_OFI_PROVIDER=verbs
+
+# Verify CP2K is available
+echo "CP2K executable: $(which {{ cp2k_executable }})"
+{{ cp2k_executable }} --version | head -3
+echo
+
+# Create output directory if needed
+mkdir -p "$(dirname {{ output_name }})"
+
+# Run CP2K
+echo "Starting CP2K calculation..."
+echo "Input file: {{ input_name }}"
+echo "Output file: {{ output_name }}"
+echo "Command: {{ mpi_command }} -np $SLURM_NTASKS {{ cp2k_executable }} -i {{ input_name }} -o {{ output_name }}"
+echo
+
+{{ mpi_command }} -np $SLURM_NTASKS {{ cp2k_executable }} -i {{ input_name }} -o {{ output_name }}
+
+# Capture exit code
+CP2K_EXIT_CODE=$?
+
+echo
+echo "CP2K finished with exit code: $CP2K_EXIT_CODE"
+echo "Finished at: $(date)"
+
+# Job summary
+echo
+echo "=== JOB SUMMARY ==="
+echo "Job ID: $SLURM_JOB_ID"
+echo "Exit code: $CP2K_EXIT_CODE"
+echo "Input file: {{ input_name }}"
+echo "Output file: {{ output_name }}"
+echo "Runtime: $SECONDS seconds"
+
+# Check if output file was created and has content
+if [ -f "{{ output_name }}" ] && [ -s "{{ output_name }}" ]; then
+    echo "Output file created successfully ($(wc -l < {{ output_name }}) lines)"
+    
+    # Check for completion markers
+    if grep -q "PROGRAM ENDED AT" "{{ output_name }}"; then
+        echo "CP2K calculation completed normally"
+    elif grep -q "ABORT" "{{ output_name }}"; then
+        echo "WARNING: CP2K calculation aborted"
+        CP2K_EXIT_CODE=1
+    else
+        echo "WARNING: CP2K calculation may not have completed normally"
+    fi
+else
+    echo "ERROR: Output file not created or empty"
+    CP2K_EXIT_CODE=1
+fi
+
+exit $CP2K_EXIT_CODE 

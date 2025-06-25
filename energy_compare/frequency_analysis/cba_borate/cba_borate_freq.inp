@@ -1,6 +1,6 @@
 &GLOBAL
-  PROJECT cba_borate_geo_opt_improved
-  RUN_TYPE GEO_OPT
+  PROJECT cba_borate_freq
+  RUN_TYPE VIBRATIONAL_ANALYSIS
   PRINT_LEVEL MEDIUM
 &END GLOBAL
 
@@ -29,33 +29,15 @@
     
     &SCF
       SCF_GUESS ATOMIC
-      EPS_SCF 1.0E-6
-      MAX_SCF 300
-      ADDED_MOS 30
+      EPS_SCF 1.0E-8
+      MAX_SCF 100
       &MIXING
         METHOD BROYDEN_MIXING
-        ALPHA 0.1
-        BETA 1.0
-        NBROYDEN 12
+        ALPHA 0.3
+        BETA 1.5
+        NBROYDEN 8
       &END MIXING
-      &OUTER_SCF
-        EPS_SCF 1.0E-6
-        MAX_SCF 100
-      &END OUTER_SCF
-      &SMEAR
-        METHOD FERMI_DIRAC
-        ELECTRONIC_TEMPERATURE 300
-      &END SMEAR
-      &PRINT
-        &RESTART
-          FILENAME =cba_borate_geo_opt_improved-RESTART.wfn
-        &END RESTART
-      &END PRINT
     &END SCF
-    
-    &KPOINTS
-      SCHEME MONKHORST-PACK 1 1 1
-    &END KPOINTS
     
     &POISSON
       PERIODIC NONE
@@ -63,7 +45,7 @@
     &END POISSON
   &END DFT
   
-      &SUBSYS
+  &SUBSYS
     &CELL
       ABC 22.0 22.0 22.0
       PERIODIC NONE
@@ -117,31 +99,14 @@
   &END SUBSYS
 &END FORCE_EVAL
 
-&MOTION
-  &GEO_OPT
-    TYPE MINIMIZATION
-    OPTIMIZER BFGS
-    MAX_ITER 200
-    MAX_DR 1.0E-4
-    MAX_FORCE 1.0E-4
-    RMS_DR 1.0E-5
-    RMS_FORCE 1.0E-5
-    &BFGS
-      TRUST_RADIUS 0.15
-    &END BFGS
-  &END GEO_OPT
-  
+&VIBRATIONAL_ANALYSIS
+  DX 0.01
+  NPROC_REP 4
   &PRINT
-    &TRAJECTORY
-      FORMAT XYZ
-      &EACH
-        GEO_OPT 1
-      &END EACH
-    &END TRAJECTORY
-    &RESTART
-      &EACH
-        GEO_OPT 10
-      &END EACH
-    &END RESTART
+    &MOLDEN_VIB
+      FILENAME cba_borate_vibrations.molden
+    &END MOLDEN_VIB
+    &PROGRAM_RUN_INFO ON
+    &END PROGRAM_RUN_INFO
   &END PRINT
-&END MOTION
+&END VIBRATIONAL_ANALYSIS
